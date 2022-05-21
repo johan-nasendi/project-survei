@@ -1,19 +1,12 @@
 <div class="container-fluid">
     <ul class="list-unstyled topnav-menu float-right mb-0">
-
-
         <li class="dropdown notification-list topbar-dropdown">
             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
                data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-               @if (Auth::user()->image == "")
                     <img src="{{asset('assets/images/users/user-sacode.png')}}" alt="user-image" class="rounded-circle">
-
-                @elseif (file_exists(public_path(Auth::user()->image)))
-                 <img src="{{asset(Auth::user()->image) }}" alt="imguser" class="rounded-circle">
-              @endif
-               <span class="pro-user-name ml-1">
-                    {{Auth::user()->name}}<i class="mdi mdi-chevron-down"></i>
-                 </span>
+                    <span class="pro-user-name ml-1">
+                            {{Auth::user()->name}} <i class="mdi mdi-chevron-down"></i>
+                    </span>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">

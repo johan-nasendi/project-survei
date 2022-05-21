@@ -43,16 +43,16 @@
         <div id="wrapper">
             {{-- Navbar --}}
             <div class="navbar-custom">
-                @include('layouts._app.navbar')
+                @include('layouts._app-dashboard.navbar')
             </div>
             {{-- Sidebar --}}
             <div class="left-side-menu">
-                @include('layouts._app.sidebar')
+                @include('layouts._app-dashboard.sidebar')
             </div>
             {{-- Content --}}
         @yield('content')
 
-            @include('layouts._app.footer')
+            @include('layouts._app-dashboard.footer')
 
         </div>
 
