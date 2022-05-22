@@ -15,11 +15,11 @@ class CreateRespondentIdentityTable extends Migration
     {
         Schema::create('respondent_identity', function (Blueprint $table) {
             $table->id();
-            $table->string('name',100);
-            $table->string('place_of_birth',50);
+            $table->string('name',);
+            $table->string('place_of_birth');
             $table->date('date_of_birth');
             $table->enum('gender',['Male','Female']);
-            $table->integer('mobile_phone_number',13)->unique();
+            $table->string('mobile_phone_number',13)->unique();
             $table->string('email')->unique();
             $table->timestamps();
         });
