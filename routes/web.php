@@ -24,10 +24,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
     // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // --------------------------------------------------------
     // ADMIN

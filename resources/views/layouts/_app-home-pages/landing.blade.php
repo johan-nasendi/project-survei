@@ -9,7 +9,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 
 		<!-- App css -->
 		<link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
@@ -21,24 +21,51 @@
 		<!-- icons -->
 		<link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
-        {{-- <link href="{{asset('')}}" rel="stylesheet" type="text/css" /> --}}
 
     </head>
 
-    <body class="loading authentication-bg authentication-bg-pattern">
+    <body class="loading">
+        <div id="wrapper">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <br>
+                                <div class="card">
+                                    <div class="card-body">
+                                         @yield('content')
+                                     </div>
+                                 </div>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+          </div>
 
-@yield('content')
         <footer class="footer footer-alt">
             2021 - <script>document.write(new Date().getFullYear())</script>
-             &copy; J.N theme by
-             <a href="" class="text-white-50">CodeKeras</a>
+             &copy; Theme by
+             <a href="#" class="text-black-50">Poltekkes</a>
         </footer>
 
-        <!-- Vendor js -->
-        <script src="../assets/js/vendor.min.js"></script>
+                <!-- Vendor js -->
+                <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
 
-        <!-- App js -->
-        <script src="../assets/js/app.min.js"></script>
+                 <!-- custom dmeo js-->
+                 <script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>
+
+                <!-- Plugins js-->
+                <script src="{{asset('/assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}"></script>
+
+                <!-- Init js-->
+                <script src="{{asset('/assets/js/pages/form-wizard.init.js')}}"></script>
+
+                <!-- App js -->
+                <script src="{{asset('/assets/js/app.min.js')}}"></script>
+
+
+
+
 
     </body>
 

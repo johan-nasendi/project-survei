@@ -5,7 +5,9 @@
                data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{asset('assets/images/users/user-sacode.png')}}" alt="user-image" class="rounded-circle">
                     <span class="pro-user-name ml-1">
-                            {{Auth::user()->name}} <i class="mdi mdi-chevron-down"></i>
+                    Johan
+                            {{-- {{Auth::user()->name}}  --}}
+                            <i class="mdi mdi-chevron-down"></i>
                     </span>
             </a>
 
