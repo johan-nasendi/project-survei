@@ -21,9 +21,9 @@ class CreateJobExperiencesTable extends Migration
             $table->string('jobs_reason');
             $table->string('after_how_many_months_job');
             $table->string('get_str');
-            $table->number('amount_applied',20);
-            $table->number('amount_response_to_applications',20);
-            $table->number('amount_inviting_interviews',20);
+            $table->integer('amount_applied',20);
+            $table->integer('amount_response_to_applications',20);
+            $table->integer('amount_inviting_interviews',20);
             $table->mediumText('how_to_find_a_job');
             $table->string('workplace');
             $table->string('name_workplace');
