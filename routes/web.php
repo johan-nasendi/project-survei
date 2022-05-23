@@ -23,8 +23,7 @@ Auth::routes([
     'register' => false
 ]);
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'home'])->name('forum');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 

@@ -26,13 +26,19 @@
 		<!-- icons -->
 		<link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
-
     </head>
 
     <body class="loading">
         <div id="wrapper">
+             {{-- Navbar --}}
+             <div class="navbar-custom">
+                @include('layouts._app-home-pages.navbar-home-page')
+            </div>
+            <br>
+            <br>
+            <br>
                 <div class="content">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-xl-12">
                                 <br>
@@ -52,7 +58,7 @@
              &copy; Theme by
              <a href="#" class="text-black-50">Poltekkes</a>
         </footer>
-
+    </body>
                 <!-- Vendor js -->
                 <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
 
@@ -68,10 +74,8 @@
                 <!-- App js -->
                 <script src="{{asset('/assets/js/app.min.js')}}"></script>
 
-
-
-
-
-    </body>
+    @stack('js-external')
+    @stack('js-internal')
 
 </html>
+
