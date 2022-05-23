@@ -2,7 +2,10 @@
 <html>
 <head>
 <title>Poltekkes Jayapura</title>
-
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!--EXTERNAL CSS-->
 <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 
@@ -17,11 +20,8 @@
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
 </head>
 <body>
-
-
 
 <!--HEADER-->
 <header>
