@@ -25,11 +25,11 @@ Auth::routes([
 
 Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'home'])->name('forum');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
     // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // --------------------------------------------------------
     // ADMIN

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
         <title>Log In</title>
+            <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- CSRF Token -->
+
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
@@ -53,7 +54,7 @@
                                     <p class="text-muted mb-4 mt-3">Masukkan alamat email dan kata sandi Anda..</p>
                                 </div>
 
-                                <form method="POST" action="{{ route('login') }}" autocomplete="off">
+                                <form  action="{{ route('login') }}" method="POST" autocomplete="on">
                                     @csrf
 
                                     <div class="form-group mb-3">

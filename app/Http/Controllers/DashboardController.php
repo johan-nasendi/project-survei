@@ -28,6 +28,6 @@ class DashboardController extends Controller
 
     public function home()
     {
-        return view('form');
+        return view('forms');
     }
 }
