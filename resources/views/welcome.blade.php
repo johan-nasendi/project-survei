@@ -37,13 +37,13 @@
             <a href="#">HOME</a>
             <a href="#">ABOUT</a>
             <a href="#">CONTACT</a>
-            <a href="{{route('login')}}" target="_blank" style="float:right;padding:10px 0;"><i class="fa fa-user"></i> LOGIN</a>
+            <a href="{{route('login')}}" style="float:right;padding:10px 0;"><i class="fa fa-user"></i> LOGIN</a>
             <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-bars"></i></a>
         </nav>
 
         <div id="navbar">
             <a href="#" class="active">®<em>POLTEKKES </em> <l style="font-weight:200;">|</l> Jayapura</a>
-            <a href=" {{route('login')}} " target="_blank"><i class="fa fa-user"></i> LOGIN</a>
+            <a href=" {{route('login')}}"><i class="fa fa-user"></i> LOGIN</a>
             <a href="#">CONTACT</a>
             <a href="#">ABOUT</a>
             <a href="#">HOME</a>
