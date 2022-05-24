@@ -54,14 +54,14 @@
                                     <p class="text-muted mb-4 mt-3">Masukkan alamat email dan kata sandi Anda..</p>
                                 </div>
 
-                                <form  action="{{ route('login') }}" method="POST" autocomplete="on">
+                                <form  action="{{ route('login') }}" method="POST">
                                     @csrf
 
                                     <div class="form-group mb-3">
-                                        <label for="emailaddress">Username</label>
-                                        <input  type="text" class="form-control @error('username') is-invalid @enderror"
-                                        placeholder="Masukkan Username Anda" name="username" value="{{ old('username') }}" required=""   autofocus>
-                                        @error('username')
+                                        <label for="emailaddress">Email</label>
+                                        <input  type="email" class="form-control @error('email') is-invalid @enderror"
+                                        placeholder="Masukkan Email Anda" name="email" value="{{ old('email') }}"  required="" autocomplete="email"   autofocus>
+                                        @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -72,7 +72,7 @@
                                         <label for="password">Password</label>
                                         <div class="input-group input-group-merge">
                                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                                            placeholder="Masukkan Password Anda" name="password" required autocomplete="current-password">
+                                            placeholder="Masukkan Password Anda" name="password" required="" autocomplete="current-password">
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
