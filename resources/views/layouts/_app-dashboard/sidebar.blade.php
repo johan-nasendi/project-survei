@@ -1,5 +1,5 @@
 
- {{-- @if(Auth::user()->hasRole('admin')) --}}
+ @if(Auth::user()->hasRole('admin'))
  <div class="h-100" data-simplebar>
      <!--- Sidemenu -->
      <div id="sidebar-menu">
@@ -32,13 +32,13 @@
      <div class="clearfix"></div>
 
  </div>
-{{-- } @elseif (Auth::user()->hasRole('member')){
+} @elseif (Auth::user()->hasRole('member')){
 <div class="h-100" data-simplebar>
    <p>Not Sidebar</p>
 </div>
 }
 @endif
-<!-- Sidebar -left --> --}}
+<!-- Sidebar -left -->
 
 
 

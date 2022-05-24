@@ -10,21 +10,20 @@ class DashboardController extends Controller
     {
 
 
-        // if(Auth::user()->hasRole('admin')){
-        //     return view('admin.dashboard');
-        // }
+        if(Auth::user()->hasRole('admin')){
+            return view('admin.dashboard');
+        }
 
-        // elseif(Auth::user()->hasRole('')){
-        //     return 'hello Member';
-        // }
+        elseif(Auth::user()->hasRole('')){
+            return 'hello Member';
+        }
 
-        // elseif(Auth::user()->hasRole('')){
-        //     return 'Hello Guest';
-        // }
+        elseif(Auth::user()->hasRole('')){
+            return 'Hello Guest';
+        }
 
-        return view('admin.dashboard');
+
     }
-
 
     public function home()
     {

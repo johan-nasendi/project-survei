@@ -23,17 +23,14 @@ Auth::routes([
     'register' => false
 ]);
 
-Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'home'])->name('forum');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'forms'])->name('forum');
 
 
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
-    // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // --------------------------------------------------------
-    // ADMIN
-    // --------------------------------------------------------
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
 
 });
