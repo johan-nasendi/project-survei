@@ -2,25 +2,26 @@
 <html lang="en">
     <head>
         <title>Log In</title>
-        <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- CSRF Token -->
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 		<!-- App css -->
-		<link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet"  id="bs-default-stylesheet" />
-		<link href="{{asset('/assets/css/app.min.css')}}" rel="stylesheet"  id="app-default-stylesheet" />
+		<link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="{{asset('/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-		<link href="{{asset('/assets/css/bootstrap-dark.min.css')}}" rel="stylesheet"  id="bs-dark-stylesheet" />
-		<link href="{{asset('/assets/css/app-dark.min.css')}}" rel="stylesheet"  id="app-dark-stylesheet" />
+		<link href="{{asset('/assets/css/bootstrap-dark.min.css')}}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="{{asset('/assets/css/app-dark.min.css')}}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
 
 		<!-- icons -->
-		<link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" />
+		<link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
     </head>
 
