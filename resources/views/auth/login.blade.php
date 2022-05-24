@@ -53,7 +53,7 @@
                                     <p class="text-muted mb-4 mt-3">Masukkan alamat email dan kata sandi Anda..</p>
                                 </div>
 
-                                <form method="POST" action="{{ route('login') }}">
+                                <form method="POST" action="{{ route('login') }}" autocomplete="off">
                                     @csrf
 
                                     <div class="form-group mb-3">
