@@ -16,11 +16,11 @@ class CreateRelationshipCompetenceTable extends Migration
         Schema::create('relationship_competence', function (Blueprint $table) {
             $table->id();
             $table->BigInteger('user_id')->unsigned();
-            $table->string('curriculum_compatibility_jobs');
-            $table->string('health_polytechnic_Competence');
-            $table->string('competency_mastered');
-            $table->string('competencies_required_job');
-            $table->string('competency_improvement_needs');
+            $table->string('curriculum_compatibility_jobs')->nullable();
+            $table->string('health_polytechnic_Competence')->nullable();
+            $table->string('competency_mastered')->nullable();
+            $table->string('competencies_required_job')->nullable();
+            $table->string('competency_improvement_needs')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
             $table->timestamps();
         });

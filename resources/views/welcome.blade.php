@@ -34,17 +34,19 @@
         </div>
         <nav class="nav" id="nav">
             <a href="#" class="active">®<em>POLTEKKES</em> <l style="font-weight:200;">|</l> JAYAPURA</a>
-            <a href="#">CONTACT</a>
+            <a href="#">HOME</a>
             <a href="#">ABOUT</a>
-            <a href="#" style="float:right;padding:10px 0;"><i class="fa fa-user"></i> LOGIN</a>
+            <a href="#">CONTACT</a>
+            <a href="{{route('login')}}" target="_blank" style="float:right;padding:10px 0;"><i class="fa fa-user"></i> LOGIN</a>
             <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-bars"></i></a>
         </nav>
 
         <div id="navbar">
             <a href="#" class="active">®<em>POLTEKKES </em> <l style="font-weight:200;">|</l> Jayapura</a>
-            <a href="#"><i class="fa fa-user"></i> LOGIN</a>
+            <a href=" {{route('login')}} " target="_blank"><i class="fa fa-user"></i> LOGIN</a>
             <a href="#">CONTACT</a>
             <a href="#">ABOUT</a>
+            <a href="#">HOME</a>
         </div>
 </header>
 
@@ -60,8 +62,9 @@
                             <span class="letters">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</span>
                         </span>
                      </h3>
-                  <h5 class="sub-title">Apakah Anda Siap Untuk Mengikuti Kuesioner Tracer Study (Alumni) ? (Klik Button Start di bawah ini :) </h5>
-                    <a href="{{route('forum')}} " class="btn1">START</a>
+                  <h5 class="sub-title">Apakah Anda Siap Untuk Mengikuti Kuesioner Tracer Study (Alumni) ?
+                      Klik <b style="color: #fbc01a;">START</b> </h5>
+                    <a href="{{route('forum')}}" target="_blank" class="btn1">START</a>
              </section>
          </td>
          <td>

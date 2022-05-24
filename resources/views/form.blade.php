@@ -53,7 +53,7 @@
                                 <div class="form-group row mb-3">
                                     <label class="col-md-3 col-form-label" for="name"> Nama Lengkap </label>
                                     <div class="col-md-9">
-                                        <input type="text" name="name" required="" placeholder="Nama lengkap anda" class="form-control">
+                                        <input type="text" name="name"  required="" placeholder="Nama lengkap anda" class="form-control">
                                             {{-- <ul class="parsley-errors-list filled" id="parsley-id-27" aria-hidden="false">
                                                 <li class="parsley-required"> This value is required. </li>
                                             </ul> --}}
@@ -99,7 +99,7 @@
                                 <div class="form-group row mb-3">
                                     <label class="col-md-3 col-form-label" for="mobile_phone_number">Nomor ponsel</label>
                                     <div class="col-md-9">
-                                        <input type="date" name="mobile_phone_number" required="" placeholder="Nomor ponsel anda yang aktif "
+                                        <input type="number" name="mobile_phone_number" required="" placeholder="Nomor ponsel anda yang aktif "
                                             class="form-control">
                                             {{-- <ul class="parsley-errors-list filled" id="parsley-id-27" aria-hidden="false">
                                                 <li class="parsley-required"> This value is required. </li>
@@ -621,10 +621,36 @@
                                         <div class="form-group">
                                             <label for="#">Media komunikasi yang digunakan? Jawaban boleh lebih dari 1<span class="text-danger">*</span></label>
 
-                                            {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="true">
-                                                <li class="parsley-required">This value is required.</li>
-                                            </ul> --}}
+                                            <div class="form-group">
+                                                <label for="pass1">Username Instagram<span class="text-danger">*</span></label>
+                                                <input id="#" type="text" placeholder="Masukan username instagram anda"  class="form-control">
+                                                {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
+                                                    <li class="parsley-required">This value is required.</li>
+                                                </ul> --}}
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="pass1">Username facebook<span class="text-danger">*</span></label>
+                                                <input id="#" type="text" placeholder="Masukan username facebook anda"  class="form-control">
+                                                {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
+                                                    <li class="parsley-required">This value is required.</li>
+                                                </ul> --}}
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="pass1">Username Linkedin<span class="text-danger">*</span></label>
+                                                <input id="#" type="text" placeholder="Masukan username Linkedin anda"  class="form-control">
+                                                {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
+                                                    <li class="parsley-required">This value is required.</li>
+                                                </ul> --}}
+                                            </div>
+
                                         </div>
+                                </div> <!-- end card-box -->
+                            </div> <!-- end col -->
+
+                            <div class="col-lg-6">
+                                <div class="card-box">
 
                                         <div class="form-group">
                                             <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>
@@ -681,8 +707,8 @@
                         <li class="previous list-inline-item disabled">
                             <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
                         </li>
-                        <li class="next list-inline-item float-right">
-                            <a href="javascript: void(0);" class="btn btn-success">Next</a>
+                        <li class="next list-inline-item float-right" >
+                            <a href="javascript: void(0);"  class="btn btn-success">Next</a>
                         </li>
                     </ul>
 
@@ -694,6 +720,7 @@
 @stop
 
 @push('js-external')
+
 @endpush
 
 @push('js-internal')
