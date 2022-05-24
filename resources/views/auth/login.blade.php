@@ -59,8 +59,8 @@
 
                                     <div class="form-group mb-3">
                                         <label for="emailaddress">Username</label>
-                                        <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
-                                        placeholder="Masukkan Username Anda" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                        <input  type="text" class="form-control @error('username') is-invalid @enderror"
+                                        placeholder="Masukkan Username Anda" name="username" value="{{ old('username') }}" required=""   autofocus>
                                         @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
