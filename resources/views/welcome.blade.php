@@ -65,18 +65,21 @@
                      </h3>
                   <h5 class="sub-title">Apakah Anda Siap Untuk Mengikuti Kuesioner Tracer Study (Alumni) ?
                       Klik <b style="color: #fbc01a;">START</b> </h5>
-                    <a href="{{route('forum')}}"  class="btn1">START</a>
+                    <a href="{{route('forum')}}"  class="btn1">START <i class="fa fa-paper-plane"></i>  </a>
              </section>
          </td>
          <td>
-         <img src="https://i.ibb.co/RTCB3CM/01.jpg" alt="">
+         <img src="https://i.ibb.co/WB37jWp/LOGO-POLTEKES-JAYAPURA.png" style="width: 400px"; height="400px"; alt="">
          </td>
          </tr>
     </table>
 </div>
 
+<a href="https://ibb.co/tYhnFMP"><img src="" alt="LOGO-POLTEKES-JAYAPURA" border="0"></a>
+
 <!--JAVASCRIPT-->
 <script src="{{asset('/js/custom.js')}}"></script>
+<script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
