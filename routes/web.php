@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RespondentIdentityController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,6 +32,8 @@ Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, '
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('/respondent-identity',RespondentIdentityController::class)->except(['create','edit']);
 
 
 });

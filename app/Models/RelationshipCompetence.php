@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class RelationshipCompetence extends Model
 {
     use HasFactory;
+
+    protected $table = "relationship_competence";
 }

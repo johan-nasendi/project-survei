@@ -69,8 +69,8 @@
              </section>
          </td>
          <td>
-         {{-- <img src="https://i.ibb.co/WB37jWp/LOGO-POLTEKES-JAYAPURA.png" style="width: 400px"; height="400px"; alt=""> --}}
          <img src="https://i.ibb.co/RSZ2DJ7/02-tes.jpg"  alt="01">
+         {{-- <img src="https://i.ibb.co/vcVbv5t/02-tes.jpg"  alt="01"> --}}
          </td>
          </tr>
     </table>

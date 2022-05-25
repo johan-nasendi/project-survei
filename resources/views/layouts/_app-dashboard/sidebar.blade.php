@@ -16,13 +16,13 @@
              </li>
 
              <li>
-                 <a href="">
+                 <a href="{{route('respondent-identity.index')}}">
                      <i data-feather="users"></i>
-                     {{-- @php
-                     $countmember = DB::table('users')->count();
+                     @php
+                     $countmember = DB::table('respondent_identity')->count();
                      @endphp
-                     <span class="badge badge-success badge-pill float-right">{{ $countmember }}</span> --}}
-                     <span> Member </span>
+                     <span class="badge badge-success badge-pill float-right">{{ $countmember }}</span>
+                     <span> Responden Users </span>
                  </a>
              </li>
          </ul>

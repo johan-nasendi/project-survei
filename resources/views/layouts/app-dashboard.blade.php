@@ -15,7 +15,7 @@
    </title>
 
    <!-- Favicon -->
-   <link rel="icon" type="image/x-icon" href="{{asset('img/logo2.png')}}">
+   <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 
    <!-- Plugins css -->
    <link href="{{asset('assets/libs/mohithg-switchery/switchery.min.css')}}" rel="stylesheet" type="text/css" />
