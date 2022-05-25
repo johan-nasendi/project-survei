@@ -70,7 +70,7 @@
          </td>
          <td>
          {{-- <img src="https://i.ibb.co/WB37jWp/LOGO-POLTEKES-JAYAPURA.png" style="width: 400px"; height="400px"; alt=""> --}}
-         <img src="https://i.ibb.co/YyDpxhk/02.jpg"  alt="01">
+         <img src="https://i.ibb.co/gTjD693/02-tes.jpg"  alt="01">
          </td>
          </tr>
     </table>
