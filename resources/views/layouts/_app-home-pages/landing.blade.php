@@ -44,7 +44,9 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <br>
+
                                 <div class="card">
+                                    <div class="background">
                                     <div class="card-body">
                                          @yield('content')
                                      </div>
@@ -53,6 +55,7 @@
                        </div>
                    </div>
                </div>
+            </div>
           </div>
 
         {{-- <footer class="footer footer-alt">
