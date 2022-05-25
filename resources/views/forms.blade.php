@@ -9,7 +9,8 @@
 
 @endpush
 
-        <h4 class="header-title mb-3"> Kuesioner Tracer Study (Alumni) </h4>
+        <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
+        <br>
         <form action="#">
             <div id="basicwizard">
 
