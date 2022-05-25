@@ -2,8 +2,15 @@
 @section('title','Poltekkes Jayapura')
 @section('content')
 
+@push('css-internal')
+    <!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+
+@endpush
+
         <h4 class="header-title mb-3"> Kuesioner Tracer Study (Alumni) </h4>
-        <form>
+        <form action="#">
             <div id="basicwizard">
 
                 <ul class="nav nav-pills bg-light nav-justified form-wizard-header mb-4">
@@ -120,6 +127,14 @@
 
                             </div> <!-- end col -->
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <a href="javascript: void(0);"  class="btn btn-success">Next</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="tab-pane" id="basictab2">
@@ -267,6 +282,14 @@
                             </div><!-- end col -->
 
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <a href="javascript: void(0);"  class="btn btn-success">Next</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="tab-pane" id="basictab3">
@@ -502,6 +525,14 @@
                             </div> <!-- end col -->
 
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <a href="javascript: void(0);"  class="btn btn-success">Next</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="tab-pane" id="basictab4">
@@ -598,6 +629,14 @@
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <a href="javascript: void(0);"  class="btn btn-success">Next</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="tab-pane" id="basictab5">
@@ -679,6 +718,14 @@
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <a href="javascript: void(0);"  class="btn btn-success">Next</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="tab-pane" id="basictab6">
@@ -695,22 +742,24 @@
                                     <div class="mb-3">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1">I agree with the Terms and Conditions</label>
+                                            <label class="custom-control-label" for="customCheck1">Saya setuju dengan Syarat dan Ketentuan</label>
                                         </div>
                                     </div>
                                 </div>
                             </div> <!-- end col -->
                         </div> <!-- end row -->
+                        <ul class="list-inline wizard mb-0">
+                            <li class="previous list-inline-item disabled">
+                                <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+                            </li>
+                            <li class="next list-inline-item float-right" >
+                                <input type="submit" class="btn btn-success" value="Kirim">
+                                {{-- <a href="javascript: void(0);"  class="btn btn-success"></a> --}}
+                            </li>
+                        </ul>
                     </div>
 
-                    <ul class="list-inline wizard mb-0">
-                        <li class="previous list-inline-item disabled">
-                            <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
-                        </li>
-                        <li class="next list-inline-item float-right" >
-                            <a href="javascript: void(0);"  class="btn btn-success">Next</a>
-                        </li>
-                    </ul>
+
 
                 </div> <!-- tab-content -->
             </div> <!-- end #basicwizard-->
