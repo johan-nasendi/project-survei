@@ -25,7 +25,7 @@ class DashboardController extends Controller
 
     }
 
-    public function home()
+    public function form()
     {
         return view('forms');
     }

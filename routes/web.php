@@ -25,7 +25,7 @@ Auth::routes([
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'forms'])->name('forum');
+Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'form'])->name('forum');
 
 
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
