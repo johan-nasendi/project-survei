@@ -64,7 +64,7 @@
                      </h3>
                   <h5 class="sub-title">Apakah Anda Siap Untuk Mengikuti Kuesioner Tracer Study (Alumni) ?
                       Klik <b style="color: #fbc01a;">START</b> </h5>
-                    <a href="{{route('forum')}}" target="_blank" class="btn1">START</a>
+                    <a href="{{route('forum')}}"  class="btn1">START</a>
              </section>
          </td>
          <td>
