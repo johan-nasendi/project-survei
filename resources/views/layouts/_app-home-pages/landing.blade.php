@@ -55,11 +55,11 @@
                </div>
           </div>
 
-        <footer class="footer footer-alt">
+        {{-- <footer class="footer footer-alt">
             2021 - <script>document.write(new Date().getFullYear())</script>
              &copy; Theme by
              <a href="#" class="text-black-50">Poltekkes</a>
-        </footer>
+        </footer> --}}
     </body>
                 <!-- Vendor js -->
                 <script src="{{asset('/assets/js/vendor.min.js')}}"></script>

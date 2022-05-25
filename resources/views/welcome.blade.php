@@ -69,13 +69,14 @@
              </section>
          </td>
          <td>
-         <img src="https://i.ibb.co/WB37jWp/LOGO-POLTEKES-JAYAPURA.png" style="width: 400px"; height="400px"; alt="">
+         {{-- <img src="https://i.ibb.co/WB37jWp/LOGO-POLTEKES-JAYAPURA.png" style="width: 400px"; height="400px"; alt=""> --}}
+         <img src="https://i.ibb.co/YyDpxhk/02.jpg"  alt="01">
          </td>
          </tr>
     </table>
 </div>
 
-<a href="https://ibb.co/tYhnFMP"><img src="" alt="LOGO-POLTEKES-JAYAPURA" border="0"></a>
+
 
 <!--JAVASCRIPT-->
 <script src="{{asset('/js/custom.js')}}"></script>
