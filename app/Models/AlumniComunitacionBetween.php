@@ -5,20 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RelationshipCompetence extends Model
+class AlumniComunitacionBetween extends Model
 {
     use HasFactory;
 
-    protected $table = "relationship_competence";
+    protected $table = "alumni_comunitacion_between";
     protected $fillable = [
         'respondent_id',
-        'curriculum_compatibility_jobs',
-        'health_polytechnic_Competence',
-        'competency_mastered',
-        'competencies_required_job',
-        'competency_improvement_needs',
+        'alumni_association',
+        'fb',
+        'ig',
+        'linkend',
+        'development_of_competencies_and_institutions',
+        'cooperation_institutions_alumni_associations',
 ];
-
 
 
     public function edentity()

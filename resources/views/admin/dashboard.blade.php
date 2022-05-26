@@ -24,7 +24,7 @@
                                             <li class="breadcrumb-item active">@yield('title')</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title"><i data-feather="home"></i> @yield('title') </h4>
+                                    <h4 class="page-title"><i data-feather="home"></i>  @yield('title'), Welcome {{Auth::user()->name}}  </h4>
                                 </div>
                             </div>
                         </div>

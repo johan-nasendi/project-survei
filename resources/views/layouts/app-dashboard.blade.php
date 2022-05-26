@@ -81,6 +81,7 @@
     <script src="{{asset('assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js')}}"></script>
     <script src="{{asset('assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js')}}"></script>
 
+    <script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>
     <!-- App js -->
     <script src="{{asset('assets/js/app.min.js')}}"></script>
 

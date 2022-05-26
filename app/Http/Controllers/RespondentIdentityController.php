@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\RespondentIdentitiy;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class RespondentIdentityController extends Controller
@@ -47,8 +49,8 @@ class RespondentIdentityController extends Controller
      */
     public function show($id)
     {
-        $users = RespondentIdentitiy::where('id', $id)->first();
-        return view('admin.responden.details',compact('users'));
+        $respondent = RespondentIdentitiy::where('slug', $id)->first();
+        return view('admin.responden.details',compact('respondent'));
 
     }
 
@@ -83,6 +85,15 @@ class RespondentIdentityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $respondent = RespondentIdentitiy::find($id);
+            $respondent->delete();
+            Alert::success('Success', 'Berhasil Dihapus');
+            return redirect()->back();
+        }catch (\Throwable $th) {
+            Alert::error('Failed','Gagal Dihapus', ['error' => $th->getMessage()]);
+        }
+        return redirect()->back();
     }
+
 }

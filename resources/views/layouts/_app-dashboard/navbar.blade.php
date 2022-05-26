@@ -5,8 +5,8 @@
                data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{asset('assets/images/users/user-sacode.png')}}" alt="user-image" class="rounded-circle">
                     <span class="pro-user-name ml-1">
-                    Johan
-                            {{-- {{Auth::user()->name}}  --}}
+
+                            {{Auth::user()->name}}
                             <i class="mdi mdi-chevron-down"></i>
                     </span>
             </a>
@@ -14,7 +14,7 @@
             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
 
                 <!-- item-->
-                <a href="#" class="dropdown-item notify-item">
+                <a href=" {{route('profile')}} " class="dropdown-item notify-item">
                     <i class="fe-user"></i>
                     <span>Profile</span>
                 </a>

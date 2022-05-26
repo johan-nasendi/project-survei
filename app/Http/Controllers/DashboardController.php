@@ -29,4 +29,8 @@ class DashboardController extends Controller
     {
         return view('forms');
     }
+    public function profile()
+    {
+        return view('admin.profile.index');
+    }
 }

@@ -15,7 +15,7 @@ class CreateQuestionsLearningaExperienceaTable extends Migration
     {
         Schema::create('questions_learning_experiencea', function (Blueprint $table) {
             $table->id();
-            $table->BigInteger('user_id')->unsigned();
+            $table->BigInteger('respondent_id')->unsigned();
             $table->string('what_study_program');
             $table->date('college_entry_date');
             $table->date('college_graduation_date');
@@ -25,8 +25,8 @@ class CreateQuestionsLearningaExperienceaTable extends Migration
             $table->enum('further_education_levels',['Yes','No']);
             $table->enum('educational_background',['Yes','No']);
             $table->enum('field_work',['Yes','No']);
-            $table->enum('according',['Very Big','Big','Enough Big','Not Enough','No Same Once']);
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->enum('according',['Perkuliahan','Praktek Laboratorium','Praktik Klinik','Praktek kerja Lapangan/PKN','Keterlibatan dalam penelitian dosen','Magang']);
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
             $table->timestamps();
         });
     }

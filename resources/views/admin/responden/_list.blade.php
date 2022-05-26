@@ -1,11 +1,8 @@
 <table class="table table-bordered mb-0">
     <thead>
     <tr>
-        <th>#</th>
+        <th class="text-center">#</th>
         <th class="text-center">Nama Lengkap</th>
-        <th class="text-center">Tempat Lahir</th>
-        <th class="text-center">Tanggal Lahir</th>
-        <th class="text-center">Jenis Kelamin</th>
         <th class="text-center">Email</th>
         <th class="text-center">Nomor Handphone</th>
         <th class="text-center">Action</th>
@@ -14,18 +11,15 @@
     <tbody>
         @foreach($data  as  $no => $m)
     <tr>
-        <th scope="row"> {{ $no + $data->firstItem() }} </th>
+        <th scope="row" class="text-center"> {{ $no + $data->firstItem() }} </th>
 
         <td class="text-center">{{$m->name}}</td>
-        <td class="text-center"> {{$m->place_of_birth}} </td>
-        <td class="text-center"> {{$m->date_of_birth}} </td>
-        <td class="text-center"> {{$m->gender}} </td>
         <td class="text-center"> {{$m->email}} </td>
         <td class="text-center"> {{$m->mobile_phone_number}} </td>
 
         <td>
             <div class="text-center">
-                <a href="{{route('respondent-identity.show', ['respondent_identity' => $m->id])}}" class="btn  btn-primary btn-sm" title="view">
+                <a href="{{route('respondent-identity.show', ['respondent_identity' => $m->slug])}}" class="btn  btn-primary btn-sm" title="view">
                      <i class="fa fa-eye"></i>
                 </a>
 
@@ -41,7 +35,7 @@
             </div>
                                                                         {{-- End Modal edit --}}
             <!-- modal Delete -->
-            <form method="POST" action="#">
+            <form method="POST" action="{{route('respondent-identity.destroy', ['respondent_identity' => $m->id])}}">
                 <div class="modal fade" id="hapus_event_{{$m->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">

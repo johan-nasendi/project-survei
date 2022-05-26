@@ -11,7 +11,6 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 		<!-- App css -->
@@ -38,7 +37,7 @@
 
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
-                                        <a href="#" class="logo logo-dark text-center">
+                                        <a href="/" class="logo logo-dark text-center">
                                             <span class="logo-lg">
                                                 <img src="{{asset('/img/logo.png')}}" alt="logos" height="100">
                                             </span>

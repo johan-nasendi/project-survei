@@ -15,7 +15,7 @@ class CreateJobExperiencesTable extends Migration
     {
         Schema::create('job_experiences', function (Blueprint $table) {
             $table->id();
-            $table->BigInteger('user_id')->unsigned();
+            $table->BigInteger('respondent_id')->unsigned();
             $table->enum('works',['Yes','No']);
             $table->string('start_work')->nullable();
             $table->string('jobs_reason')->nullable();
@@ -30,10 +30,10 @@ class CreateJobExperiencesTable extends Migration
             $table->enum('job_educational_background',['Yes','No'])->nullable();
             $table->mediumText('why_take_the_job')->nullable();
             $table->string('level_of_education');
-            $table->enum('relationship_study_work',['Very strong','Strong',' Strong enough','Less strong','Not at all'])->nullable();
+            $table->enum('relationship_study_work',['Sangat Kuat','Kuat',' Cukup Kuat','Kurang kuat','Tidak semuanya'])->nullable();
             $table->string('additional_competence')->nullable();
             $table->string('income_per_month')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
             $table->timestamps();
         });
 

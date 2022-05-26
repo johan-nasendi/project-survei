@@ -26,7 +26,7 @@ Respondent Identity
                                             <li class="breadcrumb-item active">@yield('title') </li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Welcome [{{Auth::user()->name}}]</h4>
+
                                 </div>
                             </div>
                         </div>

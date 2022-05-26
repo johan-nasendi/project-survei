@@ -17,7 +17,28 @@ class RespondentIdentitiy extends Model
                             'gender',
                             'email',
                             'mobile_phone_number',
+                            'slug',
     ];
+
+    public function jobex()
+    {
+        return $this->belongsTo(JobExperiences::class,'id');
+    }
+    public function questions()
+    {
+        return $this->belongsTo(QuestionsLearningExperiencea::class,'id');
+    }
+    public function relastionship()
+    {
+        return $this->belongsTo(RelationshipCompetence::class,'id');
+    }
+    public function alumniComunication()
+    {
+        return $this->belongsTo(AlumniComunitacionBetween::class,'id');
+    }
+
+
+
 
 
 }

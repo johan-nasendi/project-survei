@@ -667,7 +667,7 @@
 
                                                 <div class="form-group">
                                                     <label for="pass1">Username Instagram<span class="text-danger">*</span></label>
-                                                    <input id="#" type="text" placeholder="Masukan username instagram anda"  class="form-control">
+                                                    <input id="#" type="text" placeholder="Masukan Link instagram anda"  class="form-control">
                                                     {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
                                                         <li class="parsley-required">This value is required.</li>
                                                     </ul> --}}
@@ -675,7 +675,7 @@
 
                                                 <div class="form-group">
                                                     <label for="pass1">Username facebook<span class="text-danger">*</span></label>
-                                                    <input id="#" type="text" placeholder="Masukan username facebook anda"  class="form-control">
+                                                    <input id="#" type="text" placeholder="Masukan Link facebook anda"  class="form-control">
                                                     {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
                                                         <li class="parsley-required">This value is required.</li>
                                                     </ul> --}}
@@ -683,7 +683,7 @@
 
                                                 <div class="form-group">
                                                     <label for="pass1">Username Linkedin<span class="text-danger">*</span></label>
-                                                    <input id="#" type="text" placeholder="Masukan username Linkedin anda"  class="form-control">
+                                                    <input id="#" type="text" placeholder="Masukan Link Linkedin anda"  class="form-control">
                                                     {{-- <ul class="parsley-errors-list filled" id="parsley-id-31" aria-hidden="false">
                                                         <li class="parsley-required">This value is required.</li>
                                                     </ul> --}}
