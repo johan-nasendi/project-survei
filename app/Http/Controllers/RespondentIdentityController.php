@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobExperiences;
+use App\Models\AlumniComunitacionBetween;
+use App\Models\RelationshipCompetence;
+use App\Models\QuestionsLearningExperiencea;
+
 use App\Models\RespondentIdentitiy;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class RespondentIdentityController extends Controller
 {
@@ -20,14 +27,9 @@ class RespondentIdentityController extends Controller
         return view('admin.responden.index',$data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
     }
 
     /**
@@ -38,31 +40,31 @@ class RespondentIdentityController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:100',
-            'place_of_birth' => 'required|string|max:100',
-            'date_of_birth' => 'required|date',
-            'mobile_phone_number' => 'required|string|max:14|unique:respondent_identity,phone',
-            'email' => 'required|string|email|unique:respondent_identity,email',
-            'gender' => 'required',
-        ]);
-        dd($request->all());
-        // try {
-        //     $farmers = new RespondentIdentitiy;
-        //     $farmers->name = $request->name;
-        //     $farmers->email = $request->email;
-        //     $farmers->place_of_birth = $request->place_of_birth;
-        //     $farmers->date_of_birth = $request->date_of_birth;
-        //     $farmers->gender = $request->gender;
-        //     $farmers->slug = Str::slug($request->get('name'));
-        //     $farmers->mobile_phone_number = $request->mobile_phone_number;
-        //     $farmers->save();
-        //     Alert::success('Success', 'Data Anda Berhasil Dikirim');
-        //     return redirect()->route('');
-        //  }catch (\Throwable $e) {
-        //       Alert::error('Error','Gagal Mengirim Data Anda',['error' => $e->getMessage()]);
-        //       return redirect()->back();
-        //  }
+
+            // Validator::make(
+            //     $request->all(),
+            //     [
+
+            //   ])->validate();
+            // try {
+            //     $respondent = new RespondentIdentitiy();
+            //     $respondent->name = $request->name;
+            //     $respondent->email = $request->email;
+            //     $respondent->place_of_birth = $request->place_of_birth;
+            //     $respondent->date_of_birth = $request->date_of_birth;
+            //     $respondent->gender = $request->gender;
+            //     $respondent->slug = Str::slug($request->get('name'));
+            //     $respondent->mobile_phone_number = $request->mobile_phone_number;
+
+            //     $respondent->save();
+
+            //     Alert::success('Success', 'Data Anda Berhasil Dikirim');
+            //     return redirect()->route('login');
+            // }catch (\Throwable $th) {
+            //     Alert::error('Error','Data Gagal Dikirim', ['error' => $th->getMessage()]);
+            // }
+            // return redirect()->back();
+
     }
 
     /**

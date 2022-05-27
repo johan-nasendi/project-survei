@@ -17,24 +17,24 @@ class RespondentIdentitiy extends Model
                             'gender',
                             'email',
                             'mobile_phone_number',
-                            'slug',
+                            'slug'
     ];
 
     public function jobex()
     {
-        return $this->belongsTo(JobExperiences::class,'id');
+        return $this->belongsTo(JobExperiences::class,'id','respondent_id');
     }
     public function questions()
     {
-        return $this->belongsTo(QuestionsLearningExperiencea::class,'id');
+        return $this->belongsTo(QuestionsLearningExperiencea::class,'id','respondent_id');
     }
     public function relastionship()
     {
-        return $this->belongsTo(RelationshipCompetence::class,'id');
+        return $this->belongsTo(RelationshipCompetence::class,'id','respondent_id');
     }
     public function alumniComunication()
     {
-        return $this->belongsTo(AlumniComunitacionBetween::class,'id');
+        return $this->belongsTo(AlumniComunitacionBetween::class,'id','respondent_id');
     }
 
 

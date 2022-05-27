@@ -3,9 +3,11 @@
 <head>
 <title>Poltekkes Jayapura</title>
     <!-- CSRF Token -->
+    <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--EXTERNAL CSS-->
 <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 
@@ -38,13 +40,13 @@
             <a href="#">HOME</a>
             <a href="#">ABOUT</a>
             <a href="#">CONTACT</a>
-            <a href="{{route('login')}}" style="float:right;padding:10px 0;"><i class="fa fa-user"></i> LOGIN</a>
-            <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-bars"></i></a>
+            <a href="{{route('login')}}" style="float:right;padding:10px 0;"><i class="fa fa-sign-in"></i> LOGIN</a>
+            <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-sign-in"></i></a>
         </nav>
 
         <div id="navbar">
             <a href="#" class="active">®<em>POLTEKKES </em> <l style="font-weight:200;">|</l> Jayapura</a>
-            <a href=" {{route('login')}}"><i class="fa fa-user"></i> LOGIN</a>
+            <a href=" {{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a>
             <a href="#">CONTACT</a>
             <a href="#">ABOUT</a>
             <a href="#">HOME</a>
@@ -57,7 +59,7 @@
          <tr>
          <td>
              <section>
-                    <em>WELCOME TO POLTEKKES JAYAPURA </em>
+                    <h4 class="title-h">WELCOME TO POLTEKKES JAYAPURA </h4>
                      <h3 class="title ml9">
                         <span class="text-wrapper">
                             <span class="letters">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</span>

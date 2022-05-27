@@ -27,6 +27,6 @@ class QuestionsLearningExperiencea extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'respondent_id');
+         return $this->hasMany(RespondentIdentitiy::class,'id');
     }
 }

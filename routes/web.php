@@ -30,12 +30,14 @@ Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, '
 
 
 
+
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
 
-    Route::resource('/respondent-identity',RespondentIdentityController::class)->except(['create','edit','update']);
-
+    Route::get('/respondent-identity', [RespondentIdentityController::class, 'index'])->name('respondent-identity.index');
+    Route::get('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'show'])->name('respondent-identity.show');
+    Route::delete('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'destroy'])->name('respondent-identity.destroy');
 
 });

@@ -66,6 +66,11 @@ p,
     color: gray;
 }
 
+h4.title-h {
+    font-style: normal;
+    color: #1e1e1e;
+}
+
 em {
     font-style: normal;
     color: #d80b1a;
@@ -175,7 +180,7 @@ header .nav {
     top: 3em;
     width: 80%;
     box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
-    background: #fff;
+    background: #2d3436;
     border-radius: 40px;
     padding: 20px;
     transition: 0.5s;
@@ -186,13 +191,13 @@ header .nav a {
     display: inline-block;
     margin: 0px 20px;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: 0.5s;
     font-weight: 400;
 }
 
 header .nav a:hover:not(:first-child) {
-    color: #d80b1a;
+    color: #f39c12;
 }
 
 header .nav a.active {
@@ -200,7 +205,7 @@ header .nav a.active {
     transition: all 0.2s ease-in-out;
     appearance: none;
     -webkit-appearance: none;
-    box-shadow: inset 0px 0px 1px #BABECC, inset -1px -1px 2px #FFF;
+    box-shadow: inset 0px 0px 1px #f39c12, inset -1px -1px 2px #FFF;
     padding: 10px 20px;
     border-radius: 40px;
     font-weight: bold;
@@ -353,7 +358,7 @@ header .nav .icon {
 }
 
 #navbar {
-    background-color: #fff;
+    background-color: #2d3436;
     position: fixed;
     top: -85px;
     width: 100%;
@@ -367,7 +372,7 @@ header .nav .icon {
 #navbar a {
     float: left;
     display: block;
-    color: #000;
+    color: #fff;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -376,7 +381,7 @@ header .nav .icon {
 }
 
 #navbar a:hover {
-    color: black;
+    color: #d35400;
 }
 
 #navbar .dropbtn {
@@ -450,7 +455,7 @@ header .nav .icon {
 .container section {
     position: absolute;
     top: 35vh;
-    left: 2vw;
+    left: 9vw;
 }
 
 .container section .sub-title {

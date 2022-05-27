@@ -24,9 +24,6 @@
                      <i class="fa fa-eye"></i>
                 </a>
 
-                {{-- <a href="#" class="btn  btn-success btn-sm" title="edit">
-                     <i class="fa fa-edit"></i>
-                </a> --}}
 
                 <button type="button" class="btn btn-danger btn-sm" title="delete"
                 data-toggle="modal" data-target="#hapus_event_{{ $m->id }}">
