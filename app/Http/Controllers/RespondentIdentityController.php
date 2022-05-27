@@ -58,7 +58,7 @@ class RespondentIdentityController extends Controller
         //     $farmers->mobile_phone_number = $request->mobile_phone_number;
         //     $farmers->save();
         //     Alert::success('Success', 'Data Anda Berhasil Dikirim');
-        //     return redirect()->route('beranda');
+        //     return redirect()->route('');
         //  }catch (\Throwable $e) {
         //       Alert::error('Error','Gagal Mengirim Data Anda',['error' => $e->getMessage()]);
         //       return redirect()->back();
