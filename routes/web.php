@@ -17,16 +17,17 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('beranda');
 });
 
 Auth::routes([
-    'register' => false
+    'register' => false,
 ]);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'form'])->name('forum');
+
 
 
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {

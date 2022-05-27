@@ -16,13 +16,13 @@ class AlumniComunitacionBetween extends Model
         'fb',
         'ig',
         'linkend',
-        'development_of_competencies_and_institutions',
         'cooperation_institutions_alumni_associations',
+        'development_of_competencies_and_institutions',
 ];
 
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'id');
+         return $this->hasMany(RespondentIdentitiy::class,'respondent_id');
     }
 }

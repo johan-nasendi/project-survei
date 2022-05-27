@@ -1,11 +1,11 @@
-<footer class="footer">
-    <div class="container-fluid">
+<footer class="footer bg-dark ">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 2021 -
                 <script>
                     document.write(new Date().getFullYear())
-                </script> &copy; SaCode theme by <a href="">JN</a>
+                </script> &copy; Poltekkes Jayapura theme by <a href="">JN</a>
             </div>
             <div class="col-md-6">
                 <div class="text-md-right footer-links d-none d-sm-block">

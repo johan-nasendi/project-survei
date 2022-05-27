@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\RespondentIdentitiy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -8,10 +10,17 @@ class DashboardController extends Controller
 {
     public function index()
     {
-
+        $allData =  RespondentIdentitiy::all()->count();
+        $male = RespondentIdentitiy::where('gender','Pria')->count();
+        $female = RespondentIdentitiy::where('gender','Wanita')->count();
 
         if(Auth::user()->hasRole('admin')){
-            return view('admin.dashboard');
+            $data['data'] = RespondentIdentitiy::orderBy('id','DESC')->paginate(4);
+            return view('admin.dashboard',$data,[
+                'allData' => $allData,
+                'male' => $male,
+                'female' => $female,
+            ]);
         }
 
         elseif(Auth::user()->hasRole('')){

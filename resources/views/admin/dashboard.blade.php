@@ -6,6 +6,8 @@
 
 @section('content')
 
+
+
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
@@ -14,43 +16,156 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item active">@yield('title')</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title"><i data-feather="home"></i>  @yield('title'), Welcome {{Auth::user()->name}}  </h4>
+                       <!-- start page title -->
+                       <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item active">@yield('title')</li>
+                                    </ol>
                                 </div>
+                                <h4 class="page-title"><i data-feather="home"></i>  @yield('title'),Welcome {{Auth::user()->name}} </h4>
                             </div>
                         </div>
-                        <!-- end page title -->
+                    </div>
+                    <!-- end page title -->
 
 
                         <div class="row">
-                            <div class="col-md-12 col-xl-12">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-primary border-primary border">
+                                                <i class="fe-users font-22 avatar-title text-primary"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="mt-1"><span data-plugin="counterup"> {{$allData}} </span></h3>
+                                                <p class="mb-1"> <b>TOTAL DATA</b> </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-success border-success border">
+                                                <i class="fe-user font-22 avatar-title text-success"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="text-dark mt-1"><span data-plugin="counterup"> {{$male}} </span></h3>
+                                                <p class=" mb-1"> <b>PRIA</b> </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-info border-info border">
+                                                <i class="fe-user font-22 avatar-title text-info"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="text-dark mt-1"><span data-plugin="counterup"> {{$female}} </span></h3>
+                                                <p class="mb-1"> <b>WANITA</b> </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3">
+                                <div class="widget-rounded-circle card-box">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-warning border-warning border">
+                                                <i class="fe-users font-22 avatar-title text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">  </span></h3>
+                                                <p class=" mb-1"> <b>LAINNYA..</b> </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+                        <!-- End Col 1 -->
+
+                        <div class="col-xl-12 " >
                                 <div class="card-box">
-                                    <p>Welcome to dashboard page...  </p>
-                                </div>
+                                    <div class="dropdown float-right">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="mdi mdi-dots-vertical"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right" style="">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Edit Report</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="header-title mb-3 text-white">Data Respondent Terbaru</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless table-nowrap table-hover table-centered m-0">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Nama</th>
+                                                    <th>Email</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody >
+                                                @foreach($data  as $n)
+                                                <tr >
+                                                    <td>
+                                                        <h5 class="m-0 font-weight-normal"> {{$n->name}} </h5>
+                                                    </td>
+                                                    <td> {{$n->email}}  </td>
+                                                    <td> {{ $n->created_at->format('D-m-Y') }} </td>
+                                                    <td><span class="badge bg-soft-success text-dark">New</span></td>
+                                                    <td>
+                                                        <a href="{{route('respondent-identity.show', ['respondent_identity' => $n->slug])}}" title="detail" class="btn btn-xs btn-light">
+                                                            <i class="mdi mdi-eye"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            @endforeach
+                                        </table>
+                                    </div> <!-- end .table-responsive-->
+                                </div> <!-- end card-box-->
                             </div>
-                        </div>
-                        <!-- end row -->
-
-
                     </div> <!-- container -->
-
                 </div> <!-- content -->
-
-
             </div>
 
             <!-- ============================================================== -->
             <!-- End Page content -->
-            <!-- ============================================================== -->
 
+           <!-- ============================================================== -->
 
 @stop
+
+
+
+

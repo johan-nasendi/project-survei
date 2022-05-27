@@ -38,7 +38,31 @@ class RespondentIdentityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'place_of_birth' => 'required|string|max:100',
+            'date_of_birth' => 'required|date',
+            'mobile_phone_number' => 'required|string|max:14|unique:respondent_identity,phone',
+            'email' => 'required|string|email|unique:respondent_identity,email',
+            'gender' => 'required',
+        ]);
+        dd($request->all());
+        // try {
+        //     $farmers = new RespondentIdentitiy;
+        //     $farmers->name = $request->name;
+        //     $farmers->email = $request->email;
+        //     $farmers->place_of_birth = $request->place_of_birth;
+        //     $farmers->date_of_birth = $request->date_of_birth;
+        //     $farmers->gender = $request->gender;
+        //     $farmers->slug = Str::slug($request->get('name'));
+        //     $farmers->mobile_phone_number = $request->mobile_phone_number;
+        //     $farmers->save();
+        //     Alert::success('Success', 'Data Anda Berhasil Dikirim');
+        //     return redirect()->route('beranda');
+        //  }catch (\Throwable $e) {
+        //       Alert::error('Error','Gagal Mengirim Data Anda',['error' => $e->getMessage()]);
+        //       return redirect()->back();
+        //  }
     }
 
     /**
