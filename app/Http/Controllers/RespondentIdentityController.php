@@ -41,29 +41,35 @@ class RespondentIdentityController extends Controller
     public function store(Request $request)
     {
 
-            // Validator::make(
-            //     $request->all(),
-            //     [
+        Validator::make(
+            $request->all(),
+            [
+                'name' => 'required|string|max:100',
+                'place_of_birth' => 'required|string|max:100',
+                'date_of_birth' => 'required|date',
+                'mobile_phone_number' => 'required|string|max:14|unique:respondent_identity,mobile_phone_number',
+                'email' => 'required|string|email|unique:respondent_identity,email',
+                'gender' => 'required',
+          ])->validate();
+    try {
+        $respondent = new RespondentIdentitiy();
+        $respondent->name = $request->name;
+        $respondent->email = $request->email;
+        $respondent->place_of_birth = $request->place_of_birth;
+        $respondent->date_of_birth = $request->date_of_birth;
+        $respondent->gender = $request->gender;
+        $respondent->slug = Str::slug($request->get('name'));
+        $respondent->mobile_phone_number = $request->mobile_phone_number;
 
-            //   ])->validate();
-            // try {
-            //     $respondent = new RespondentIdentitiy();
-            //     $respondent->name = $request->name;
-            //     $respondent->email = $request->email;
-            //     $respondent->place_of_birth = $request->place_of_birth;
-            //     $respondent->date_of_birth = $request->date_of_birth;
-            //     $respondent->gender = $request->gender;
-            //     $respondent->slug = Str::slug($request->get('name'));
-            //     $respondent->mobile_phone_number = $request->mobile_phone_number;
 
-            //     $respondent->save();
+        $respondent->save();
 
-            //     Alert::success('Success', 'Data Anda Berhasil Dikirim');
-            //     return redirect()->route('login');
-            // }catch (\Throwable $th) {
-            //     Alert::error('Error','Data Gagal Dikirim', ['error' => $th->getMessage()]);
-            // }
-            // return redirect()->back();
+        Alert::success('Success', 'Data Anda Berhasil Dikirim');
+        return redirect()->route('login');
+    }catch (\Throwable $th) {
+        Alert::error('Error','Data Gagal Dikirim', ['error' => $th->getMessage()]);
+    }
+    return redirect()->back();
 
     }
 

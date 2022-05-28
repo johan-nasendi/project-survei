@@ -1,5 +1,4 @@
 <h4 class="header-title mb-3"> Alumni Comunicacion </h4>
-<form  action="#">
     @csrf
     <div class="row">
         <div class="col-lg-6">
@@ -23,7 +22,7 @@
                     <div class="form-group">
                         <label for="#">Media komunikasi yang digunakan? Jawaban boleh lebih dari 1<span class="text-danger">*</span></label>
                         <div class="form-group">
-                            <label for="pass1">Username Instagram<span class="text-danger">*</span></label>
+                            <label for="pass1">Username Instagram</label>
                             <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda"
                             class="form-control @error('fb') is-invalid @enderror" value="{{old('fb')}}">
                             @error('fb')
@@ -34,7 +33,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pass1">Username facebook<span class="text-danger">*</span></label>
+                            <label for="pass1">Username facebook</label>
                             <input  type="text" name="ig" placeholder="Masukan usernmae facebook anda"
                             class="form-control @error('ig') is-invalid @enderror" value="{{old('ig')}}">
                             @error('ig')
@@ -45,7 +44,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pass1">Username Linkedin<span class="text-danger">*</span></label>
+                            <label for="pass1">Username Linkedin</label>
                             <input  type="text" name="linkend" placeholder="Masukan username Linkedin anda"
                             class="form-control @error('linkend') is-invalid @enderror" value="{{old('linkend')}}">
                             @error('linkend')
@@ -98,10 +97,12 @@
     </div> <!-- end row -->
     <ul class="list-inline wizard mb-0">
         <li class="previous list-inline-item disabled">
-            <a href="javascript: void(0);" class="btn btn-secondary">Previous</a>
+            <a href="javascript: void(0);" class="btn btn-secondary ">
+                <i class="fas fa-arrow-alt-circle-left"></i> <b>SEBELUMYA</b>
+            </a>
         </li>
-        <li class="list-inline-item float-right" >
-            <button type="submit" class="btn btn-warning">Next</button>
+        <li class="next list-inline-item float-right" >
+            <button type="button" class="btn btn-warning  text-dark"> <b> SELANJUTNYA</b> <i class=" fas fa-arrow-alt-circle-right"></i> </button>
         </li>
     </ul>
-</form>
+

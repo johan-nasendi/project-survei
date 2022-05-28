@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RespondentIdentityController;
 use Illuminate\Support\Facades\Route;
@@ -27,8 +26,7 @@ Auth::routes([
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, 'form'])->name('forum');
-
-
+Route::post('/form/Kuesioner/Tracer-Study-Alumni/kirim', [RespondentIdentityController::class, 'store'])->name('forum.post');
 
 
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {

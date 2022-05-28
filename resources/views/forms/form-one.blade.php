@@ -1,8 +1,5 @@
 
 <h4 class="header-title mb-3"> IDENTITAS RESPONDEN </h4>
-
-<form  action="#">
-    @csrf
         <div class="row">
             <div class="col-6">
                 <div class="form-group row mb-3">
@@ -96,8 +93,9 @@
             <li class=" list-inline-item disabled">
 
             </li>
-            <li class="list-inline-item float-right" >
-                <button type="submit" class="btn btn-warning"> Next </button>
+            <li class="next list-inline-item float-right" >
+                <button type="button" class="btn btn-warning"> <b> SELANJUTNYA</b>
+                    <i class="fas fa-arrow-alt-circle-right"></i>
+                </button>
             </li>
         </ul>
-    </form>
