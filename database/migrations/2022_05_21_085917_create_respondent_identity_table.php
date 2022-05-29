@@ -18,7 +18,7 @@ class CreateRespondentIdentityTable extends Migration
             $table->string('name');
             $table->string('place_of_birth');
             $table->date('date_of_birth');
-            $table->enum('gender',['Pria','Wanita']);
+            $table->string('gender');
             $table->string('mobile_phone_number',13)->unique();
             $table->string('email')->unique();
             $table->string('slug');

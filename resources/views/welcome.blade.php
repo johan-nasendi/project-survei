@@ -44,13 +44,7 @@
             <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-sign-in"></i></a>
         </nav>
 
-        <div id="navbar">
-            <a href="#" class="active">®<em>POLTEKKES </em> <l style="font-weight:200;">|</l> Jayapura</a>
-            <a href=" {{route('login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a>
-            <a href="#">CONTACT</a>
-            <a href="#">ABOUT</a>
-            <a href="#">HOME</a>
-        </div>
+
 </header>
 
 <!--CONTAINER-->
@@ -59,15 +53,13 @@
          <tr>
          <td>
              <section>
-                    <h4 class="title-h">WELCOME TO POLTEKKES JAYAPURA </h4>
+                    {{-- <h4 class="title-h">WELCOME TO POLTEKKES JAYAPURA </h4> --}}
                      <h3 class="title ml9">
                         <span class="text-wrapper">
                             <span class="letters">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</span>
                         </span>
                      </h3>
-                  <h5 class="sub-title">Apakah Anda Siap Untuk Mengikuti Kuesioner Tracer Study (Alumni) ?
-                      Klik <b style="color: #fbc01a;">START</b> </h5>
-                    <a href="{{route('forum')}}"  class="btn1">START <i class="fa fa-paper-plane"></i>  </a>
+                    <a href="{{route('forum')}}"  class="btn1">MULAI KUESIONER <i class="fa fa-paper-plane"></i>  </a>
              </section>
          </td>
          <td>
@@ -79,7 +71,7 @@
 </div>
 
 
-
+@include('sweetalert::alert')
 <!--JAVASCRIPT-->
 <script src="{{asset('/js/custom.js')}}"></script>
 <script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>

@@ -16,7 +16,7 @@ class CreateJobExperiencesTable extends Migration
         Schema::create('job_experiences', function (Blueprint $table) {
             $table->id();
             $table->BigInteger('respondent_id')->unsigned();
-            $table->enum('works',['Yes','No']);
+            $table->string('works');
             $table->string('start_work')->nullable();
             $table->string('jobs_reason')->nullable();
             $table->string('after_how_many_months_job')->nullable();
@@ -27,13 +27,13 @@ class CreateJobExperiencesTable extends Migration
             $table->mediumText('how_to_find_a_job')->nullable();
             $table->string('workplace')->nullable();
             $table->string('name_workplace')->nullable();
-            $table->enum('job_educational_background',['Yes','No'])->nullable();
+            $table->string('job_educational_background')->nullable();
             $table->mediumText('why_take_the_job')->nullable();
             $table->string('level_of_education');
-            $table->enum('relationship_study_work',['Sangat Kuat','Kuat',' Cukup Kuat','Kurang kuat','Tidak semuanya'])->nullable();
+            $table->string('relationship_study_work')->nullable();
             $table->string('additional_competence')->nullable();
             $table->string('income_per_month')->nullable();
-            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
 

@@ -19,14 +19,14 @@ class CreateQuestionsLearningaExperienceaTable extends Migration
             $table->string('what_study_program');
             $table->date('college_entry_date');
             $table->date('college_graduation_date');
-            $table->string('score_ipk',5);
-            $table->enum('organization',['Yes','No']);
-            $table->enum('Active_inactive_organization',['Yes','No']);
-            $table->enum('further_education_levels',['Yes','No']);
-            $table->enum('educational_background',['Yes','No']);
-            $table->enum('field_work',['Yes','No']);
-            $table->enum('according',['Perkuliahan','Praktek Laboratorium','Praktik Klinik','Praktek kerja Lapangan/PKN','Keterlibatan dalam penelitian dosen','Magang']);
-            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
+            $table->string('score_ipk',8);
+            $table->string('organization');
+            $table->string('active_inactive_organization');
+            $table->string('further_education_levels');
+            $table->string('educational_background');
+            $table->string('field_work');
+            $table->string('according');
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

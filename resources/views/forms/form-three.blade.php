@@ -7,7 +7,7 @@
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <label for="#">Apakah anda sudah bekerja saat ini ?<span class="text-danger">*</span></label>
                             <select  name="works" class="form-control @error('works') is-invalid @enderror" id="test"
-                            required="" autocomplete="works" autofocus onchange="showDiv();">
+                            required autocomplete="works" onchange="showDiv();">
                                 <option selected>---Pilih---</option>
                                 <option value="Yes" {{old('works')}}> Yes </option>
                                 <option value="No" {{old('works')}}> No </option>

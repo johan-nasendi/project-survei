@@ -23,6 +23,7 @@ class AlumniComunitacionBetween extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'id');
+         return $this->belongsToMany(RespondentIdentitiy::class,'respondent_id');
     }
+
 }

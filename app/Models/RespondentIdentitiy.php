@@ -22,22 +22,20 @@ class RespondentIdentitiy extends Model
 
     public function jobex()
     {
-        return $this->belongsTo(JobExperiences::class,'id','respondent_id');
+        return $this->hasMany(JobExperiences::class,'respondent_id');
     }
     public function questions()
     {
-        return $this->belongsTo(QuestionsLearningExperiencea::class,'id','respondent_id');
+        return $this->hasMany(QuestionsLearningExperiencea::class,'respondent_id');
     }
     public function relastionship()
     {
-        return $this->belongsTo(RelationshipCompetence::class,'id','respondent_id');
+        return $this->hasMany(RelationshipCompetence::class,'respondent_id');
     }
     public function alumniComunication()
     {
-        return $this->belongsTo(AlumniComunitacionBetween::class,'id','respondent_id');
+        return $this->hasMany(AlumniComunitacionBetween::class,'respondent_id');
     }
-
-
 
 
 

@@ -1,5 +1,6 @@
 
 <h4 class="header-title mb-3"> Selesai </h4>
+
     <div class="row">
         <div class="col-12">
             <div class="text-center">
@@ -25,6 +26,7 @@
             </a>
         </li>
         <li class="list-inline-item float-right" >
-            <button type="submit" class="btn btn-succes text-dark" id="sendData">KIRIM</button>
+            <button type="submit" class="btn btn-success" id="sendData">KIRIM <i class="fa fa-paper-plane"></i></button>
         </li>
     </ul>
+

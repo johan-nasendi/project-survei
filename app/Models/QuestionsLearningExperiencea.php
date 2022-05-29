@@ -17,7 +17,7 @@ class QuestionsLearningExperiencea extends Model
         'college_graduation_date',
         'score_ipk',
         'organization',
-        'Active_inactive_organization',
+        'active_inactive_organization',
         'further_education_levels',
         'educational_background',
         'field_work',
@@ -27,6 +27,9 @@ class QuestionsLearningExperiencea extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'id');
+         return $this->belongsToMany(RespondentIdentitiy::class,'respondent_id');
     }
+
+
+
 }

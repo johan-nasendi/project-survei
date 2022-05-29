@@ -103,7 +103,7 @@
             <!-- end container -->
         </div>
         <!-- end page -->
-
+        @include('sweetalert::alert')
         <!-- Vendor js -->
         <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
 

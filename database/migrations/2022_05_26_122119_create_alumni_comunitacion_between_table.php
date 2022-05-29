@@ -16,13 +16,13 @@ class CreateAlumniComunitacionBetweenTable extends Migration
         Schema::create('alumni_comunitacion_between', function (Blueprint $table) {
             $table->id();
             $table->BigInteger('respondent_id')->unsigned();
-            $table->enum('alumni_association',['Yes','No'])->nullable();
+            $table->string('alumni_association')->nullable();
             $table->string('fb')->nullable();
             $table->string('ig')->nullable();
             $table->string('linkend')->nullable();
-            $table->enum('development_of_competencies_and_institutions',['Sudah','Belum'])->nullable();
-            $table->enum('cooperation_institutions_alumni_associations',['Reuni','Pengabdian','Pelatihan','Seminar'])->nullable();
-            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
+            $table->string('development_of_competencies_and_institutions')->nullable();
+            $table->string('cooperation_institutions_alumni_associations')->nullable();
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

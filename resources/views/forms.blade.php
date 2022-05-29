@@ -17,10 +17,10 @@
         <div id="basicwizard">
             @include('layouts.component.nav-form')
             <form  action="{{route('forum.post')}}"  method="POST">
+                @csrf
                 <div class="tab-content b-0 mb-0 pt-0">
                     @include('layouts.component.content-form')
                 </div> <!-- tab-content -->
-                @csrf
             </form>
         </div> <!-- end #basicwizard-->
 

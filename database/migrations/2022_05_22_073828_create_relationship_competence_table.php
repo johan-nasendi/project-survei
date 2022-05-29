@@ -21,7 +21,7 @@ class CreateRelationshipCompetenceTable extends Migration
             $table->string('competency_mastered')->nullable();
             $table->string('competencies_required_job')->nullable();
             $table->string('competency_improvement_needs')->nullable();
-            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade');
+            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

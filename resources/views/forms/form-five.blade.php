@@ -7,7 +7,7 @@
                         <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
                                 <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
-                                required="" autocomplete="alumni_association" autofocus>
+                               required autocomplete="alumni_association" >
                                     <option selected disabled>---Pilih---</option>
                                     <option value="Yes" {{old('alumni_association')}}> Yes </option>
                                     <option value="No" {{old('alumni_association')}}> No </option>
@@ -64,7 +64,7 @@
                         <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>
                             <select name="cooperation_institutions_alumni_associations"
                             class="form-control @error('cooperation_institutions_alumni_associations') is-invalid @enderror"
-                            required="" autocomplete="cooperation_institutions_alumni_associations" autofocus>
+                           required autocomplete="cooperation_institutions_alumni_associations" >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Sudah" {{old('cooperation_institutions_alumni_associations')}}> Sudah </option>
                                 <option value="Belum" {{old('cooperation_institutions_alumni_associations')}}> Belum </option>
@@ -79,7 +79,7 @@
                         <label for="#">Kegiatan apa sajakah yang dirasakan perlu dikembangkan untuk menjalin kerjasama antara institusi dengan ikatan alumni?<span class="text-danger">*</span></label>
                             <select name="development_of_competencies_and_institutions"
                             class="form-control @error('development_of_competencies_and_institutions') is-invalid @enderror"
-                            required="" autocomplete="development_of_competencies_and_institutions" autofocus>
+                           required autocomplete="development_of_competencies_and_institutions" >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Reuni" {{old('development_of_competencies_and_institutions')}}> Reuni </option>
                                 <option value="Pengabdian masyarakat bersama" {{old('development_of_competencies_and_institutions')}}> Pengabdian masyarakat bersama </option>

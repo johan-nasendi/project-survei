@@ -177,9 +177,8 @@ header .banner span:nth-child(2) a {
 
 header .nav {
     position: fixed;
-    top: 3em;
+    top: 2em;
     width: 80%;
-    box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
     background: #2d3436;
     border-radius: 40px;
     padding: 20px;
@@ -188,6 +187,7 @@ header .nav {
 }
 
 header .nav a {
+    margin-top: 8em;
     display: inline-block;
     margin: 0px 20px;
     text-decoration: none;
@@ -205,7 +205,6 @@ header .nav a.active {
     transition: all 0.2s ease-in-out;
     appearance: none;
     -webkit-appearance: none;
-    box-shadow: inset 0px 0px 1px #f39c12, inset -1px -1px 2px #FFF;
     padding: 10px 20px;
     border-radius: 40px;
     font-weight: bold;
@@ -354,83 +353,6 @@ header .nav .icon {
         z-index: 9;
         left: 30%;
         margin-top: -25px;
-    }
-}
-
-#navbar {
-    background-color: #2d3436;
-    position: fixed;
-    top: -85px;
-    width: 100%;
-    display: block;
-    z-index: 999;
-    padding: 10px 0px;
-    transition: top 0.3s;
-    box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 400;
-}
-
-#navbar a:hover {
-    color: #d35400;
-}
-
-#navbar .dropbtn {
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 17px;
-    margin: 20px 10px;
-    font-family: 'Yusei Magic', sans-serif;
-    transition: 0.5s;
-}
-
-
-/* Dropdown Content (Hidden by Default) */
-
-#navbar .dropdown-content {
-    min-width: auto;
-    margin-top: 60px;
-}
-
-#navbar a:not(:first-child),
-#navbar .dropbtn,
-#navbar .dropdown {
-    float: right;
-}
-
-#navbar .dropdown a {
-    float: left;
-}
-
-@media (max-width:900px) {
-    #navbar {
-        display: none;
-    }
-    header .banner {
-        display: none;
-    }
-    header .nav a.active {
-        width: 200px;
-    }
-    header .nav {
-        position: fixed;
-        top: 0em;
-        width: 100%;
-        box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
-        background: #fff;
-        border-radius: 0px;
-        padding: 10px;
-        transition: 0.5s;
     }
 }
 
