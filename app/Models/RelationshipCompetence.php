@@ -23,7 +23,7 @@ class RelationshipCompetence extends Model
 
     public function edentity()
     {
-         return $this->belongsTo(RespondentIdentitiy::class,'id');
+         return $this->hasMany(RespondentIdentitiy::class,'id');
     }
 
 }

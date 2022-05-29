@@ -38,4 +38,5 @@ Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function
     Route::get('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'show'])->name('respondent-identity.show');
     Route::delete('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'destroy'])->name('respondent-identity.destroy');
 
+    Route::get('respondent-identity/export/', [RespondentIdentityController::class, 'export'])->name('export');
 });

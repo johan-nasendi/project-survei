@@ -42,7 +42,7 @@ Respondent Identity
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right" style="">
                                             <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Export Report Excel</a>
+                                            <a href="{{route('export')}}" class="dropdown-item">Export Excel</a>
                                             <!-- item-->
 
                                         </div>

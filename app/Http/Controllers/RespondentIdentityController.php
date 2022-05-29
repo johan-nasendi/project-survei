@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\RespondentExport;
 use App\Models\JobExperiences;
 use App\Models\AlumniComunitacionBetween;
 use App\Models\RelationshipCompetence;
 use App\Models\QuestionsLearningExperiencea;
 use App\Models\RespondentIdentitiy;
 use RealRashid\SweetAlert\Facades\Alert;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -23,6 +25,9 @@ class RespondentIdentityController extends Controller
     {
         $data['data'] = RespondentIdentitiy::orderBy('id','DESC')->paginate(6);
         return view('admin.responden.index',$data);
+    }
+    public function export(Request $request){
+        return Excel::download(new RespondentExport, 'users.xlsx');
     }
 
 
@@ -126,5 +131,7 @@ class RespondentIdentityController extends Controller
         }
         return redirect()->back();
     }
+
+
 
 }
