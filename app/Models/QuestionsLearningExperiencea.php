@@ -27,8 +27,15 @@ class QuestionsLearningExperiencea extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'id');
+         return $this->belongsTo(RespondentIdentitiy::class,'id');
     }
+
+
+    // public function idn()
+    // {
+    //      return $this->hasMany(RespondentIdentitiy::class,'id');
+    // }
+
 
 
 
