@@ -19,7 +19,7 @@
                  <a href="{{route('respondent-identity.index')}}">
                      <i data-feather="users"></i>
                      @php
-                     $countmember = DB::table('respondent_identity')->count();
+                     $countmember = DB::table('respondent')->count();
                      @endphp
                      <span class="badge badge-success badge-pill float-right">{{ $countmember }}</span>
                      <span> Responden Users </span>

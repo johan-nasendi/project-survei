@@ -9,8 +9,12 @@ class RespondentIdentitiy extends Model
 {
     use HasFactory;
 
-    protected $table = "respondent_identity";
+    protected $table = "respondent";
 	protected $fillable = [
+                            'question_id',
+                            'job_id',
+                            'relation_id',
+                            'alumni_id',
                             'name',
                             'place_of_birth',
                             'date_of_birth',

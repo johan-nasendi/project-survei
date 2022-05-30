@@ -15,13 +15,11 @@ class CreateRelationshipCompetenceTable extends Migration
     {
         Schema::create('relationship_competence', function (Blueprint $table) {
             $table->id();
-            $table->BigInteger('respondent_id')->unsigned();
             $table->string('curriculum_compatibility_jobs')->nullable();
             $table->string('health_polytechnic_Competence')->nullable();
             $table->string('competency_mastered')->nullable();
             $table->string('competencies_required_job')->nullable();
             $table->string('competency_improvement_needs')->nullable();
-            $table->foreign('respondent_id')->references('id')->on('respondent_identity')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

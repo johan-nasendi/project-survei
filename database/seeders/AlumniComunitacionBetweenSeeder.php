@@ -15,7 +15,6 @@ class AlumniComunitacionBetweenSeeder extends Seeder
     public function run()
     {
         AlumniComunitacionBetween::create([
-            'respondent_id' => 1,
             'alumni_association' => 'Yes',
             'fb' => 'johan.nasendi',
             'ig' => 'johan.nasendi',
@@ -24,7 +23,6 @@ class AlumniComunitacionBetweenSeeder extends Seeder
             'cooperation_institutions_alumni_associations' => 'Reuni',
         ]);
         AlumniComunitacionBetween::create([
-            'respondent_id' => 2,
             'alumni_association' => 'Yes',
             'fb' => 'johan.nasendi',
             'ig' => 'theis.andatu',
@@ -33,7 +31,6 @@ class AlumniComunitacionBetweenSeeder extends Seeder
             'cooperation_institutions_alumni_associations' => 'Pengabdian',
         ]);
         AlumniComunitacionBetween::create([
-            'respondent_id' => 3,
             'alumni_association' => 'Yes',
             'fb' => 'johan.nasendi',
             'ig' => 'janzen.faidiban',
@@ -42,7 +39,6 @@ class AlumniComunitacionBetweenSeeder extends Seeder
             'cooperation_institutions_alumni_associations' => 'Pelatihan',
         ]);
         AlumniComunitacionBetween::create([
-            'respondent_id' => 4,
             'alumni_association' => 'Yes',
             'fb' => 'johan.nasendi',
             'ig' => 'iambobbybale',

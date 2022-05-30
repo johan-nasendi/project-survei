@@ -16,7 +16,6 @@ class QuestionsLearningExperienceaSeeder extends Seeder
     public function run()
     {
         QuestionsLearningExperiencea::create([
-            'respondent_id' => 1,
             'what_study_program' => 'Farmasi',
             'college_entry_date'=> Carbon::create('2016', '06', '22'),
             'college_graduation_date'=> Carbon::create('2020', '05', '22'),
@@ -29,7 +28,6 @@ class QuestionsLearningExperienceaSeeder extends Seeder
             'according' => 'Perkuliahan',
         ]);
         QuestionsLearningExperiencea::create([
-            'respondent_id' => 2,
             'what_study_program' => 'Keperawatan',
             'college_entry_date'=> Carbon::create('2016', '06', '22'),
             'college_graduation_date'=> Carbon::create('2020', '05', '22'),
@@ -42,7 +40,6 @@ class QuestionsLearningExperienceaSeeder extends Seeder
             'according' => 'Praktek kerja Lapangan',
         ]);
         QuestionsLearningExperiencea::create([
-            'respondent_id' => 3,
             'what_study_program' => 'Keperawatan Gigi',
             'college_entry_date'=> Carbon::create('2016', '06', '22'),
             'college_graduation_date'=> Carbon::create('2020', '05', '22'),
@@ -56,7 +53,6 @@ class QuestionsLearningExperienceaSeeder extends Seeder
         ]);
 
         QuestionsLearningExperiencea::create([
-            'respondent_id' => 4,
             'what_study_program' => 'Analis Kesehatan',
             'college_entry_date'=> Carbon::create('2016', '06', '22'),
             'college_graduation_date'=> Carbon::create('2020', '05', '22'),

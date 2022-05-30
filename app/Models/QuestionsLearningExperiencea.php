@@ -9,9 +9,8 @@ class QuestionsLearningExperiencea extends Model
 {
     use HasFactory;
 
-    protected $table = "questions_learning_experiencea";
+    protected $table = "questions_learning";
     protected $fillable = [
-        'respondent_id',
         'what_study_program',
         'college_entry_date',
         'college_graduation_date',
@@ -27,7 +26,7 @@ class QuestionsLearningExperiencea extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'respondent_id');
+         return $this->hasMany(RespondentIdentitiy::class);
     }
 
 

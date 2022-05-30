@@ -9,9 +9,8 @@ class AlumniComunitacionBetween extends Model
 {
     use HasFactory;
 
-    protected $table = "alumni_comunitacion_between";
+    protected $table = "alumni_comunitacion";
     protected $fillable = [
-        'respondent_id',
         'alumni_association',
         'fb',
         'ig',
@@ -23,7 +22,7 @@ class AlumniComunitacionBetween extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class,'respondent_id');
+         return $this->hasMany(RespondentIdentitiy::class);
     }
 
 }
