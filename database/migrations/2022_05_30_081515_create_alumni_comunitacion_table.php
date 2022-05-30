@@ -15,12 +15,14 @@ class CreateAlumniComunitacionTable extends Migration
     {
         Schema::create('alumni_comunitacion', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('respondent_id');
             $table->string('alumni_association')->nullable();
             $table->string('fb')->nullable();
             $table->string('ig')->nullable();
             $table->string('linkend')->nullable();
             $table->string('development_of_competencies_and_institutions')->nullable();
             $table->string('cooperation_institutions_alumni_associations')->nullable();
+            $table->foreign('respondent_id')->references('id')->on('respondent')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

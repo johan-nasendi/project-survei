@@ -11,6 +11,7 @@ class QuestionsLearningExperiencea extends Model
 
     protected $table = "questions_learning";
     protected $fillable = [
+        'respondent_id',
         'what_study_program',
         'college_entry_date',
         'college_graduation_date',
@@ -26,7 +27,7 @@ class QuestionsLearningExperiencea extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class);
+         return $this->hasMany(RespondentIdentitiy::class,'id');
     }
 
 

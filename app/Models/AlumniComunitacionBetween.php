@@ -11,6 +11,7 @@ class AlumniComunitacionBetween extends Model
 
     protected $table = "alumni_comunitacion";
     protected $fillable = [
+        'respondent_id',
         'alumni_association',
         'fb',
         'ig',
@@ -22,7 +23,7 @@ class AlumniComunitacionBetween extends Model
 
     public function edentity()
     {
-         return $this->hasMany(RespondentIdentitiy::class);
+         return $this->hasMany(RespondentIdentitiy::class,'id');
     }
 
 }

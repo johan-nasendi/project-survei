@@ -16,10 +16,6 @@ class RespondentSeeder extends Seeder
     public function run()
     {
         DB::table('respondent')->insert([
-            'question_id' => 1,
-            'job_id' => 1,
-            'relation_id' => 1,
-            'alumni_id' => 1,
            'name' => 'Josua Buay',
            'slug' => 'josua-buay',
            'place_of_birth' =>  'Jayapura',
@@ -32,10 +28,6 @@ class RespondentSeeder extends Seeder
            ]);
 
         DB::table('respondent')->insert([
-           'question_id' => 2,
-           'job_id' => 2,
-           'relation_id' => 2,
-           'alumni_id' => 2,
            'name' => 'Matha Doas',
            'slug' => 'matha-doas',
            'place_of_birth' =>  'Sarmi',
@@ -48,10 +40,6 @@ class RespondentSeeder extends Seeder
            ]);
 
         DB::table('respondent')->insert([
-           'question_id' => 3,
-           'job_id' => 3,
-           'relation_id' => 3,
-           'alumni_id' => 3,
            'name' => 'Dorlina Sampar',
            'slug' => 'dorlina-sampar',
            'place_of_birth' =>  'Sentani',
@@ -64,10 +52,6 @@ class RespondentSeeder extends Seeder
            ]);
 
         DB::table('respondent')->insert([
-           'question_id' => 4,
-           'job_id' => 4,
-           'relation_id' => 4,
-           'alumni_id' => 4,
            'name' => 'Felipus Tegai',
            'slug' => 'felipus-tegai',
            'place_of_birth' =>  'Biak',

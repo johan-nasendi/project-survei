@@ -51,7 +51,7 @@
                     <div class="col-md-9">
                         <select name="gender"  class="form-control @error('gender') is-invalid @enderror"
                         required autocomplete="gender" >
-                            <option selected>---Pilih---</option>
+                            <option disabled selected>---Pilih---</option>
                             <option value="Pria" {{old('gender')}}> Pria</option>
                             <option value="Wanita" {{old('gender')}}>Wanita</option>
                         </select>

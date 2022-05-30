@@ -1,5 +1,4 @@
 <h4 class="header-title mb-3"> Alumni Comunicacion </h4>
-    @csrf
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box">

@@ -15,6 +15,7 @@ class RelationshipCompetenceSeeder extends Seeder
     public function run()
     {
         RelationshipCompetence::create([
+            'respondent_id' => 1,
             'curriculum_compatibility_jobs' => 'Sangat Sesuai',
             'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
             'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
@@ -23,6 +24,7 @@ class RelationshipCompetenceSeeder extends Seeder
         ]);
 
         RelationshipCompetence::create([
+            'respondent_id' => 2,
             'curriculum_compatibility_jobs' => 'Tidak Sesuai',
             'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
             'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
@@ -30,6 +32,7 @@ class RelationshipCompetenceSeeder extends Seeder
             'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
         ]);
         RelationshipCompetence::create([
+            'respondent_id' => 3,
             'curriculum_compatibility_jobs' => 'Kurang Sesuai',
             'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
             'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
@@ -37,6 +40,7 @@ class RelationshipCompetenceSeeder extends Seeder
             'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
         ]);
         RelationshipCompetence::create([
+            'respondent_id' => 4,
             'curriculum_compatibility_jobs' => 'Sangat',
             'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
             'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',

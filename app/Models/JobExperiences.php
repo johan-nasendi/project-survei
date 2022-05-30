@@ -33,6 +33,6 @@ class JobExperiences extends Model
 
     public function edentity()
     {
-         return $this->belongsTo(RespondentIdentitiy::class,'respondent_id');
+         return $this->hasMany(RespondentIdentitiy::class,'id');
     }
 }

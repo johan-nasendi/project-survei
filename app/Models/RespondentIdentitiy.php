@@ -10,11 +10,8 @@ class RespondentIdentitiy extends Model
     use HasFactory;
 
     protected $table = "respondent";
+    protected $primaryKey = 'id';
 	protected $fillable = [
-                            'question_id',
-                            'job_id',
-                            'relation_id',
-                            'alumni_id',
                             'name',
                             'place_of_birth',
                             'date_of_birth',

@@ -15,6 +15,7 @@ class CreateJobExperiencesTable extends Migration
     {
         Schema::create('job_experiences', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('respondent_id');
             $table->string('works');
             $table->string('start_work')->nullable();
             $table->string('jobs_reason')->nullable();
@@ -28,10 +29,11 @@ class CreateJobExperiencesTable extends Migration
             $table->string('name_workplace')->nullable();
             $table->string('job_educational_background')->nullable();
             $table->mediumText('why_take_the_job')->nullable();
-            $table->string('level_of_education');
+            $table->string('level_of_education')->nullable();
             $table->string('relationship_study_work')->nullable();
             $table->string('additional_competence')->nullable();
             $table->string('income_per_month')->nullable();
+            $table->foreign('respondent_id')->references('id')->on('respondent')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

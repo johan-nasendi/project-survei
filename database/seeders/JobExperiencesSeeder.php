@@ -15,6 +15,7 @@ class JobExperiencesSeeder extends Seeder
     public function run()
     {
         JobExperiences::create([
+            'respondent_id' => 1,
             'works' => 'Yes',
             'start_work' => 'Sebelum lulus Kuliah',
             'jobs_reason' => '',
@@ -36,6 +37,7 @@ class JobExperiencesSeeder extends Seeder
            ]);
 
         JobExperiences::create([
+            'respondent_id' => 2,
             'works' => 'Yes',
             'start_work' => 'Sebelum lulus Kuliah',
             'jobs_reason'=>'',
@@ -56,6 +58,7 @@ class JobExperiencesSeeder extends Seeder
 
            ]);
         JobExperiences::create([
+            'respondent_id' => 3,
             'works' => 'Yes',
             'start_work' => 'Sebelum lulus Kuliah',
             'jobs_reason'=>'',
@@ -76,6 +79,7 @@ class JobExperiencesSeeder extends Seeder
 
            ]);
         JobExperiences::create([
+            'respondent_id' => 4,
             'works' => 'Yes',
             'start_work' => 'Sebelum lulus Kuliah',
             'jobs_reason'=>'',

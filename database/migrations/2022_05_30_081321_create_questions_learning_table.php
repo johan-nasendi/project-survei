@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuestionsLearningExperienceaTable extends Migration
+class CreateQuestionsLearningTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,7 @@ class CreateQuestionsLearningExperienceaTable extends Migration
     {
         Schema::create('questions_learning', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('respondent_id');
             $table->string('what_study_program');
             $table->date('college_entry_date');
             $table->date('college_graduation_date');
@@ -25,6 +26,7 @@ class CreateQuestionsLearningExperienceaTable extends Migration
             $table->string('educational_background');
             $table->string('field_work');
             $table->string('according');
+            $table->foreign('respondent_id')->references('id')->on('respondent')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

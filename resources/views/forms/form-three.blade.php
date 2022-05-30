@@ -8,7 +8,7 @@
                             <label for="#">Apakah anda sudah bekerja saat ini ?<span class="text-danger">*</span></label>
                             <select  name="works" class="form-control @error('works') is-invalid @enderror" id="test"
                             required autocomplete="works" onchange="showDiv();">
-                                <option selected>---Pilih---</option>
+                                <option disabled selected>---Pilih---</option>
                                 <option value="Yes" {{old('works')}}> Yes </option>
                                 <option value="No" {{old('works')}}> No </option>
                             </select>
