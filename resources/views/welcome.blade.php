@@ -1,84 +1,77 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Poltekkes Jayapura</title>
-    <!-- CSRF Token -->
-    <meta charset="utf-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--EXTERNAL CSS-->
-<link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
+@extends('layouts._app-home-pages.landing')
+@section('title','Poltekkes Jayapura')
+@section('content')
 
-<!--GOOGLE FONTS-->
+@push('css-internal')
+    <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
 
-<link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{('/vendor/landing/css/bootstrap.min.css')}}" type="text/css">
 
-<!--PLUGIN-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!--Material Icon -->
+    <link rel="stylesheet" type="text/css" href="{{('/vendor/landing/css/materialdesignicons.min.css')}}" />
 
-<!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom  sCss -->
+    <link rel="stylesheet" type="text/css" href="{{('/vendor/landing/css/style.css')}}" />
 
-</head>
-<body>
+@endpush
 
-<!--HEADER-->
-<header>
-        <div class="banner">
-            <span>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            </span>
+
+
+<section class="bg-home bg-gradient" id="home">
+    <div class="home-center">
+        <div class="home-desc-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="home-title mo-mb-20">
+                            <h1 class="mb-4 text-dark">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</h1>
+                            <div class="subscribe">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="mb-2">
+                                                <a href="{{route('forum')}}" class="btn btn-warning text-dark"> <b>MULAI KUESIONER</b> <i class="fa fa-paper-plane text-dark"></i> </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
+                        <div class="home-img position-relative">
+                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-first-img">
+                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-second-img mx-auto d-block">
+                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-third-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container-fluid -->
         </div>
-        <nav class="nav" id="nav">
-            <a href="#" class="active">®<em>POLTEKKES</em> <l style="font-weight:200;">|</l> JAYAPURA</a>
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">CONTACT</a>
-            <a href="{{route('login')}}" style="float:right;padding:10px 0;"><i class="fa fa-sign-in"></i> LOGIN</a>
-            <a class="icon" id="icon" onclick="opennav()"><i class="fa fa-sign-in"></i></a>
-        </nav>
+    </div>
+</section>
 
 
-</header>
+@stop
+@push('js-internal')
 
-<!--CONTAINER-->
-<div class="container">
-    <table>
-         <tr>
-         <td>
-             <section>
-                    {{-- <h4 class="title-h">WELCOME TO POLTEKKES JAYAPURA </h4> --}}
-                     <h3 class="title ml9">
-                        <span class="text-wrapper">
-                            <span class="letters">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</span>
-                        </span>
-                     </h3>
-                    <a href="{{route('forum')}}"  class="btn1">MULAI KUESIONER <i class="fa fa-paper-plane"></i>  </a>
-             </section>
-         </td>
-         <td>
-         <img src="https://i.ibb.co/RSZ2DJ7/02-tes.jpg"  alt="01">
-         {{-- <img src="https://i.ibb.co/vcVbv5t/02-tes.jpg"  alt="01"> --}}
-         </td>
-         </tr>
-    </table>
-</div>
+<script src="{{('/vendor/landing/js/jquery.min.js')}}"></script>
+<script src="{{('/vendor/landing/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{('/vendor/landing/js/jquery.easing.min.js')}}"></script>
+<script src="{{('/vendor/landing/js/scrollspy.min.js')}}"></script>
 
+<!-- custom js -->
+<script src="{{('/vendor/landing/js/app.js')}}"></script>
 
-@include('sweetalert::alert')
-<!--JAVASCRIPT-->
-<script src="{{asset('/js/custom.js')}}"></script>
-<script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
-
+@endpush
 
 
