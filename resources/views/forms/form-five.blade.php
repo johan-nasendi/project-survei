@@ -3,7 +3,7 @@
         <div class="col-lg-6">
             <div class="card-box">
                     <div class="form-group">
-                        <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
+                        <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}" autocomplete="off">
                             <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
                                 <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
                                required autocomplete="alumni_association" >
@@ -22,7 +22,7 @@
                         <label for="#">Media komunikasi yang digunakan? Jawaban boleh lebih dari 1<span class="text-danger">*</span></label>
                         <div class="form-group">
                             <label for="pass1">Username Instagram</label>
-                            <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda"
+                            <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda" autocomplete="off"
                             class="form-control @error('fb') is-invalid @enderror" value="{{old('fb')}}">
                             @error('fb')
                                 <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
 
                         <div class="form-group">
                             <label for="pass1">Username facebook</label>
-                            <input  type="text" name="ig" placeholder="Masukan usernmae facebook anda"
+                            <input  type="text" name="ig" placeholder="Masukan usernmae facebook anda" autocomplete="off"
                             class="form-control @error('ig') is-invalid @enderror" value="{{old('ig')}}">
                             @error('ig')
                                 <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
 
                         <div class="form-group">
                             <label for="pass1">Username Linkedin</label>
-                            <input  type="text" name="linkend" placeholder="Masukan username Linkedin anda"
+                            <input  type="text" name="linkend" placeholder="Masukan username Linkedin anda" autocomplete="off"
                             class="form-control @error('linkend') is-invalid @enderror" value="{{old('linkend')}}">
                             @error('linkend')
                                 <span class="invalid-feedback" role="alert">
@@ -63,7 +63,7 @@
                         <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>
                             <select name="cooperation_institutions_alumni_associations"
                             class="form-control @error('cooperation_institutions_alumni_associations') is-invalid @enderror"
-                           required autocomplete="cooperation_institutions_alumni_associations" >
+                           required  >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Sudah" {{old('cooperation_institutions_alumni_associations')}}> Sudah </option>
                                 <option value="Belum" {{old('cooperation_institutions_alumni_associations')}}> Belum </option>
@@ -78,7 +78,7 @@
                         <label for="#">Kegiatan apa sajakah yang dirasakan perlu dikembangkan untuk menjalin kerjasama antara institusi dengan ikatan alumni?<span class="text-danger">*</span></label>
                             <select name="development_of_competencies_and_institutions"
                             class="form-control @error('development_of_competencies_and_institutions') is-invalid @enderror"
-                           required autocomplete="development_of_competencies_and_institutions" >
+                           required  >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Reuni" {{old('development_of_competencies_and_institutions')}}> Reuni </option>
                                 <option value="Pengabdian masyarakat bersama" {{old('development_of_competencies_and_institutions')}}> Pengabdian masyarakat bersama </option>

@@ -6,7 +6,7 @@
                         <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                         <label for="#">Kesesuaian Kurikulum dengan dunia kerja <span class="text-danger">*</span></label>
                         <select name="curriculum_compatibility_jobs" class="form-control @error('curriculum_compatibility_jobs') is-invalid @enderror"
-                        required autocomplete="curriculum_compatibility_jobs" >
+                        required  autocomplete="off">
                             <option selected disabled>---Pilih---</option>
                             <option value="Sangat Tidak Sesuai" {{old('curriculum_compatibility_jobs')}}> [1] Sangat Tidak Sesuai </option>
                             <option value="Tidak Sesuai" {{old('curriculum_compatibility_jobs')}}> [2] Tidak Sesuai </option>
@@ -26,7 +26,7 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="health_polytechnic_Competence" class="form-control @error('health_polytechnic_Competence') is-invalid @enderror"
-                        required autocomplete="health_polytechnic_Competence" >
+                        required  autocomplete="off">
                             <option selected disabled>---Pilih---</option>
                             <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('health_polytechnic_Competence')}}> Pengetahuan di bidang atau disiplin ilmu </option>
                             <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('health_polytechnic_Competence')}}> Pengetahuan di luar bidang disiplin ilmu</option>
@@ -48,7 +48,7 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="competency_mastered" class="form-control @error('competency_mastered') is-invalid @enderror"
-                        required autocomplete="competency_mastered" >
+                        required  autocomplete="off" >
                             <option selected disabled>---Pilih---</option>
                             <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('competency_mastered')}}>Pengetahuan di bidang atau disiplin ilmu </option>
                             <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('competency_mastered')}}> Pengetahuan di luar bidang disiplin ilmu </option>
@@ -70,7 +70,7 @@
                             <span class="text-danger">*</span>
                         </label>
                             <select name="competencies_required_job" class="form-control @error('competencies_required_job') is-invalid @enderror"
-                            required autocomplete="competencies_required_job" >
+                            required autocomplete="off" >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('competencies_required_job')}}>Pengetahuan di bidang atau disiplin ilmu </option>
                                 <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('competencies_required_job')}}> Pengetahuan di luar bidang disiplin ilmu </option>
@@ -92,7 +92,7 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="competency_improvement_needs" class="form-control @error('competency_improvement_needs') is-invalid @enderror"
-                        required autocomplete="competency_improvement_needs" >
+                        required autocomplete="off" >
                             <option selected disabled>---Pilih---</option>
                             <option value="Komunikasi" {{old('competency_improvement_needs')}}> Komunikasi </option>
                             <option value="Kemampuan berbahasa inggris" {{old('competency_improvement_needs')}}> Kemampuan berbahasa inggris </option>

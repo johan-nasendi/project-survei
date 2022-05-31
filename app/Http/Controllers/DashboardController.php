@@ -42,10 +42,11 @@ class DashboardController extends Controller
         return Excel::download(new TransactionExport(), 'Data-kuesioner.xlsx');
     }
 
+
     public function form()
     {
-        $value = '';
-        return view('forms',compact('value'));
+
+        return view('forms');
     }
     public function profile()
     {

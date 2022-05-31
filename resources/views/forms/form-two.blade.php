@@ -10,7 +10,7 @@
 
                         <input type="text" id="what_study_program" name="what_study_program" id="what_study_program" value="{{old('what_study_program')}}"
                         placeholder="Lulus dari program studi apa ?" class="form-control @error('what_study_program') is-invalid @enderror"
-                       required>
+                       required autocomplete="off">
                         @error('what_study_program')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label for="#">Masuk  kuliah <span class="text-danger">*</span></label>
                         <input type="date" id="college_entry_date" name="college_entry_date" value="{{old('college_entry_date')}}"
-                       required    placeholder="Kapan Anda Masuk Kuliah?"
+                       required  autocomplete="off"  placeholder="Kapan Anda Masuk Kuliah?"
                        class="form-control @error('college_entry_date') is-invalid @enderror" >
                         @error('college_entry_date')
                         <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label for="#">Lulus  kuliah <span class="text-danger">*</span></label>
                         <input type="date" id="college_graduation_date" name="college_graduation_date" value="{{old('college_graduation_date')}}"
-                       required  placeholder="Kapan Anda Lulus Kuliah ?"
+                       required autocomplete="off" placeholder="Kapan Anda Lulus Kuliah ?"
                         class="form-control @error('college_graduation_date') is-invalid @enderror" >
                         @error('college_graduation_date')
                             <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
                         <label for="pass1">Nilai IPK (Indeks Prestasi Kumulatif)<span class="text-danger">*</span></label>
                         <input  type="text" id="score_ipk" name="score_ipk" value="{{old('score_ipk')}}"
                         placeholder="Berapa nilai IPK (Indeks Prestasi Kumulatif) anda?"
-                       required   class="form-control @error('score_ipk') is-invalid @enderror">
+                       required autocomplete="off"  class="form-control @error('score_ipk') is-invalid @enderror">
                         @error('score_ipk')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -56,7 +56,7 @@
                         <label for="#">Selama kuliah, apakah anda menjadi anggota dari suatu organisasi
                             (sosial, pemuda, organisasi keagamaan) di dalam atau di luar kampus?<span class="text-danger">*</span></label>
                         <select name="organization" id="organization" class="form-control @error('organization') is-invalid @enderror"
-                       required  >
+                       required  autocomplete="off">
                             <option selected disabled>---Pilih---</option>
                             <option value="Yes" {{ old('organization')}}> Yes</option>
                             <option value="No" {{ old('organization')}}>No</option>
@@ -71,7 +71,7 @@
                     <div class="form-group">
                         <label for="#">Seberapa aktif anda di organisasi tersebut?<span class="text-danger">*</span></label>
                             <select name="active_inactive_organization" id="active_inactive_organization" class="form-control @error('active_inactive_organization') is-invalid @enderror"
-                           required  >
+                           required autocomplete="off" >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Sangat Aktif" {{old('active_inactive_organization')}}>Sangat Aktif</option>
                                 <option value="Cukup Aktif" {{old('active_inactive_organization')}}>Cukup Aktif</option>
@@ -99,7 +99,7 @@
                         <span class="text-danger">*</span>
                     </label>
                     <select name="further_education_levels" id="further_education_levels" class="form-control @error('further_education_levels') is-invalid @enderror"
-                   required  >
+                   required autocomplete="off" >
                         <option selected disabled>---Pilih---</option>
                         <option value="Yes" {{old('further_education_levels')}}>Yes</option>
                         <option value="No" {{old('further_education_levels')}}>No</option>
@@ -115,7 +115,7 @@
                         <span class="text-danger">*</span>
                     </label>
                     <select name="educational_background" id="educational_background" class="form-control @error('educational_background') is-invalid @enderror"
-                   required  >
+                   required  autocomplete="off">
                         <option selected disabled>---Pilih---</option>
                         <option value="Yes" {{old('educational_background')}}>Yes</option>
                         <option value="No" {{old('educational_background')}}>No</option>
@@ -131,7 +131,7 @@
                         <span class="text-danger">*</span>
                     </label>
                     <select name="field_work" id="field_work" class="form-control @error('field_work') is-invalid @enderror"
-                   required  >
+                   required  autocomplete="off">
                         <option selected disabled>---Pilih---</option>
                         <option value="Yes" {{old('field_work')}}>Yes</option>
                         <option value="No" {{old('field_work')}}>No</option>
@@ -148,7 +148,7 @@
                         <span class="text-danger">*</span>
                     </label>
                     <select name="according" id="according" class="form-control @error('according') is-invalid @enderror"
-                    required  >
+                    required  autocomplete="off">
                         <option selected disabled>---Pilih---</option>
                         <option value="Perkuliahan" {{old('according')}}>Perkuliahan</option>
                         <option value="Praktek Laboratorium" {{old('according')}}>Praktek Laboratorium</option>
@@ -175,7 +175,7 @@
             </a>
         </li>
         <li class="next list-inline-item float-right" >
-            <button type="button" class="btn btn-warning" id="next" disabled> <b> SELANJUTNYA</b>
+            <button type="button" class="btn btn-warning"> <b> SELANJUTNYA</b>
                 <i class="fas fa-arrow-alt-circle-right"></i>
             </button>
         </li>

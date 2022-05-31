@@ -12,7 +12,7 @@
                 <div class="mb-3">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1"
-                        onchange="document.getElementById('sendData').disabled = !this.checked;" />
+                        onchange="document.getElementById('sendData').disabled = !this.checked;" required autocomplete="off"  />
                         <label class="custom-control-label" for="customCheck1">Saya setuju</label>
                     </div>
                 </div>
