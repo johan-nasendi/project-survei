@@ -27,9 +27,8 @@ class RespondentIdentityController extends Controller
         $data['data'] = RespondentIdentitiy::orderBy('id','DESC')->paginate(6);
         return view('admin.responden.index',$data);
     }
-    public function export(Request $request){
-        return Excel::download(new RespondentExport, 'users.xlsx');
-    }
+
+
 
 
     public function create()
@@ -44,9 +43,10 @@ class RespondentIdentityController extends Controller
      */
     public function store(Request $request)
     {
-        Validator::make(
-            $request->all(),
-            [
+
+
+          $request->validate([
+
                 'name' => 'required|string|max:100',
                 'mobile_phone_number' => 'required|string|max:13|unique:respondent,mobile_phone_number',
                 'date_of_birth' => 'required|date',
@@ -54,28 +54,27 @@ class RespondentIdentityController extends Controller
                 'email' => 'required|string|email|unique:respondent,email',
                 'gender' => 'required',
 
-                'what_study_program' => 'required',
-                'college_entry_date' => 'required',
-                'college_graduation_date' => 'required',
-                'score_ipk' => 'required',
-                'organization' => 'required',
-                'active_inactive_organization' => 'required',
-                'further_education_levels' => 'required',
-                'educational_background' => 'required',
-                'field_work' => 'required',
-                'according' => 'required',
+                'what_study_program' => 'required|string',
+                'college_entry_date' => 'required|string',
+                'college_graduation_date' => 'required|string',
+                'score_ipk' => 'required|string',
+                'organization' => 'required|string',
+                'active_inactive_organization' => 'required|string',
+                'further_education_levels' => 'required|string',
+                'educational_background' => 'required|string',
+                'field_work' => 'required|string',
+                'according' => 'required|string',
 
 
-                'curriculum_compatibility_jobs' => 'required',
-                'health_polytechnic_Competence' => 'required',
-                'competency_mastered' => 'required',
-                'competencies_required_job' => 'required',
-                'competency_improvement_needs' => 'required',
-
-
-          ])->validate();
+                'curriculum_compatibility_jobs' => 'required|string',
+                'health_polytechnic_Competence' => 'required|string',
+                'competency_mastered' => 'required|string',
+                'competencies_required_job' => 'required|string',
+                'competency_improvement_needs' => 'required|string',
+        ]);
 
     try {
+
 
             $respondent = new RespondentIdentitiy();
             $respondent->name = $request->name;

@@ -40,7 +40,7 @@ Respondent Identity
                                         <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right" style="">
+                                        <div class="dropdown-menu dropdown-menu-right">
                                             <!-- item-->
                                             <a href="{{route('export')}}" class="dropdown-item">Export Excel</a>
                                             <!-- item-->

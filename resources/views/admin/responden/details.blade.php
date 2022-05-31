@@ -57,25 +57,6 @@
                                         <p class="text-color-black mb-2 font-13"><strong>Email :</strong> <span class="ml-2 ">{{$respondent->email}}</span></p>
                                     </div>
 
-                                    {{-- <ul class="social-list list-inline mt-3 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i
-                                                    class="mdi mdi-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i
-                                                    class="mdi mdi-google"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-info text-info"><i
-                                                    class="mdi mdi-twitter"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="social-list-item border-info text-danger"><i
-                                                    class="mdi mdi-instagram"></i></a>
-                                        </li>
-
-                                    </ul> --}}
                                 </div> <!-- end card-box -->
 
                             </div> <!-- end col-->

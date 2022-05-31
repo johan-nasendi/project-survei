@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\TransactionExport;
 use App\Models\RespondentIdentitiy;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -31,7 +33,11 @@ class DashboardController extends Controller
             return 'Hello Guest';
         }
 
+    }
 
+    public function export_mapping() {
+
+        return Excel::download(new TransactionExport(), 'Data-kuesioner.xlsx');
     }
 
     public function form()
