@@ -42,7 +42,11 @@
     @stack('css-internal')
 </head>
 
+
+
+
 <body class="loading">
+
         <!-- Begin page -->
         <div id="wrapper">
             {{-- Navbar --}}

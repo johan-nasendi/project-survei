@@ -16,7 +16,7 @@
         <br>
         <div id="basicwizard">
             @include('layouts.component.nav-form')
-            <form  action="{{route('forum.post')}}"  method="POST" enctype="multipart/form-data">
+            <form  action="{{route('forum.post')}}" autocomplete="off"  method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="tab-content b-0 mb-0 pt-0">
                     @include('layouts.component.content-form')
@@ -25,7 +25,9 @@
         </div> <!-- end #basicwizard-->
 
 @stop
+
 @push('js-internal')
+
 <script type="text/javascript">
 
     function showDiv(){

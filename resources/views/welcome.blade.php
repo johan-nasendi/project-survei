@@ -33,13 +33,12 @@
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="mb-2">
-                                                <a href="{{route('forum')}}" class="btn btn-warning text-dark"> <b>MULAI KUESIONER</b> <i class="fa fa-paper-plane text-dark"></i> </a>
+                                                <a href="{{route('forum')}}" class="btn btn-warning text-dark">
+                                                    <b>MULAI KUESIONER</b> <i class="fa fa-paper-plane text-dark"></i>
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
 
-
-                                        </div>
                                     </div>
                                 </form>
                             </div>

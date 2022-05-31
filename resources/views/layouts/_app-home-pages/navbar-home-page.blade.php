@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <ul class="list-unstyled topnav-menu float-right mb-0">
         <li class="dropdown notification-list topbar-dropdown">
             <a class="nav-link  nav-user mr-0 waves-effect waves-light"

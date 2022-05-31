@@ -122,7 +122,7 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="header-title mb-3 text-white">Data Respondent Terbaru</h4>
+                                    <h4 class="header-title mb-3 text-dark">Data Respondent Terbaru</h4>
                                     <div class="table-responsive">
                                         <table class="table table-borderless table-nowrap table-hover table-centered m-0">
                                             <thead class="thead-dark">

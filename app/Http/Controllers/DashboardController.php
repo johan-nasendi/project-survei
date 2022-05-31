@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+
     public function index()
     {
         $allData =  RespondentIdentitiy::all()->count();
@@ -42,7 +44,8 @@ class DashboardController extends Controller
 
     public function form()
     {
-        return view('forms');
+        $value = '';
+        return view('forms',compact('value'));
     }
     public function profile()
     {

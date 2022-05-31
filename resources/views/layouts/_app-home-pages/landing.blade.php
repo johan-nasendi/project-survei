@@ -30,6 +30,7 @@
         @stack('css-external')
     </head>
 
+
     <body class="loading">
         <div id="wrapper">
              {{-- Navbar --}}
