@@ -6,13 +6,13 @@
                         <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                         <label for="#">Kesesuaian Kurikulum dengan dunia kerja <span class="text-danger">*</span></label>
                         <select name="curriculum_compatibility_jobs" class="form-control @error('curriculum_compatibility_jobs') is-invalid @enderror"
-                        required  autocomplete="off">
+                        required=""  autocomplete="off">
                             <option selected disabled>---Pilih---</option>
-                            <option value="Sangat Tidak Sesuai" {{old('curriculum_compatibility_jobs')}}> [1] Sangat Tidak Sesuai </option>
-                            <option value="Tidak Sesuai" {{old('curriculum_compatibility_jobs')}}> [2] Tidak Sesuai </option>
-                            <option value="Kurang Sesuai" {{old('curriculum_compatibility_jobs')}}> [3] Kurang Sesuai </option>
-                            <option value="Sesuai" {{old('curriculum_compatibility_jobs')}}> [4] Sesuai </option>
-                            <option value="Sangat Sesuai" {{old('curriculum_compatibility_jobs')}}> [5] Sangat Sesuai </option>
+                            <option value="Sangat Tidak Sesuai" @if(old('curriculum_compatibility_jobs') == "Sangat Tidak Sesuai") {{ 'selected' }} @endif> [1] Sangat Tidak Sesuai </option>
+                            <option value="Tidak Sesuai" @if(old('curriculum_compatibility_jobs') == "Tidak Sesuai") {{ 'selected' }} @endif> [2] Tidak Sesuai </option>
+                            <option value="Kurang Sesuai" @if(old('curriculum_compatibility_jobs') == "Kurang Sesuai") {{ 'selected' }} @endif> [3] Kurang Sesuai </option>
+                            <option value="Sesuai" @if(old('curriculum_compatibility_jobs') == "Sesuai") {{ 'selected' }} @endif> [4] Sesuai </option>
+                            <option value="Sangat Sesuai" @if(old('curriculum_compatibility_jobs') == "Sangat Sesuai") {{ 'selected' }} @endif> [5] Sangat Sesuai </option>
                         </select>
                         @error('curriculum_compatibility_jobs')
                         <span class="invalid-feedback" role="alert">
@@ -26,10 +26,10 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="health_polytechnic_Competence" class="form-control @error('health_polytechnic_Competence') is-invalid @enderror"
-                        required  autocomplete="off">
+                        required=""  autocomplete="off">
                             <option selected disabled>---Pilih---</option>
-                            <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('health_polytechnic_Competence')}}> Pengetahuan di bidang atau disiplin ilmu </option>
-                            <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('health_polytechnic_Competence')}}> Pengetahuan di luar bidang disiplin ilmu</option>
+                            <option value="Pengetahuan di bidang atau disiplin ilmu" @if(old('health_polytechnic_Competence') == "Pengetahuan di bidang atau disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di bidang atau disiplin ilmu </option>
+                            <option value="Pengetahuan di luar bidang disiplin ilmu" @if(old('health_polytechnic_Competence') == "Pengetahuan di luar bidang disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di luar bidang disiplin ilmu</option>
                         </select>
                         @error('health_polytechnic_Competence')
                         <span class="invalid-feedback" role="alert">
@@ -48,15 +48,15 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="competency_mastered" class="form-control @error('competency_mastered') is-invalid @enderror"
-                        required  autocomplete="off" >
+                        required=""  autocomplete="off" >
                             <option selected disabled>---Pilih---</option>
-                            <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('competency_mastered')}}>Pengetahuan di bidang atau disiplin ilmu </option>
-                            <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('competency_mastered')}}> Pengetahuan di luar bidang disiplin ilmu </option>
-                            <option value="Penguasaan Bahasa Inggris" {{old('competency_mastered')}}> Penguasaan Bahasa Inggris </option>
-                            <option value="Penguasaan Teknologi Informasi" {{old('competency_mastered')}}> Penguasaan Teknologi Informasi </option>
-                            <option value="Ketrampilan Komunikasi" {{old('competency_mastered')}}> Ketrampilan Komunikasi </option>
-                            <option value="Kerjasama Tim" {{old('competency_mastered')}}> Kerjasama Tim </option>
-                            <option value="Pengetahuan Umum" {{old('competency_mastered')}}> Pengetahuan Umum </option>
+                            <option value="Pengetahuan di bidang atau disiplin ilmu" @if(old('competency_mastered') == "Pengetahuan di bidang atau disiplin ilmu") {{ 'selected' }} @endif>Pengetahuan di bidang atau disiplin ilmu </option>
+                            <option value="Pengetahuan di luar bidang disiplin ilmu" @if(old('competency_mastered') == "Pengetahuan di luar bidang disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di luar bidang disiplin ilmu </option>
+                            <option value="Penguasaan Bahasa Inggris" @if(old('competency_mastered') == "Penguasaan Bahasa Inggris") {{ 'selected' }} @endif> Penguasaan Bahasa Inggris </option>
+                            <option value="Penguasaan Teknologi Informasi" @if(old('competency_mastered') == "Penguasaan Teknologi Informasi") {{ 'selected' }} @endif> Penguasaan Teknologi Informasi </option>
+                            <option value="Ketrampilan Komunikasi" @if(old('competency_mastered') == "Ketrampilan Komunikasi") {{ 'selected' }} @endif> Ketrampilan Komunikasi </option>
+                            <option value="Kerjasama Tim" @if(old('competency_mastered') == "Kerjasama Tim") {{ 'selected' }} @endif> Kerjasama Tim </option>
+                            <option value="Pengetahuan Umum" @if(old('competency_mastered') == "Pengetahuan Umum") {{ 'selected' }} @endif> Pengetahuan Umum </option>
                         </select>
                         @error('competency_mastered')
                         <span class="invalid-feedback" role="alert">
@@ -70,15 +70,15 @@
                             <span class="text-danger">*</span>
                         </label>
                             <select name="competencies_required_job" class="form-control @error('competencies_required_job') is-invalid @enderror"
-                            required autocomplete="off" >
+                            required="" autocomplete="off" >
                                 <option selected disabled>---Pilih---</option>
-                                <option value="Pengetahuan di bidang atau disiplin ilmu" {{old('competencies_required_job')}}>Pengetahuan di bidang atau disiplin ilmu </option>
-                                <option value="Pengetahuan di luar bidang disiplin ilmu" {{old('competencies_required_job')}}> Pengetahuan di luar bidang disiplin ilmu </option>
-                                <option value="Penguasaan Bahasa Inggris" {{old('competencies_required_job')}}> Penguasaan Bahasa Inggris </option>
-                                <option value="Penguasaan Teknologi Informasi" {{old('competencies_required_job')}}> Penguasaan Teknologi Informasi </option>
-                                <option value="Ketrampilan Komunikasi" {{old('competencies_required_job')}}> Ketrampilan Komunikasi </option>
-                                <option value="Kerjasama Tim" {{old('competencies_required_job')}}> Kerjasama Tim </option>
-                                <option value="Pengetahuan Umum" {{old('competencies_required_job')}}> Pengetahuan Umum </option>
+                                <option value="Pengetahuan di bidang atau disiplin ilmu" @if(old('competencies_required_job') == "Pengetahuan di bidang atau disiplin ilmu") {{ 'selected' }} @endif>Pengetahuan di bidang atau disiplin ilmu </option>
+                                <option value="Pengetahuan di luar bidang disiplin ilmu" @if(old('competencies_required_job') == "Pengetahuan di luar bidang disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di luar bidang disiplin ilmu </option>
+                                <option value="Penguasaan Bahasa Inggris" @if(old('competencies_required_job') == "Penguasaan Bahasa Inggris") {{ 'selected' }} @endif> Penguasaan Bahasa Inggris </option>
+                                <option value="Penguasaan Teknologi Informasi" @if(old('competencies_required_job') == "Penguasaan Teknologi Informasi") {{ 'selected' }} @endif> Penguasaan Teknologi Informasi </option>
+                                <option value="Ketrampilan Komunikasi" @if(old('competencies_required_job') == "Ketrampilan Komunikasi") {{ 'selected' }} @endif> Ketrampilan Komunikasi </option>
+                                <option value="Kerjasama Tim" @if(old('competencies_required_job') == "Kerjasama Tim") {{ 'selected' }} @endif> Kerjasama Tim </option>
+                                <option value="Pengetahuan Umum" @if(old('competencies_required_job') == "Pengetahuan Umum") {{ 'selected' }} @endif> Pengetahuan Umum </option>
                             </select>
                             @error('competencies_required_job')
                             <span class="invalid-feedback" role="alert">
@@ -92,11 +92,11 @@
                             <span class="text-danger">*</span>
                         </label>
                         <select name="competency_improvement_needs" class="form-control @error('competency_improvement_needs') is-invalid @enderror"
-                        required autocomplete="off" >
+                        required="" autocomplete="off" >
                             <option selected disabled>---Pilih---</option>
-                            <option value="Komunikasi" {{old('competency_improvement_needs')}}> Komunikasi </option>
-                            <option value="Kemampuan berbahasa inggris" {{old('competency_improvement_needs')}}> Kemampuan berbahasa inggris </option>
-                            <option value="Kemampuan penguasaan teknologi informasi" {{old('competency_improvement_needs')}}> Kemampuan penguasaan teknologi informasi </option>
+                            <option value="Komunikasi" @if(old('competency_improvement_needs') == "Komunikasi") {{ 'selected' }} @endif> Komunikasi </option>
+                            <option value="Kemampuan berbahasa inggris" @if(old('competency_improvement_needs') == "Kemampuan berbahasa inggris") {{ 'selected' }} @endif> Kemampuan berbahasa inggris </option>
+                            <option value="Kemampuan penguasaan teknologi informasi" @if(old('competency_improvement_needs') == "Kemampuan penguasaan teknologi informasi") {{ 'selected' }} @endif> Kemampuan penguasaan teknologi informasi </option>
                         </select>
                         @error('competency_improvement_needs')
                             <span class="invalid-feedback" role="alert">

@@ -158,76 +158,138 @@
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C2</span>
                                                     <h5 class="mt-0 mb-1">Kapan anda mulai mencari pekerjaan?</h5>
+                                                    @if(empty($respondent->pekerjaan->start_work = null))
+                                                    <p>Tidak Ada Data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->start_work}}</p>
+
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C3</span>
                                                     <h5 class="mt-0 mb-1">Apa alasan utama anda tidak mencari pekerjaan setelah lulus kuliah?</h5>
+                                                    @if(empty($respondent->pekerjaan->jobs_reason = null))
+                                                    <p>Tidak Ada Data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->jobs_reason}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C4</span>
                                                     <h5 class="mt-0 mb-1">Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?</h5>
+                                                    @if(empty($respondent->pekerjaan->after_how_many_months_job = null))
+                                                    <p>Tidak Ada Data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->after_how_many_months_job}}</p>
+                                                    @endif
+
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C5</span>
                                                     <h5 class="mt-0 mb-1">Berapa bulan setelah keluar STR anda memeroleh pekerjaan pertama?</h5>
-                                                    <p>{{$respondent->get_str}}</p>
+                                                    @if(empty($respondent->pekerjaan->get_str = null))
+                                                    <p>Tidak Ada Data</p>
+                                                    @else
+                                                    <p>{{$respondent->pekerjaan->get_str}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C6</span>
                                                     <h5 class="mt-0 mb-1">Sebelum anda memperoleh pekerjaan pertama berapa jumlah instansi yang anda lamar, yang merespon, dan yang mengundang wawancara?</h5>
+                                                    @if(empty($respondent->pekerjaan->amount_applied = null))
+                                                    <p> Tidak ada data </p>
+                                                    @else
                                                     <p>
                                                         {{$respondent->pekerjaan->amount_applied}} <br>
                                                         {{$respondent->pekerjaan->amount_response_to_applications}} <br>
                                                         {{$respondent->pekerjaan->amount_inviting_interviews}}
                                                     </p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C7</span>
                                                     <h5 class="mt-0 mb-1">Bagaimana anda mencari pekerjaan?</h5>
+                                                    @if(empty($respondent->pekerjaan->how_to_find_a_job = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->how_to_find_a_job}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C8</span>
                                                     <h5 class="mt-0 mb-1">Instansi tempat anda bekerja?</h5>
+                                                    @if(empty($respondent->pekerjaan->workplace = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->workplace}}</p>
+                                                    @endif
+
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C9</span>
                                                     <h5 class="mt-0 mb-1">Apa nama instansi tempat anda bekerja?</h5>
+                                                    @if(empty($respondent->pekerjaan->name_workplace = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->name_workplace}}</p>
+                                                    @endif
+
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C10</span>
                                                     <h5 class="mt-0 mb-1">Apakah pekerjaan anda sesuai dengan latar belakang pendidikan?</h5>
+                                                    @if(empty($respondent->pekerjaan->job_educational_background = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->job_educational_background}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C11</span>
                                                     <h5 class="mt-0 mb-1">Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya?</h5>
+                                                    @if(empty($respondent->pekerjaan->why_take_the_job = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->why_take_the_job}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C12</span>
                                                     <h5 class="mt-0 mb-1">Tingkat pendidikan apa yang paling tepat/sesuai untuk pekerjaan anda saat ini</h5>
+                                                    @if(empty($respondent->pekerjaan->level_of_education = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->level_of_education}}</p>
+                                                    @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C13</span>
                                                     <h5 class="mt-0 mb-1">Seberapa erat hubungan antara bidang studi dengan pekerjaan anda?</h5>
+                                                    @if(empty($respondent->pekerjaan->relationship_study_work = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->relationship_study_work}}</p>
+                                                    @endif
+
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C14</span>
                                                     <h5 class="mt-0 mb-1">Dalam melaksanakan pekerjaan, menurut penilaian Saudara sejauh mana kompetensi tambahan berikut diperlukan?</h5>
+                                                    @if(empty($respondent->pekerjaan->additional_competence = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->additional_competence}}</p>
+                                                    @endif
+
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C15</span>
                                                     <h5 class="mt-0 mb-1">Berapa rata- rata penghasilan anda per bulan </h5>
+                                                    @if(empty($respondent->pekerjaan->income_per_month = null))
+                                                    <p>Tidak ada data</p>
+                                                    @else
                                                     <p>{{$respondent->pekerjaan->income_per_month}}</p>
+                                                    @endif
                                                 </li>
                                             </ul>
 

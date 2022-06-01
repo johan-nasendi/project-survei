@@ -16,9 +16,8 @@
         <br>
         <div id="basicwizard">
             @include('layouts.component.nav-form')
-            <form  action="{{route('forum.post')}}" autocomplete="off"
-            method="POST" enctype="multipart/form-data">
-                @csrf
+            <form  action="{{route('forum.post')}}"  method="POST" enctype="multipart/form-data">
+            @csrf
                 <div class="tab-content b-0 mb-0 pt-0">
                     @include('layouts.component.content-form')
                 </div> <!-- tab-content -->
@@ -97,15 +96,13 @@
     }
 
     function showArea(){
-        getSelectValue = document.getElementById("other").value;
+        getSelectValue = document.getElementById("jobs_reason").value;
         if(getSelectValue == "1"){
             document.getElementById("hidden_textarea").style.display="block";
         } else {
             document.getElementById("hidden_textarea").style.display="none";
         }
     }
-
-
 
     </script>
 

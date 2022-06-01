@@ -46,7 +46,7 @@ class RespondentIdentityController extends Controller
           $request->validate([
 
                 'name' => 'required|string|max:100',
-                'mobile_phone_number' => 'required|string|max:13|unique:respondent,mobile_phone_number',
+                'mobile_phone_number' => 'required|numeric|min:14|unique:respondent,mobile_phone_number',
                 'date_of_birth' => 'required|date',
                 'place_of_birth' => 'required|string|max:100',
                 'email' => 'required|string|email|unique:respondent,email',
@@ -63,12 +63,17 @@ class RespondentIdentityController extends Controller
                 'field_work' => 'required|string',
                 'according' => 'required|string',
 
-
                 'curriculum_compatibility_jobs' => 'required|string',
                 'health_polytechnic_Competence' => 'required|string',
                 'competency_mastered' => 'required|string',
                 'competencies_required_job' => 'required|string',
                 'competency_improvement_needs' => 'required|string',
+
+                'alumni_association'=> 'required',
+                'cooperation_institutions_alumni_associations'=> 'required',
+                'development_of_competencies_and_institutions'=> 'required',
+
+                'works' => 'required',
         ]);
 
     try {
@@ -130,6 +135,7 @@ class RespondentIdentityController extends Controller
 
             $alumni = new AlumniComunitacionBetween();
             $alumni->respondent_id = $request->respondent_id;
+            $alumni->alumni_association = $request->alumni_association;
             $alumni->fb = $request->fb;
             $alumni->ig = $request->ig;
             $alumni->linkend = $request->linkend;

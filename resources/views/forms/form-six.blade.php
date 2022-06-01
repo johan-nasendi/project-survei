@@ -1,6 +1,5 @@
 
 <h4 class="header-title mb-3"> Selesai </h4>
-
     <div class="row">
         <div class="col-12">
             <div class="text-center">
@@ -12,7 +11,7 @@
                 <div class="mb-3">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1"
-                        onchange="document.getElementById('sendData').disabled = !this.checked;" required autocomplete="off"  />
+                        onchange="document.getElementById('sendData').disabled = !this.checked;" required   />
                         <label class="custom-control-label" for="customCheck1">Saya setuju</label>
                     </div>
                 </div>
@@ -29,4 +28,5 @@
             <button type="submit" class="btn btn-success" id="sendData">KIRIM <i class="fa fa-paper-plane"></i></button>
         </li>
     </ul>
+
 
