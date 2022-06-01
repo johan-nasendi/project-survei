@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\TransactionExport;
 use App\Models\RespondentIdentitiy;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ class DashboardController extends Controller
     public function index()
     {
         $allData =  RespondentIdentitiy::all()->count();
+        $userAll =  User::all()->count();
         $male = RespondentIdentitiy::where('gender','Pria')->count();
         $female = RespondentIdentitiy::where('gender','Wanita')->count();
 
@@ -24,6 +26,7 @@ class DashboardController extends Controller
                 'allData' => $allData,
                 'male' => $male,
                 'female' => $female,
+                'userAll' => $userAll
             ]);
         }
 
@@ -48,8 +51,5 @@ class DashboardController extends Controller
 
         return view('forms');
     }
-    public function profile()
-    {
-        return view('admin.profile.index');
-    }
+
 }

@@ -6,7 +6,7 @@
         <th class="text-center">Nama Lengkap</th>
         <th class="text-center">Email</th>
         <th class="text-center">Nomor Handphone</th>
-        <th class="text-center">Action</th>
+        <th class="text-center">Opsi</th>
     </tr>
     </thead>
     <tbody>
@@ -38,19 +38,19 @@
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Peringatan!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                             </div>
                             <div class="modal-body">
-                            <p>Are you sure you want to delete this data?</p>
+                            <p>Apakah anda yakin ingin hapus data ini?</p>
                             @csrf
                             {{ method_field('DELETE') }}
                             </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="ti-close m-r-5 f-s-12"></i> Cancel</button>
-                        <button type="submit" class="btn btn-danger"><i class="fa fa-paper-plane m-r-5"></i> Yes, Deleted</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="ti-close m-r-5 f-s-12"></i> Tidak</button>
+                        <button type="submit" class="btn btn-danger"><i class="fa fa-paper-plane m-r-5"></i> Hapus</button>
                         </div>
                     </div>
                     </div>

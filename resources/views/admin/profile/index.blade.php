@@ -24,6 +24,7 @@ Profile
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+
                                             <li class="breadcrumb-item active">@yield('title')</li>
                                         </ol>
                                     </div>
@@ -70,7 +71,6 @@ Profile
                                                         <div class="form-group">
                                                             <label for="userpassword">Kata Sandi lama</label>
                                                             <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
-                                                            <span class="form-text text-muted"><small>If you want to change password please <a href="javascript: void(0);">click</a> here.</small></span>
                                                         </div>
                                                     </div> <!-- end col -->
                                                     <div class="col-md-12">
@@ -121,14 +121,11 @@ Profile
                                                             <label for="lastname">E-mail</label>
                                                             <input type="email" class="form-control" name="email"
                                                             value="{{old('name',Auth::user()->email)}}" placeholder="email" readonly>
-                                                            <span class="form-text text-muted"><small>If you want to change email please
-                                                                <a href="javascript: void(0);">click</a> here.</small>
-                                                            </span>
                                                         </div>
                                                     </div> <!-- end col -->
                                                 </div> <!-- end row -->
                                                 <div class="text-right">
-                                                    <a href="#" class="btn btn-warning waves-effect waves-light mt-2" >
+                                                    <a href="{{route('profile.edit', ['profile' => Auth::user()->username])}}" class="btn btn-warning waves-effect waves-light mt-2" >
                                                         <i class="mdi mdi-content-save"></i> Edit
                                                     </a>
                                                 </div>

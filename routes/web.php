@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RespondentIdentityController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -32,12 +33,15 @@ Route::post('/form/Kuesioner/Tracer-Study-Alumni/kirim', [RespondentIdentityCont
 Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
 
-    Route::get('/respondent-identity', [RespondentIdentityController::class, 'index'])->name('respondent-identity.index');
-    Route::get('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'show'])->name('respondent-identity.show');
-    Route::delete('/respondent-identity/{respondent_identity}', [RespondentIdentityController::class, 'destroy'])->name('respondent-identity.destroy');
+
+    Route::get('/respon-alumni', [RespondentIdentityController::class, 'index'])->name('respondent-identity.index');
+    Route::get('/respon-alumni/{respondent_identity}', [RespondentIdentityController::class, 'show'])->name('respondent-identity.show');
+    Route::delete('/respon-alumni/{respondent_identity}', [RespondentIdentityController::class, 'destroy'])->name('respondent-identity.destroy');
 
     Route::get('export', [DashboardController::class, 'export_mapping'])->name('export');
+
+    Route::resource('/profile',ProfileController::class)->except('show');
+
 
 });

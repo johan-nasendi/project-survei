@@ -6,7 +6,7 @@
 
          <ul id="side-menu">
 
-             <li class="menu-title">Main Menu</li>
+             <li class="menu-title">Menu</li>
 
              <li>
                  <a href="{{route('dashboard')}}">
@@ -22,7 +22,7 @@
                      $countmember = DB::table('respondent')->count();
                      @endphp
                      <span class="badge badge-success badge-pill float-right">{{ $countmember }}</span>
-                     <span> Responden Users </span>
+                     <span> Respon Alumni </span>
                  </a>
              </li>
          </ul>

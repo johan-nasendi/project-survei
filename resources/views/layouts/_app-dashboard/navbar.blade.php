@@ -14,9 +14,9 @@
             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
 
                 <!-- item-->
-                <a href=" {{route('profile')}} " class="dropdown-item notify-item">
+                <a href=" {{route('profile.index')}} " class="dropdown-item notify-item">
                     <i class="fe-user"></i>
-                    <span>Profile</span>
+                    <span>Profil</span>
                 </a>
 
                 <div class="dropdown-divider"></div>
@@ -25,7 +25,7 @@
                 <a href="{{ route('logout') }}" class="dropdown-item notify-item" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                     <i class="fe-log-out"></i>
-                    <span>Logout</span>
+                    <span>Keluar</span>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf

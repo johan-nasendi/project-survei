@@ -1,7 +1,7 @@
 @extends('layouts.app-dashboard')
 
 @section('title')
- Detail Respondent
+ Detail Respon
 @endsection
 @section('content')
 
@@ -24,11 +24,11 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="{{route('respondent-identity.index')}}">Respondent Identity</a></li>
+                                            <li class="breadcrumb-item"><a href="{{route('respondent-identity.index')}}">Respon Alumni</a></li>
                                             <li class="breadcrumb-item active">@yield('title')</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Detail Data Respondent</h4>
+                                    <h4 class="page-title">Detail Data Respon </h4>
                                 </div>
                             </div>
                         </div>

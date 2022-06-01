@@ -1,7 +1,7 @@
 @extends('layouts.app-dashboard')
 
 @section('title')
-Respondent Identity
+Respon Alumni
 @endsection
 
 @section('content')
@@ -37,17 +37,10 @@ Respondent Identity
                             <div class="col-12">
                                 <div class="card-box">
                                     <div class="dropdown float-right">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-dots-vertical"></i>
+                                        <a href="{{route('export')}}" class="btn btn-sm btn-secondary">
+                                            <div class="fas fa-file-export"></div> Export Excel
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <!-- item-->
-                                            <a href="{{route('export')}}" class="dropdown-item">Export Excel</a>
-                                            <!-- item-->
-
-                                        </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-lg-8">
                                             <h2 class="header-title mt-2"><i class="fas fa-users mr-1"></i>@yield('title')</h2>

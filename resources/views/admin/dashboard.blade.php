@@ -97,8 +97,8 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="text-right">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">  </span></h3>
-                                                <p class=" mb-1"> <b>LAINNYA..</b> </p>
+                                                <h3 class="text-dark mt-1"><span data-plugin="counterup"> {{$userAll}} </span></h3>
+                                                <p class=" mb-1"> <b>PETUGAS</b> </p>
                                             </div>
                                         </div>
                                     </div> <!-- end row-->
@@ -109,29 +109,19 @@
                         <div class="col-xl-12 " >
                                 <div class="card-box">
                                     <div class="dropdown float-right">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-dots-vertical"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right" style="">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Edit Report</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                        </div>
+
                                     </div>
 
-                                    <h4 class="header-title mb-3 text-dark">Data Respondent Terbaru</h4>
+                                    <h4 class="header-title mb-3 text-dark">Data Respon Alumni Terbaru</h4>
                                     <div class="table-responsive">
                                         <table class="table table-borderless table-nowrap table-hover table-centered m-0">
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th>Nama</th>
                                                     <th>Email</th>
-                                                    <th>Date</th>
+                                                    <th>Tanggal</th>
                                                     <th>Status</th>
-                                                    <th>Action</th>
+                                                    <th>Opsi</th>
                                                 </tr>
                                             </thead>
                                             <tbody >
