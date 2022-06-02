@@ -7,10 +7,11 @@
                             <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
                                 <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
                                required="" autocomplete="alumni_association" >
-                                    <option selected disabled>---Pilih---</option>
+                                    <option value="" selected disabled>---Pilih---</option>
                                     <option value="Yes" @if(old('alumni_association') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                     <option value="No" @if(old('alumni_association') == "No") {{ 'selected' }} @endif> No </option>
                                 </select>
+                                <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
                                 @error('alumni_association')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -63,11 +64,12 @@
                         <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>
                             <select name="cooperation_institutions_alumni_associations"
                             class="form-control @error('cooperation_institutions_alumni_associations') is-invalid @enderror"
-                           required=""  >
-                                <option selected disabled>---Pilih---</option>
+                           required="" >
+                                <option value="" selected disabled>---Pilih---</option>
                                 <option value="Sudah" @if(old('cooperation_institutions_alumni_associations') == "Sudah") {{ 'selected' }} @endif> Sudah </option>
                                 <option value="Belum" @if(old('cooperation_institutions_alumni_associations') == "Belum") {{ 'selected' }} @endif> Belum </option>
                             </select>
+                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
                             @error('cooperation_institutions_alumni_associations')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -79,12 +81,13 @@
                             <select name="development_of_competencies_and_institutions"
                             class="form-control @error('development_of_competencies_and_institutions') is-invalid @enderror"
                            required=""  >
-                                <option selected disabled>---Pilih---</option>
+                                <option value="" selected disabled>---Pilih---</option>
                                 <option value="Reuni" @if(old('development_of_competencies_and_institutions') == "Reuni") {{ 'selected' }} @endif> Reuni </option>
                                 <option value="Pengabdian masyarakat bersama" @if(old('development_of_competencies_and_institutions') == "Pengabdian masyarakat bersama") {{ 'selected' }} @endif> Pengabdian masyarakat bersama </option>
                                 <option value="Seminar ilmiah bersama" @if(old('development_of_competencies_and_institutions') == "Seminar ilmiah bersama") {{ 'selected' }} @endif> Seminar ilmiah bersama </option>
                                 <option value="Pelatihan" @if(old('development_of_competencies_and_institutions') == "Pelatihan") {{ 'selected' }} @endif> Pelatihan </option>
                             </select>
+                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
                             @error('development_of_competencies_and_institutions')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

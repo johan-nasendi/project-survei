@@ -8,6 +8,9 @@
                     <div class="col-md-9">
                         <input type="text" name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
                         class="form-control @error('name') is-invalid @enderror" required="" autocomplete="name">
+                        <div class="invalid-feedback">
+                            Harap mengisi nama lengkap anda
+                        </div>
                         @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -22,6 +25,9 @@
                         <input type="text"  name="place_of_birth" value="{{ old('place_of_birth') }}"
                         placeholder="Tempat lahir anda" required=""  autofocus autocomplete="place_of_birth"
                         class="form-control @error('place_of_birth') is-invalid @enderror">
+                        <div class="invalid-feedback">
+                            Harap mengisi tempat lahir anda
+                        </div>
                         @error('place_of_birth')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -33,8 +39,11 @@
                 <div class="form-group row mb-3">
                     <label class="col-md-3 col-form-label" for="date_of_birth"> Tanggal Lahir <span class="text-danger">*</span></label>
                     <div class="col-md-9">
-                        <input type="date"  name="date_of_birth" required="" autofocus autocomplete="date_of_birth"
+                        <input type="date"  name="date_of_birth" required=""  autocomplete="date_of_birth"
                         class="form-control @error('date_of_birth') is-invalid @enderror" value="{{ old('date_of_birth') }}">
+                        <div class="invalid-feedback">
+                            Harap mengisi tanggal lahir anda
+                        </div>
                         @error('date_of_birth')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -52,10 +61,11 @@
                     <div class="col-md-9">
                         <select name="gender"  class="form-control @error('gender') is-invalid @enderror"
                          required="" autofocus>
-                            <option disabled selected>---Pilih---</option>
+                            <option value="" disabled selected>---Pilih---</option>
                             <option value="Pria" @if (old('gender') == "Pria") {{ 'selected' }} @endif> Pria</option>
                             <option value="Wanita" @if (old('gender') == "Wanita") {{ 'selected' }} @endif>Wanita</option>
                         </select>
+                        <div class="invalid-feedback">Harap memilih jenis kelamin anda</div>
                         @error('gender')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -68,6 +78,7 @@
                     <div class="col-md-9">
                         <input type="number"  name="mobile_phone_number" value="{{old('mobile_phone_number')}}"  required="" autocomplete="mobile_phone_number" autofocus
                         placeholder="Nomor ponsel anda yang aktif" class="form-control @error('mobile_phone_number') is-invalid @enderror">
+                        <div class="invalid-feedback">Harap mengisi nomor handphone anda</div>
                         @error('mobile_phone_number')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -81,6 +92,7 @@
                     <div class="col-md-9">
                         <input type="email" name="email" value="{{old('email')}}" class="form-control @error('email') is-invalid @enderror"
                         required="" autofocus  autocomplete="email" placeholder="Alamat email anda yang aktif">
+                        <div class="invalid-feedback">Harap mengisi email anda</div>
                         @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

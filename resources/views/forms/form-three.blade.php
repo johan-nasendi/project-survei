@@ -8,10 +8,11 @@
                             <label for="#">Apakah anda sudah bekerja saat ini ?<span class="text-danger">*</span></label>
                             <select  name="works" class="form-control @error('works') is-invalid @enderror" id="test"
                             required="" autocomplete="off" onchange="showDiv();">
-                                <option disabled selected>---Pilih---</option>
+                                <option value="" disabled selected>---Pilih---</option>
                                 <option value="Yes" @if(old('works') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                 <option value="No" @if(old('works') == "No") {{ 'selected' }} @endif> No </option>
                             </select>
+                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
                             @error('works')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -65,10 +66,10 @@
                         </div>
 
                         <div class="form-group" id="hidden_div_yes_two" style="display: none;" >
-                            <label for="#"> Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?
+                            <label for="#">  Bulan berapa setelah lulus anda memperoleh pekerjaan pertama?
                                 <span class="text-danger">*</span>
                             </label>
-                            <input type="number" autocomplete="off" name="after_how_many_months_job" value="{{old('after_how_many_months_job')}}" placeholder="Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?"
+                            <input type="month" autocomplete="off" name="after_how_many_months_job" value="{{old('after_how_many_months_job')}}" placeholder="Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?"
                             class="form-control @error('after_how_many_months_job') is-invalid @enderror">
                             @error('after_how_many_months_job')
                             <span class="invalid-feedback" role="alert">
@@ -78,10 +79,10 @@
                         </div>
 
                         <div class="form-group" id="hidden_div_yes_three" style="display: none;" >
-                            <label for="#"> Berapa bulan setelah keluar STR anda memeroleh pekerjaan pertama?
+                            <label for="#">  Bulan Berapa setelah keluar STR anda memeroleh pekerjaan pertama?
                                 <span class="text-danger">*</span>
                             </label>
-                            <input type="number" autocomplete="off"  name="get_str" placeholder="Bulan ke berapa anda memperoleh pekerjaan anda ?"
+                            <input type="month" autocomplete="off"  name="get_str" placeholder="Bulan ke berapa anda memperoleh pekerjaan anda ?"
                             class="form-control @error('get_str') is-invalid @enderror">
                             @error('get_str')
                             <span class="invalid-feedback" role="alert">
@@ -95,6 +96,7 @@
                                 yang merespon, dan yang mengundang wawancara?
                                 <span class="text-danger">*</span>
                             </label>
+
                             <input type="number" autocomplete="off"  value="{{old('amount_applied')}}" name="amount_applied" placeholder="Jumlah Instansi yang dilamar"
                             class="form-control @error('amount_applied') is-invalid @enderror">
                             @error('amount_applied')
