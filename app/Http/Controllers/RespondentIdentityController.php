@@ -9,7 +9,7 @@ use App\Models\RespondentIdentitiy;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 
 class RespondentIdentityController extends Controller
 {
@@ -72,9 +72,9 @@ class RespondentIdentityController extends Controller
                 'works' => 'required',
         ]);
 
+
+
     try {
-
-
             $respondent = new RespondentIdentitiy();
             $respondent->name = $request->name;
             $respondent->email = $request->email;
@@ -139,16 +139,11 @@ class RespondentIdentityController extends Controller
             $alumni->development_of_competencies_and_institutions = $request->development_of_competencies_and_institutions;
             $respondent->alumniComunication()->save($alumni);
 
-
-
               Alert::success('Success', 'Data Anda Berhasil Dikirim');
               return redirect('/');
-            }catch (\Throwable $th) {
-
-                    Alert::error('Error','Data Anda Gagal Dikirim', ['error' => $th->getMessage()]);
-        }
-         return redirect()->back();
-
+            } catch (\Throwable $th) {
+              Alert::error('Error','Data Anda Gagal Dikirim', ['error' => $th->getMessage()]);
+            } return redirect()->back();
     }
 
     /**

@@ -6,8 +6,8 @@
                 <div class="form-group row mb-3">
                     <label class="col-md-3 col-form-label" for="name"> Nama Lengkap<span class="text-danger">*</span> </label>
                     <div class="col-md-9">
-                        <input type="text" name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
-                        class="form-control @error('name') is-invalid @enderror" required="" autocomplete="name">
+                        <input type="text"  name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
+                        class="form-control @error('name') is-invalid @enderror" required="" autocomplete="name"  >
                         <div class="invalid-feedback">
                             Harap mengisi nama lengkap anda
                         </div>
@@ -90,7 +90,7 @@
                 <div class="form-group row mb-3">
                     <label class="col-md-3 col-form-label" for="email"> Alamat E-mail <span class="text-danger">*</span> </label>
                     <div class="col-md-9">
-                        <input type="email" name="email" value="{{old('email')}}" class="form-control @error('email') is-invalid @enderror"
+                        <input type="email" name="email"  value="{{old('email')}}" class="form-control @error('email') is-invalid @enderror"
                         required="" autofocus  autocomplete="email" placeholder="Alamat email anda yang aktif">
                         <div class="invalid-feedback">Harap mengisi email anda</div>
                         @error('email')
@@ -108,7 +108,7 @@
             </li>
 
                 <li class="next list-inline-item float-right">
-                    <button type="button | submit" class="btn btn-warning"> <b> SELANJUTNYA</b>
+                    <button type="button" class="btn btn-warning"> <b> SELANJUTNYA</b>
                         <i class="fas fa-arrow-alt-circle-right"></i>
                     </button>
                  </li>

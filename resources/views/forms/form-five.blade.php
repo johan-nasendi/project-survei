@@ -1,4 +1,4 @@
-<h4 class="header-title mb-3"> Alumni Comunicacion </h4>
+<h4 class="header-title mb-3"> KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES </h4>
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box">

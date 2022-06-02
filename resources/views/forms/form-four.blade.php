@@ -7,8 +7,8 @@
                         <label for="#">Kesesuaian Kurikulum dengan dunia kerja <span class="text-danger">*</span></label>
                         <select name="curriculum_compatibility_jobs" class="form-control @error('curriculum_compatibility_jobs') is-invalid @enderror"
                         required=""  autocomplete="off">
-                            <option selected disabled>---Pilih---</option>
-                            <option value="" value="Sangat Tidak Sesuai" @if(old('curriculum_compatibility_jobs') == "Sangat Tidak Sesuai") {{ 'selected' }} @endif> [1] Sangat Tidak Sesuai </option>
+                            <option value="" selected disabled>---Pilih---</option>
+                            <option  value="Sangat Tidak Sesuai" @if(old('curriculum_compatibility_jobs') == "Sangat Tidak Sesuai") {{ 'selected' }} @endif> [1] Sangat Tidak Sesuai </option>
                             <option value="Tidak Sesuai" @if(old('curriculum_compatibility_jobs') == "Tidak Sesuai") {{ 'selected' }} @endif> [2] Tidak Sesuai </option>
                             <option value="Kurang Sesuai" @if(old('curriculum_compatibility_jobs') == "Kurang Sesuai") {{ 'selected' }} @endif> [3] Kurang Sesuai </option>
                             <option value="Sesuai" @if(old('curriculum_compatibility_jobs') == "Sesuai") {{ 'selected' }} @endif> [4] Sesuai </option>
