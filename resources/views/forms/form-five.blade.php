@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box">
-                    <div class="form-group">
+                    <div class="form-group needs-validation was-validated" novalidate="">
                         <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
                                 <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
@@ -20,11 +20,14 @@
                         </div>
 
                     <div class="form-group">
-                        <label for="#">Media komunikasi yang digunakan? Jawaban boleh lebih dari 1<span class="text-danger">*</span></label>
+                        <label for="#">Media komunikasi yang digunakan?</label>
                         <div class="form-group">
-                            <label for="pass1">Username Instagram</label>
+                            <label for="pass1">Username Facebook</label>
                             <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda" autocomplete="off"
                             class="form-control @error('fb') is-invalid @enderror" value="{{old('fb')}}">
+                            <div class="text-danger">
+                                Jika anda mempunyai akun facebook,Mohon mengisi,Jika tidak dapat dikosongkan
+                             </div>
                             @error('fb')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -33,9 +36,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="pass1">Username facebook</label>
+                            <label for="pass1">Username Instagram</label>
                             <input  type="text" name="ig" placeholder="Masukan usernmae facebook anda" autocomplete="off"
                             class="form-control @error('ig') is-invalid @enderror" value="{{old('ig')}}">
+                            <div class="text-danger">
+                                Jika anda mempunyai akun instagram,Mohon mengisi,Jika tidak dapat dikosongkan
+                             </div>
                             @error('ig')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -47,6 +53,9 @@
                             <label for="pass1">Username Linkedin</label>
                             <input  type="text" name="linkend" placeholder="Masukan username Linkedin anda" autocomplete="off"
                             class="form-control @error('linkend') is-invalid @enderror" value="{{old('linkend')}}">
+                            <div class="text-danger">
+                                Jika anda mempunyai akun linkedin,Mohon mengisi,Jika tidak dapat dikosongkan
+                             </div>
                             @error('linkend')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -58,7 +67,7 @@
             </div> <!-- end card-box -->
         </div> <!-- end col -->
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 needs-validation was-validated" novalidate="">
             <div class="card-box">
                     <div class="form-group">
                         <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>

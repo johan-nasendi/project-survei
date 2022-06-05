@@ -44,11 +44,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-7">
+                    <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-8">
                         <div class="home-img position-relative">
-                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-first-img">
-                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-second-img mx-auto d-block">
-                            <img src="{{asset('/img/logo.png')}}" alt="" class="home-third-img">
+                            <img src="{{asset('/img/hello.png')}}" alt="" class="home-first-img">
+                            {{-- <img src="{{asset('/img/hello.png')}}" alt="" class="home-second-img mx-auto d-block"> --}}
+                            {{-- <img src="{{asset('/img/hello.png')}}" alt="" class="home-third-img"> --}}
                         </div>
                     </div>
                 </div>

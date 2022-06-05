@@ -15,7 +15,7 @@
         <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
         <div id="basicwizard">
             @include('layouts.component.nav-form')
-            <form name="frm" action="{{route('forum.post')}}"   class="needs-validation was-validated" novalidate=""
+            <form name="frm" action="{{route('forum.post')}}"
             method="POST" enctype="multipart/form-data">
             @csrf
 

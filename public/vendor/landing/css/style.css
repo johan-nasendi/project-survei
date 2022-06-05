@@ -173,14 +173,14 @@ p {
 }
 
 .home-first-img {
-    position: relative;
-    z-index: 2;
-    max-width: 300px;
+    position: absolute;
+    top: 80%;
+    width: 500px;
 }
 
 .home-second-img {
     position: absolute;
-    max-width: 250px;
+    max-width: 350px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);

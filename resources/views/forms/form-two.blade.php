@@ -1,7 +1,7 @@
 
 <h4 class="header-title mb-3"> PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN </h4>
 
-    <div class="row">
+    <div class="row needs-validation was-validated" novalidate="">
         <div class="col-lg-6">
             <div class="card-box">
                     <div class="form-group">
@@ -96,7 +96,7 @@
             </div> <!-- end card-box -->
         </div> <!-- end col -->
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 ">
             <div class="card-box">
 
                 <div class="form-group">

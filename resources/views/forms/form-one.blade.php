@@ -2,12 +2,12 @@
 <h4 class="header-title mb-3"> IDENTITAS RESPONDEN </h4>
 
         <div class="row">
-            <div class="col-6">
-                <div class="form-group row mb-3">
+            <div class="col-6 needs-validation was-validated" novalidate="">
+                <div class="form-group row mb-3" >
                     <label class="col-md-3 col-form-label" for="name"> Nama Lengkap<span class="text-danger">*</span> </label>
                     <div class="col-md-9">
                         <input type="text"  name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
-                        class="form-control @error('name') is-invalid @enderror" required="" autocomplete="name"  >
+                        class="form-control  @error('name') is-invalid @enderror" required="" autocomplete="name"  >
                         <div class="invalid-feedback">
                             Harap mengisi nama lengkap anda
                         </div>
@@ -55,7 +55,7 @@
 
             </div> <!-- end col -->
 
-            <div class="col-6">
+            <div class="col-6 needs-validation was-validated" novalidate="">
                 <div class="form-group row mb-3">
                     <label class="col-md-3 col-form-label" for="gender">Jenis Kelamin <span class="text-danger">*</span></label>
                     <div class="col-md-9">
