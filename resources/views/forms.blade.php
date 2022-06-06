@@ -13,6 +13,13 @@
 @endpush
 
         <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
+        @if (count($errors) > 0)
+        <ul class="alert alert-danger">
+        @foreach($errors->all() as $error)
+           <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+        @endif
         <div id="basicwizard">
             @include('layouts.component.nav-form')
             <form name="frm" action="{{route('forum.post')}}"
@@ -72,6 +79,9 @@
             document.getElementById("hidden_div_yes_eleven").style.display="block";
         }
         if(getSelectValue == "Yes"){
+            document.getElementById("hidden_div_yes_additional_competence").style.display="block";
+        }
+        if(getSelectValue == "Yes"){
             document.getElementById("hidden_div_yes_twelve").style.display="block";
         }
 
@@ -87,6 +97,7 @@
             document.getElementById("hidden_div_yes_eight").style.display="none";
             document.getElementById("hidden_div_yes_nine").style.display="none";
             document.getElementById("hidden_div_yes_eleven").style.display="none";
+            document.getElementById("hidden_div_yes_additional_competence").style.display="none";
             document.getElementById("hidden_div_yes_twelve").style.display="none";
 
         }
@@ -109,198 +120,199 @@
     }
 
     function IsEmpty() {
-     // Respondent
+        // Respondent
         if (document.forms['frm'].name.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].email.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].mobile_phone_number.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].place_of_birth.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].date_of_birth.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].gender.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
-        })
-            return false;
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].email.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].mobile_phone_number.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].place_of_birth.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].date_of_birth.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].gender.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>A.IDENTITAS RESPONDEN</h4>'
+            })
+                return false;
         }
 
-        //questions
+            //questions
         if (document.forms['frm'].what_study_program.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].college_entry_date.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].college_graduation_date.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].score_ipk.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].organization.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].active_inactive_organization.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].further_education_levels.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].educational_background.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].field_work.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].according.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
-        })
-            return false;
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].college_entry_date.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].college_graduation_date.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].score_ipk.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].organization.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].active_inactive_organization.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].further_education_levels.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].educational_background.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].field_work.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].according.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h4>'
+            })
+                return false;
         }
 
-        // RIWAYAT PEKERJAAN
+            // RIWAYAT PEKERJAAN
         if (document.forms['frm'].works.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>C.RIWAYAT PEKERJAAN</h4>'
-        })
-            return false;
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>C.RIWAYAT PEKERJAAN</h4>'
+            })
+                return false;
         }
 
 
 
-        // KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA
+            // KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA
         if (document.forms['frm'].curriculum_compatibility_jobs.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
-        })
-            return false;
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
+            })
+                return false;
+            }
+
+            if (document.forms['frm'].health_polytechnic_Competence.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
+            })
+                return false;
+            }
+
+            if (document.forms['frm'].competency_mastered.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
+            })
+                return false;
+            }
+
+            if (document.forms['frm'].competencies_required_job.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
+            })
+                return false;
+            }
+
+            if (document.forms['frm'].competency_improvement_needs.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
+            })
+                return false;
         }
 
-        if (document.forms['frm'].health_polytechnic_Competence.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
-        })
-            return false;
-        }
-
-        if (document.forms['frm'].competency_mastered.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
-        })
-            return false;
-        }
-
-        if (document.forms['frm'].competencies_required_job.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
-        })
-            return false;
-        }
-
-        if (document.forms['frm'].competency_improvement_needs.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>D.KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h4>'
-        })
-            return false;
-        }
-
-        // KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES
+            // KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES
         if (document.forms['frm'].alumni_association.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].cooperation_institutions_alumni_associations.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
-        })
-            return false;
-        }
-        if (document.forms['frm'].development_of_competencies_and_institutions.value === "") {
-            Swal.fire({icon: 'error',title: 'Oops...',
-            text: 'Data anda belum lengkap,Mohon dilengkapi',
-            footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
-        })
-            return false;
-        }
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].cooperation_institutions_alumni_associations.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
+            })
+                return false;
+            }
+            if (document.forms['frm'].development_of_competencies_and_institutions.value === "") {
+                Swal.fire({icon: 'error',title: 'Oops...',
+                text: 'Data anda belum lengkap,Mohon dilengkapi',
+                footer: '<h4>E.KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h4>'
+            })
+                return false;
+            }
 
-        return true;
+            return true;
+
     }
 
 

@@ -70,9 +70,8 @@ class RespondentIdentityController extends Controller
                 'development_of_competencies_and_institutions'=> 'required',
 
                 'works' => 'required',
-                'works' => 'required_if:works,Yes,No',
-                'start_work' => 'required_if:works,Yes,Sebelum Lulus,Setelah Lulus',
-                'jobs_reason' => 'required_if:works,No,Saya memulai bisnis sendiri,Saya melanjutkan kuliah',
+                'jobs_reason' => 'required_if:works,No',
+                'start_work' =>'required_if:works,Yes',
                 'after_how_many_months_job' => 'required_if:works,Yes',
                 'get_str' => 'required_if:works,Yes',
                 'amount_applied' => 'required_if:works,Yes',
@@ -85,8 +84,8 @@ class RespondentIdentityController extends Controller
                 'why_take_the_job' => 'required_if:works,Yes',
                 'level_of_education'=> 'required_if:works,Yes',
                 'relationship_study_work' => 'required_if:works,Yes',
-                'additional_competence' => 'required_if:works,Yes',
-                'income_per_month' => 'required_if:works,Yes',
+                'additional_competence'=>'required_if:works,Yes',
+                'income_per_month'=>'required_if:works,Yes',
         ]);
 
 
