@@ -1,9 +1,9 @@
 <h4 class="header-title mb-3"> RIWAYAT PEKERJAAN </h4>
 
-        <div class="row">
+        <div class="row needs-validation was-validated" novalidate="">
             <div class="col-lg-6">
                 <div class="card-box">
-                        <div class="form-group needs-validation was-validated" novalidate="">
+                        <div class="form-group" >
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <label for="#">Apakah anda sudah bekerja saat ini ?<span class="text-danger">*</span></label>
                             <select  name="works" class="form-control @error('works') is-invalid @enderror" id="test"
@@ -20,16 +20,14 @@
                             @enderror
                         </div>
 
-                        <div class="form-group"  id="hidden_div_yes_one" style="display: none;">
+                        <div class="form-group"   id="hidden_div_yes_one" style="display: none;">
                             <label for="#">Kapan anda mulai mencari pekerjaan?<span class="text-danger">*</span></label>
-                            <select  autocomplete="off" name="start_work" class="form-control @error('start_work') is-invalid @enderror" >
-                                <option selected disabled>---Pilih---</option>
+                            <select name="start_work" class="form-control @error('start_work') is-invalid @enderror" >
+                                <option value="" selected disabled>---Pilih---</option>
                                 <option value="Sebelum Lulus" @if(old('start_work') == "Sebelum Lulus") {{ 'selected' }} @endif> Bulan sebelum lulus</option>
                                 <option value="Setelah Lulus" @if(old('start_work') == "Setelah Lulus") {{ 'selected' }} @endif> Bulan setelah lulus</option>
                             </select>
-                            <div class="text-danger">
-                                Harap memilih pilihan anda
-                            </div>
+                            <div class="invalid-feedback">Harap memilih pilihan anda</div>
                             @error('start_work')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -42,12 +40,15 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <select name="jobs_reason" onchange="showArea();"  id="jobs_reason"
-                            class="form-control @error('jobs_reason') is-invalid @enderror" autocomplete="off">
-                                <option selected disabled>---Pilih---</option>
+                            class="form-control @error('jobs_reason') is-invalid @enderror">
+                                <option value="" selected disabled>---Pilih---</option>
                                 <option value="Saya memulai bisnis sendiri" @if(old('jobs_reason') == "Saya memulai bisnis sendiri") {{ 'selected' }} @endif> Saya memulai bisnis sendiri </option>
                                 <option value="Saya melanjutkan kuliah" @if(old('jobs_reason') == "Saya melanjutkan kuliah") {{ 'selected' }} @endif> Saya melanjutkan kuliah </option>
                                 <option value="1" @if(old('jobs_reason') == "1") {{ 'selected' }} @endif> Lainnya </option>
                             </select>
+                            <div class="invalid-feedback">
+                                Harap memilih pilihan alasan anda
+                            </div>
                             @error('jobs_reason')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -61,7 +62,7 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <textarea class="form-control @error('jobs_reason') is-invalid @enderror" name="jobs_reason"  rows="3"autocomplete="off"> {{old('jobs_reason')}} </textarea>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi alasan anda
                             </div>
                             @error('jobs_reason')
@@ -77,7 +78,7 @@
                             </label>
                             <input type="month" autocomplete="off" name="after_how_many_months_job" value="{{old('after_how_many_months_job')}}" placeholder="Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?"
                             class="form-control @error('after_how_many_months_job') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi bulan berapa anda memperoleh pekerjaan
                             </div>
                             @error('after_how_many_months_job')
@@ -93,7 +94,7 @@
                             </label>
                             <input type="month" autocomplete="off"  name="get_str" placeholder="Bulan ke berapa anda memperoleh pekerjaan anda ?"
                             class="form-control @error('get_str') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi bulan berapa STR anda keluar
                             </div>
                             @error('get_str')
@@ -110,7 +111,7 @@
                             </label>
                             <input type="number" autocomplete="off"  value="{{old('amount_applied')}}" name="amount_applied" placeholder="Jumlah Instansi yang dilamar"
                             class="form-control @error('amount_applied') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi jumlah instansi yang anda lamar
                             </div>
                             @error('amount_applied')
@@ -122,7 +123,7 @@
                             <input type="number" autocomplete="off" value="{{old('amount_response_to_applications')}}"
                             name="amount_response_to_applications" parsley-trigger="change" placeholder="Jumlah instansi merespon lamaran"
                             class="form-control @error('amount_response_to_applications') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi jumlah instansi yang merespon lamaran anda
                             </div>
                             @error('amount_response_to_applications')
@@ -134,7 +135,7 @@
                             <input type="number" autocomplete="off" value="{{old('amount_inviting_interviews')}}" name="amount_inviting_interviews"
                             parsley-trigger="change" placeholder="Jumlah instansi yang mengundang wawancara"
                             class="form-control @error('amount_inviting_interviews') is-invalid @enderror ">
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mengisi jumlah instansi yang mengundang anda wawancara
                             </div>
                             @error('amount_inviting_interviews')
@@ -149,7 +150,7 @@
                             <label for="#">Bagaimana anda mencari pekerjaan?<span class="text-danger">*</span></label>
                             <select name="how_to_find_a_job" autocomplete="off" class="form-control @error('how_to_find_a_job') is-invalid @enderror" >
                                 <option selected disabled>---Pilih---</option>
-                                <option value="Melamar ke instansi " @if(old('how_to_find_a_job') == "Melamar ke instansi ") {{ 'selected' }} @endif> Melamar ke instansi </option>
+                                <option value="Melamar ke instansi" @if(old('how_to_find_a_job') == "Melamar ke instansi ") {{ 'selected' }} @endif> Melamar ke instansi </option>
                                 <option value="Mencari lewat internet/iklan online/milis" @if(old('how_to_find_a_job') == "Mencari lewat internet/iklan online/milis") {{ 'selected' }} @endif> Mencari lewat internet/iklan online/milis </option>
                                 <option value="Dihubungi oleh instansi (RS, Klinik, perusahaan, dll)" @if(old('how_to_find_a_job') == "Dihubungi oleh instansi (RS, Klinik, perusahaan, dll)") {{ 'selected' }} @endif> Dihubungi oleh instansi (RS, Klinik, perusahaan, dll) </option>
                                 <option value="Memperoleh informasi dari Poltekkes" @if(old('how_to_find_a_job') == "Memperoleh informasi dari Poltekkes") {{ 'selected' }} @endif> Memperoleh informasi dari Poltekkes </option>
@@ -158,7 +159,7 @@
                                 <option value="Melalui jejaring/relasi orang tua/saudara/teman/dosen" @if(old('how_to_find_a_job') == "Melalui jejaring/relasi orang tua/saudara/teman/dosen") {{ 'selected' }} @endif> Melalui jejaring/relasi orang tua/saudara/teman/dosen </option>
                                 <option value="Lainnya" @if(old('how_to_find_a_job') == "Lainnya") {{ 'selected' }} @endif> Lainnya </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('how_to_find_a_job')
@@ -176,7 +177,7 @@
                 <div class="card-box">
                         <div class="form-group" id="hidden_div_yes_six" style="display: none;">
                             <label for="#">Instansi tempat anda bekerja?<span class="text-danger">*</span></label>
-                            <select autocomplete="off" name="workplace" class="form-control @error('workplace') is-invalid @enderror">
+                            <select  name="workplace" class="form-control @error('workplace') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Instansi Pemerintah" @if(old('workplace') == "Instansi Pemerintah") {{ 'selected' }} @endif> Instansi Pemerintah (termasuk BUMN) </option>
                                 <option value="Swasta" @if(old('workplace') == "Swasta") {{ 'selected' }} @endif> Swasta </option>
@@ -184,7 +185,7 @@
                                 <option value="Usaha sendiri" @if(old('workplace') == "Usaha sendiri") {{ 'selected' }} @endif> Usaha sendiri </option>
                                 <option value="Lainnya" @if(old('workplace') == "Lainnya") {{ 'selected' }} @endif> Lainya... </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('workplace')
@@ -196,7 +197,7 @@
 
                         <div class="form-group" id="hidden_div_yes_seven" style="display: none;">
                             <label for="#">Apa nama instansi tempat anda bekerja?<span class="text-danger">*</span></label>
-                            <select autocomplete="off" name="name_workplace" class="form-control @error('name_workplace') is-invalid @enderror" >
+                            <select name="name_workplace" class="form-control @error('name_workplace') is-invalid @enderror" >
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Puskesmas" @if(old('name_workplace') == "Puskesmas") {{ 'selected' }} @endif> Puskesmas</option>
                                 <option value="Klinik" @if(old('name_workplace') == "Klinik") {{ 'selected' }} @endif> Klinik</option>
@@ -205,7 +206,7 @@
                                 <option value="Laboratorium" @if(old('name_workplace') == "Laboratorium") {{ 'selected' }} @endif>Laboratorium</option>
                                 <option value="Lainya" @if(old('name_workplace') == "Lainya") {{ 'selected' }} @endif> Lainya...</option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('name_workplace')
@@ -216,12 +217,12 @@
                         </div>
                         <div class="form-group" id="hidden_div_yes_eight" style="display: none;">
                             <label for="#">Apakah pekerjaan anda sesuai dengan latar belakang pendidikan?<span class="text-danger">*</span></label>
-                            <select  autocomplete="off" name="job_educational_background" class="form-control @error('job_educational_background') is-invalid @enderror">
+                            <select name="job_educational_background" class="form-control @error('job_educational_background') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Yes" @if(old('job_educational_background') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                 <option value="No" @if(old('job_educational_background') == "No") {{ 'selected' }} @endif> No </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('job_educational_background')
@@ -234,7 +235,7 @@
                             <label for="#">Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select autocomplete="off" name="why_take_the_job" class="form-control @error('why_take_the_job') is-invalid @enderror">
+                            <select  name="why_take_the_job" class="form-control @error('why_take_the_job') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Saya belum mendapatkan pekerjaan yang lebih sesuai" @if(old('why_take_the_job') == "Saya belum mendapatkan pekerjaan yang lebih sesuai") {{ 'selected' }} @endif> Saya belum mendapatkan pekerjaan yang lebih sesuai </option>
                                 <option value="Di pekerjaan ini saya memeroleh prospek karir yang baik" @if(old('why_take_the_job') == "Di pekerjaan ini saya memeroleh prospek karir yang baik") {{ 'selected' }} @endif> Di pekerjaan ini saya memeroleh prospek karir yang baik. </option>
@@ -248,7 +249,7 @@
                                 <option value="Pekerjaan saya saat ini dapat lebih menjamin kebutuhan keluarga saya" @if(old('why_take_the_job') == "Pekerjaan saya saat ini dapat lebih menjamin kebutuhan keluarga saya") {{ 'selected' }} @endif> Pekerjaan saya saat ini dapat lebih menjamin kebutuhan keluarga saya </option>
                                 <option value="Lainnya" @if(old('why_take_the_job') == "Lainnya") {{ 'selected' }} @endif > Lainnya... </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('why_take_the_job')
@@ -262,13 +263,13 @@
                             <label for="#"> Tingkat pendidikan apa yang paling tepat/sesuai untuk pekerjaan anda saat ini?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select autocomplete="off" name="level_of_education" class="form-control @error('level_of_education') is-invalid @enderror">
+                            <select   name="level_of_education" class="form-control @error('level_of_education') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Setingkat lebih tinggi" @if(old('level_of_education') == "Setingkat lebih tinggi") {{ 'selected' }} @endif> Setingkat lebih tinggi  </option>
                                 <option value="Tingkat yang sama" @if(old('level_of_education') == "Tingkat yang sama") {{ 'selected' }} @endif> Tingkat yang sama </option>
                                 <option value="Setingkat lebih rendah" @if(old('level_of_education') == "Setingkat lebih rendah") {{ 'selected' }} @endif> Setingkat lebih rendah </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('level_of_education')
@@ -282,7 +283,7 @@
                             <label for="#"> Seberapa erat hubungan antara bidang studi dengan pekerjaan anda?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select autocomplete="off" name="relationship_study_work" class="form-control @error('relationship_study_work') is-invalid @enderror">
+                            <select  name="relationship_study_work" class="form-control @error('relationship_study_work') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Sangat erat" @if(old('relationship_study_work') == "Sangat erat") {{ 'selected' }} @endif> Sangat erat  </option>
                                 <option value="Erat" @if(old('relationship_study_work') == "Lainnya") {{ 'Erat' }} @endif> Erat </option>
@@ -290,7 +291,7 @@
                                 <option value="Kurang erat" @if(old('relationship_study_work') == "Kurang erat") {{ 'selected' }} @endif> Kurang erat </option>
                                 <option value="Tidak sama sekali" @if(old('relationship_study_work') == "Tidak sama sekali") {{ 'selected' }} @endif> Tidak sama sekali </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('relationship_study_work')
@@ -304,7 +305,7 @@
                             <label for="#"> Dalam melaksanakan pekerjaan, menurut penilaian Saudara sejauh mana kompetensi tambahan berikut diperlukan?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select autocomplete="off" name="additional_competence" class="form-control @error('additional_competence') is-invalid @enderror">
+                            <select  name="additional_competence" class="form-control @error('additional_competence') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value="Pengetahuan Umum"  @if(old('additional_competence') == "Pengetahuan Umum") {{ 'selected' }} @endif > Pengetahuan Umum  </option>
                                 <option value="Penguasaan Bahasa Inggris"  @if(old('additional_competence') == "Penguasaan Bahasa Inggris") {{ 'selected' }} @endif > Penguasaan Bahasa Inggris </option>
@@ -312,7 +313,7 @@
                                 <option value="Ketrampilan Komunikasi"  @if(old('additional_competence') == "Ketrampilan Komunikasi") {{ 'selected' }} @endif > Ketrampilan Komunikasi </option>
                                 <option value="Kerjasama Tim"  @if(old('additional_competence') == "Kerjasama Tim") {{ 'selected' }} @endif > Kerjasama Tim </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('additional_competence')
@@ -326,7 +327,7 @@
                             <label for="#"> Berapa rata- rata penghasilan anda per bulan?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select autocomplete="off" name="income_per_month" class="form-control @error('income_per_month') is-invalid @enderror">
+                            <select  name="income_per_month" class="form-control @error('income_per_month') is-invalid @enderror">
                                 <option selected disabled>---Pilih---</option>
                                 <option value=" < 2000000" @if(old('income_per_month') == "< 2000000") {{ 'selected' }} @endif> < Rp. 2.000.000,-  </option>
                                 <option value=" > 2000000-3500000" @if(old('income_per_month') == "> 2000000-3500000") {{ 'selected' }} @endif> > Rp. 2.000.000. – 3.500.000,- </option>
@@ -334,7 +335,7 @@
                                 <option value=" > 5000000 - 6500000 " @if(old('income_per_month') == " > 5000000 - 6500000") {{ 'selected' }} @endif> >Rp. 5.000.000. – 6.500.000.- </option>
                                 <option value="6500000" @if(old('income_per_month') == "6500000") {{ 'selected' }} @endif> >Rp. 6.500.000,- </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="invalid-feedback">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('income_per_month')

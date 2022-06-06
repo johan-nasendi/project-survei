@@ -37,9 +37,10 @@
 
     function showDiv(){
         getSelectValue = document.getElementById("test").value;
-        if(getSelectValue == "Yes"){
+        if(getSelectValue == "Yes") {
             document.getElementById("hidden_div_yes_one").style.display="block";
         }
+
         if(getSelectValue == "Yes"){
             document.getElementById("hidden_div_yes_two").style.display="block";
         }
@@ -95,8 +96,6 @@
         } else {
             document.getElementById("hidden_div_no").style.display="none";
         }
-
-
 
     }
 
@@ -234,6 +233,8 @@
         })
             return false;
         }
+
+
 
         // KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA
         if (document.forms['frm'].curriculum_compatibility_jobs.value === "") {
