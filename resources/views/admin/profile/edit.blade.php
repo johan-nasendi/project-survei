@@ -46,7 +46,7 @@ Edit Profil
                                             </div><!-- end col-->
                                             <div class="col-lg-4">
                                                 <div class="text-lg-right">
-                                                    <a href="{{ route('profile.index') }}" class="btn btn-sm btn-danger" title="kembali"><div class="fas fa-reply"></div></a>
+                                                    <a href="{{ route('profil.index') }}" class="btn btn-sm btn-danger" title="kembali"><div class="fas fa-reply"></div></a>
                                                 </div>
                                             </div><!-- end col-->
                                         </div> <!-- end row -->
@@ -55,7 +55,7 @@ Edit Profil
 
                                         <!-- start card-body -->
                                         <div class="card-body">
-                                            <form action="{{route('profile.update',['profile' =>$user->id ])}}" method="POST">
+                                            <form action="{{route('profil.update',['profile' =>$user->id ])}}" method="POST">
                                                 @method('PUT')
                                                 @csrf
 

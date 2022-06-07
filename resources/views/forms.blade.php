@@ -44,7 +44,7 @@
 
     function showDiv(){
         getSelectValue = document.getElementById("test").value;
-        if(getSelectValue == "Yes") {
+        if(getSelectValue == "Yes" ) {
             document.getElementById("hidden_div_yes_one").style.display="block";
         }
 

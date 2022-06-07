@@ -1,7 +1,7 @@
 @extends('layouts.app-dashboard')
 
 @section('title')
-Profile
+Profil
 @endsection
 @section('content')
 
@@ -23,12 +23,12 @@ Profile
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dasbor</a></li>
 
                                             <li class="breadcrumb-item active">@yield('title')</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Profile Info</h4>
+                                    <h4 class="page-title">Profil Info</h4>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ Profile
                                                     </div> <!-- end col -->
                                                 </div> <!-- end row -->
                                                 <div class="text-right">
-                                                    <a href="{{route('profile.edit', ['profile' => Auth::user()->username])}}" class="btn btn-warning waves-effect waves-light mt-2" >
+                                                    <a href="{{route('profil.edit', ['profil' => Auth::user()->username])}}" class="btn btn-warning waves-effect waves-light mt-2" >
                                                         <i class="mdi mdi-content-save"></i> Edit
                                                     </a>
                                                 </div>

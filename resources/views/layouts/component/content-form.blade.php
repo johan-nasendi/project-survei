@@ -1,5 +1,5 @@
 
-<div class="tab-pane active" id="basictab1">
+ <div class="tab-pane active" id="basictab1">
     @include('forms.form-one')
 </div>
 
@@ -11,7 +11,7 @@
     @include('forms.form-three')
 </div>
 
-<div class="tab-pane" id="basictab4">
+ <div class="tab-pane" id="basictab4">
     @include('forms.form-four')
 </div>
 

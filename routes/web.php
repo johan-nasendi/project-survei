@@ -30,7 +30,7 @@ Route::get('/form/Kuesioner/Tracer-Study-Alumni', [DashboardController::class, '
 Route::post('/form/Kuesioner/Tracer-Study-Alumni/kirim', [RespondentIdentityController::class, 'store'])->name('forum.post');
 
 
-Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function() {
+Route::group(['prefix' => 'dasbor','middleware' => ['web','auth']] , function() {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -41,7 +41,7 @@ Route::group(['prefix' => 'dashboard','middleware' => ['web','auth']] , function
 
     Route::get('export', [DashboardController::class, 'export_mapping'])->name('export');
 
-    Route::resource('/profile',ProfileController::class)->except('show');
+    Route::resource('/profil',ProfileController::class)->except('show');
 
 
 });

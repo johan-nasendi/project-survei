@@ -6,11 +6,11 @@
                         <div class="form-group needs-validation was-validated" novalidate="">
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <label for="#">Apakah anda sudah bekerja saat ini ?<span class="text-danger">*</span></label>
-                            <select  name="works" class="form-control @error('works') is-invalid @enderror" id="test"
-                            required="" autocomplete="off" onchange="showDiv();">
-                                <option value="" disabled selected>---Pilih---</option>
-                                <option value="Yes" @if(old('works') == "Yes") {{ 'selected' }} @endif>Yes </option>
-                                <option value="No" @if(old('works') == "No") {{ 'selected' }} @endif>No </option>
+                            <select  name="works" class="form-control @error('works') is-invalid @enderror"
+                            required="" id="test" onchange="showDiv()">
+                                <option value="" disabled selected="selected">---Pilih---</option>
+                                <option value="Yes" @if (old('works') == "Yes") {{ 'selected' }} @endif> Yes </option>
+                                <option value="No"  @if (old('works') == "No")  {{ 'selected' }} @endif> No </option>
                             </select>
                             <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
                             @error('works')
@@ -22,10 +22,10 @@
 
                         <div class="form-group" id="hidden_div_yes_one" style="display: none;">
                             <label for="#">Kapan anda mulai mencari pekerjaan?<span class="text-danger">*</span></label>
-                            <select name="start_work" class="form-control @error('start_work') is-invalid @enderror" >
+                            <select  name="start_work" class="form-control @error('start_work') is-invalid @enderror" >
                                 <option value="" selected disabled>---Pilih---</option>
-                                <option value="Sebelum Lulus" @if(old('start_work') == "Sebelum Lulus") {{ 'selected' }} @endif> Bulan sebelum lulus</option>
-                                <option value="Setelah Lulus" @if(old('start_work') == "Setelah Lulus") {{ 'selected' }} @endif> Bulan setelah lulus</option>
+                                <option value="Sebelum Lulus" @if (old('start_work') == "Sebelum Lulus") {{ 'selected' }} @endif> Bulan sebelum lulus</option>
+                                <option value="Setelah Lulus" @if (old('start_work') == "Setelah Lulus") {{ 'selected' }} @endif> Bulan setelah lulus</option>
                             </select>
                             <div class="text-danger">Harap memilih pilihan anda</div>
                             @error('start_work')
@@ -335,7 +335,7 @@
                 </a>
             </li>
             <li class="next list-inline-item float-right" >
-                <button type="button" class="btn btn-warning  text-dark"> <b> SELANJUTNYA</b> <i class=" fas fa-arrow-alt-circle-right"></i> </button>
+                <button type="button" class="btn btn-warning text-dark"> <b> SELANJUTNYA</b> <i class=" fas fa-arrow-alt-circle-right"></i> </button>
             </li>
         </ul>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app-dashboard')
 
 @section('title')
-   Dashboard
+    Dasbor
 @endsection
 
 @section('content')
@@ -21,11 +21,12 @@
                         <div class="col-12">
                             <div class="page-title-box">
                                 <div class="page-title-right">
+
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item active">@yield('title')</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title"><i data-feather="home"></i>  @yield('title'),Welcome {{Auth::user()->name}} </h4>
+                                <h4 class="page-title"><i data-feather="home"></i>  @yield('title'),Hai {{Auth::user()->name}} </h4>
                             </div>
                         </div>
                     </div>
@@ -118,8 +119,8 @@
                                             <thead class="thead-dark">
                                                 <tr>
                                                     <th>Nama</th>
-                                                    <th>Email</th>
                                                     <th>Tanggal</th>
+                                                    <th>Waktu</th>
                                                     <th>Status</th>
                                                     <th>Opsi</th>
                                                 </tr>
@@ -130,8 +131,8 @@
                                                     <td>
                                                         <h5 class="m-0 font-weight-normal"> {{$n->name}} </h5>
                                                     </td>
-                                                    <td> {{$n->email}}  </td>
-                                                    <td> {{ $n->created_at->format('D-m-Y') }} </td>
+                                                    <td> {{ $n->created_at->format('D-m-y')  }} </td>
+                                                    <td>  {{ $n->created_at->diffForHumans()  }}  </td>
                                                     <td><span class="badge bg-soft-success text-dark">New</span></td>
                                                     <td>
                                                         <a href="{{route('respondent-identity.show', ['respondent_identity' => $n->slug])}}" title="detail" class="btn btn-xs btn-light">
@@ -139,6 +140,7 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+
                                             </tbody>
                                             @endforeach
                                         </table>

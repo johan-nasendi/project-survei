@@ -1,6 +1,6 @@
 
 <table class="table table-bordered mb-0">
-    <thead>
+    <thead class="thead-dark">
     <tr>
         <th class="text-center">#</th>
         <th class="text-center">Nama Lengkap</th>
