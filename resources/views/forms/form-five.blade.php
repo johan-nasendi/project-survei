@@ -1,28 +1,12 @@
-<h4 class="header-title mb-3"> KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES </h4>
+<h4 class="header-title mb-3"> <b>E. KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</b> </h4>
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box">
-                    <div class="form-group needs-validation was-validated" novalidate="">
-                        <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
-                            <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
-                                <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
-                               required="" autocomplete="alumni_association" >
-                                    <option value="" selected disabled>---Pilih---</option>
-                                    <option value="Yes" @if(old('alumni_association') == "Yes") {{ 'selected' }} @endif> Yes </option>
-                                    <option value="No" @if(old('alumni_association') == "No") {{ 'selected' }} @endif> No </option>
-                                </select>
-                                <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
-                                @error('alumni_association')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                        </div>
-
                     <div class="form-group">
-                        <label for="#">Media komunikasi yang digunakan?</label>
+
                         <div class="form-group">
                             <label for="pass1">Username Facebook</label>
+                            <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda" autocomplete="off"
                             class="form-control @error('fb') is-invalid @enderror" value="{{old('fb')}}">
                             <div class="text-danger">
@@ -69,6 +53,23 @@
 
         <div class="col-lg-6 needs-validation was-validated" novalidate="">
             <div class="card-box">
+                     <div class="form-group needs-validation was-validated" novalidate="">
+
+                            <label for="#">Keikutsertaan dalam Ikatan alumni Poltekkes?<span class="text-danger">*</span></label>
+                                <select name="alumni_association" class="form-control @error('alumni_association') is-invalid @enderror"
+                                    required="" autocomplete="alumni_association" >
+                                    <option value="" selected disabled>---Pilih---</option>
+                                    <option value="Yes" @if(old('alumni_association') == "Yes") {{ 'selected' }} @endif> Yes </option>
+                                    <option value="No" @if(old('alumni_association') == "No") {{ 'selected' }} @endif> No </option>
+                                </select>
+                                <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                                @error('alumni_association')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                      </div>
+
                     <div class="form-group">
                         <label for="#">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi<span class="text-danger">*</span></label>
                             <select name="cooperation_institutions_alumni_associations"
@@ -106,14 +107,5 @@
             </div> <!-- end card-box -->
         </div> <!-- end col -->
     </div> <!-- end row -->
-    <ul class="list-inline wizard mb-0">
-        <li class="previous list-inline-item disabled">
-            <a href="javascript: void(0);" class="btn btn-secondary ">
-                <i class="fas fa-arrow-alt-circle-left"></i> <b>SEBELUMYA</b>
-            </a>
-        </li>
-        <li class="next list-inline-item float-right" >
-            <button type="button" class="btn btn-warning  text-dark"> <b> SELANJUTNYA</b> <i class=" fas fa-arrow-alt-circle-right"></i> </button>
-        </li>
-    </ul>
+
 

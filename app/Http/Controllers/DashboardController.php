@@ -48,8 +48,8 @@ class DashboardController extends Controller
 
     public function form()
     {
-        $value = '';
-        return view('forms',compact('value'));
+
+        return view('forms');
     }
 
 }

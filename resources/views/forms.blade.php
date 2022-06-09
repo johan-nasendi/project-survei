@@ -6,9 +6,6 @@
     <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
-@endpush
-
-@push('js-external')
 <link href="{{ asset('/css/background.css') }}" rel="stylesheet">
 @endpush
 
@@ -20,12 +17,11 @@
         @endforeach
         </ul>
         @endif
-        <div id="basicwizard">
-            @include('layouts.component.nav-form')
-            <form name="frm" action="{{route('forum.post')}}"
-            method="POST" enctype="multipart/form-data">
-            @csrf
 
+         <div id="basicwizard">
+            @include('layouts.component.nav-form')
+            <form name="frm" action="{{route('forum.post')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="tab-content b-0 mb-0 pt-0">
                     @include('layouts.component.content-form')
                 </div> <!-- tab-content -->
@@ -39,12 +35,11 @@
 @endpush
 
 @push('js-internal')
-
 <script type="text/javascript">
 
     function showDiv(){
         getSelectValue = document.getElementById("test").value;
-        if(getSelectValue == "Yes" ) {
+        if(getSelectValue == "Yes") {
             document.getElementById("hidden_div_yes_one").style.display="block";
         }
 
@@ -312,9 +307,6 @@
             }
 
             return true;
-
     }
-
-
-    </script>
+ </script>
 @endpush
