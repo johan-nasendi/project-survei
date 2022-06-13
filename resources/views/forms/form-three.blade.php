@@ -12,7 +12,8 @@
                                 <option value="Yes" @if (old('works') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                 <option value="No"  @if (old('works') == "No")  {{ 'selected' }} @endif> No </option>
                             </select>
-                            <div class="invalid-feedback">Harap memilih pilihan anda</div>
+                            <div class="text-danger">Harap memilih pilihan anda</div>
+                            {{-- <div class="invalid-feedback">Harap memilih pilihan anda</div> --}}
                             @error('works')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
