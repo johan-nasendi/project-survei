@@ -86,9 +86,60 @@ class RespondentIdentityController extends Controller
                 'relationship_study_work' => 'required_if:works,Yes',
                 'additional_competence'=>'required_if:works,Yes',
                 'income_per_month'=>'required_if:works,Yes',
-        ]);
+          ],
+          [
+
+            'email.unique'    => ':attribute sudah digunakan,Silakan Masukan Email yang lain!',
+            'mobile_phone_number.unique'    => ':attribute sudah digunakan,Silakan Masukan No handphone yang lain!',
+            'gender.required'   => 'Jenis Kelamin Wajib di isi',
+            'place_of_birth.required'   => 'Tempat lahir Wajib di isi',
+            'date_of_birth.required'   => 'Tanggal lahir Wajib di isi',
+            'name.required'   => 'Nama Wajib di isi',
+
+            'what_study_program.required'=> 'Lulus dari program studi? Wajib di isi!',
+            'college_entry_date.required'=> 'Kapan Masuk Kuliah? Wajib di isi!',
+            'college_graduation_date.required'=> 'Kapan Lulus Kuliah? Wajib di isi!',
+            'score_ipk.required'=> 'Nilai IPK (Indeks Prestasi Kumulatif)? Wajib di isi!',
+            'organization.required'=> 'Selama kuliah, apakah anda menjadi anggota dari suatu organisasi (sosial, pemuda, organisasi keagamaan) di dalam atau di luar kampus? Wajib di isi!',
+            'active_inactive_organization.required' => 'Seberapa aktif anda di organisasi tersebut? Wajib di isi!',
+            'further_education_levels.required' => 'Setelah lulus dari Poltekkes,apakah anda melanjutkan pendidikan ke jenjang yang lebih tinggi? Wajib di isi!',
+            'educational_background.required' => 'Jika ya, apakah pendidikan yang diambil sesuai dengan latar belakang pendidikan anda di Poltekkes? Wajib di isi! ',
+            'field_work.required' => 'Jika anda sudah bekerja, apakah pendidikan yang diambil sesuai dengan bidang pekerjaan anda saat ini? Wajib di isi!',
+            'according.required' => 'Menurut anda seberapa besar penekanan pada metode pembelajaran di bawah ini dilaksanakan di program studi anda? Wajib di isi!',
 
 
+            'works.required' => 'Apakah anda sudah bekerja saat ini? Wajib di isi!',
+            'jobs_reason.required_if'  => 'Berikan Alasan anda tidak mencari pekerjaan setelah lulus kuliah? Wajib di isi!',
+            'start_work.required_if' => 'Kapan anda mulai mencari pekerjaan? Wajib di isi!',
+            'after_how_many_months_job.required_if' => 'Bulan berapa setelah lulus anda memperoleh pekerjaan pertama? Wajib di isi! ',
+            'get_str.required_if' => 'Bulan Berapa setelah keluar STR anda memeroleh pekerjaan pertama? Wajib di isi!',
+            'amount_applied.required_if' => 'jumlah instansi yang anda lamar? Wajib di isi!',
+            'amount_response_to_applications.required_if' => 'Jumlah Instansi yang merespon? Wajib di isi!',
+            'amount_inviting_interviews.required_if' => 'Jumlah instansi yang mengundang wawancara? Wajib di isi!',
+            'how_to_find_a_job.required_if' => 'Bagaimana anda mencari pekerjaan? Wajib di isi!',
+            'workplace.required_if' => 'Instansi tempat anda bekerja? Wajib di isi!',
+            'name_workplace.required_if' => 'Apa nama instansi tempat anda bekerja? Wajib di isi!',
+            'job_educational_background.required_if' => 'Apakah pekerjaan anda sesuai dengan latar belakang pendidikan? Wajib di isi!',
+            'why_take_the_job.required_if' => 'Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya? Wajib di isi!',
+            'level_of_education.required_if'=> 'Tingkat pendidikan apa yang paling tepat/sesuai untuk pekerjaan anda saat ini? Wajib di isi! ',
+            'relationship_study_work.required_if' => 'Seberapa erat hubungan antara bidang studi dengan pekerjaan anda? Wajib di isi!',
+            'additional_competence.required_if'=>'Dalam melaksanakan pekerjaan, menurut penilaian Saudara sejauh mana kompetensi tambahan berikut diperlukan? Wajib di isi!',
+            'income_per_month.required_if'=>'Berapa rata- rata penghasilan anda per bulan? Wajib di isi! ',
+
+            'curriculum_compatibility_jobs.required' => 'Kesesuaian Kurikulum dengan dunia kerja',
+            'health_polytechnic_Competence.required' => 'Kesesuaian Kompetensi yang diperoleh di Poltekkes Kemenkes berikut ini dalam melaksanakan pekerjaan anda? *',
+            'competency_mastered.required' => 'Pada saat lulus, pada tingkat mana kompetensi di bawah ini anda kuasai?',
+            'competencies_required_job.required' => 'Pada saat ini, pada tingkat mana kompetensi di bawah ini diperlukan dalam pekerjaan?',
+            'competency_improvement_needs.required' => 'Kebutuhan peningkatan Kompetensi yang perlu ditambah pada kurikulum Prodi',
+
+            'alumni_association.required'=> 'Keikutsertaan dalam Ikatan alumni Poltekkes? Wajib di isi!',
+            'cooperation_institutions_alumni_associations.required'=> 'Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi? Wajib di isi!',
+            'development_of_competencies_and_institutions.required'=> 'Kegiatan apa sajakah yang dirasakan perlu dikembangkan untuk menjalin kerjasama antara institusi dengan ikatan alumni? Wajib di isi!',
+
+
+        ]
+
+    );
 
     try {
             $respondent = new RespondentIdentitiy();

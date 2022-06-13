@@ -1,9 +1,8 @@
 
 <h4 class="header-title mb-3"> <b>A.IDENTITAS RESPONDEN</b> </h4>
 
-        <div class="row needs-validation was-validated"  novalidate="">
-            <div class="col-6">
-                <div class="card-box">
+        <div class="row needs-validation was-validated bg-white"   novalidate="">
+            <div class="col-6 ">
                     <div class="form-group row mb-3" >
                         <label class="col-md-3 col-form-label" for="name"> Nama Lengkap<span class="text-danger">*</span> </label>
                         <div class="col-md-9">
@@ -53,13 +52,10 @@
                         @enderror
                         </div>
                     </div>
-
-                </div>
-
             </div> <!-- end col -->
 
             <div class="col-6">
-                <div class="card-box">
+
                     <div class="form-group row mb-3">
                         <label class="col-md-3 col-form-label" for="gender"> Jenis Kelamin <span class="text-danger">*</span></label>
                         <div class="col-md-9">
@@ -104,8 +100,6 @@
                         @enderror
                         </div>
                     </div>
-                </div>
-
             </div> <!-- end col -->
         </div> <!-- end row -->
 

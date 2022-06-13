@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="#">Masuk  kuliah <span class="text-danger">*</span></label>
+                        <label for="#">Kapan Masuk  kuliah <span class="text-danger">*</span></label>
                         <input type="date"  name="college_entry_date" value="{{old('college_entry_date')}}"
                        required=""  autocomplete="off"  placeholder="Kapan Anda Masuk Kuliah?"
                        class="form-control @error('college_entry_date') is-invalid @enderror">
@@ -32,7 +32,7 @@
                     @enderror
                     </div>
                     <div class="form-group">
-                        <label for="#">Lulus  kuliah <span class="text-danger">*</span></label>
+                        <label for="#">Kapan Lulus  kuliah <span class="text-danger">*</span></label>
                         <input type="date"  name="college_graduation_date" value="{{old('college_graduation_date')}}"
                        required="" autocomplete="off" placeholder="Kapan Anda Lulus Kuliah ?"
                         class="form-control @error('college_graduation_date') is-invalid @enderror" >
