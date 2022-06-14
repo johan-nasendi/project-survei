@@ -6,7 +6,7 @@
     <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
-<link href="{{ asset('/css/background.css') }}" rel="stylesheet">
+
 @endpush
 
         <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
