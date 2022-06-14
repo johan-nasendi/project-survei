@@ -59,9 +59,8 @@
           </div>
           <br><br>
         <footer class="footer footer-alt">
-            2021 - <script>document.write(new Date().getFullYear())</script>
-             &copy; Theme by
-             <a href="/" class="text-black-50">Poltekkes</a>
+             <script>document.write(new Date().getFullYear())</script>
+             &copy; Poltekkes Kemenkes Jayapura
         </footer>
     </body>
                 <!-- Vendor js -->

@@ -3,9 +3,7 @@
         <li class="dropdown notification-list topbar-dropdown">
             <a class="nav-link  nav-user mr-0 waves-effect waves-light"
                 href="{{route('login')}}" role="button"  aria-haspopup="false" aria-expanded="false">
-               <i class="fa fa-sign-in"></i>  Login
-                    <span class="pro-user-name ml-1">
-                    </span>
+                <i class="fa fa-sign-in"></i><span class="pro-user-name ml-1">Login</span>
             </a>
 
         </li>

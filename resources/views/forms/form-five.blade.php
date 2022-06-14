@@ -9,7 +9,7 @@
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                             <input  type="text" name="fb" placeholder="Masukan usernmae instagram anda" autocomplete="off"
                             class="form-control @error('fb') is-invalid @enderror" value="{{old('fb')}}">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Jika anda mempunyai akun facebook,Mohon mengisi,Jika tidak dapat dikosongkan
                              </div>
                             @error('fb')
@@ -23,7 +23,7 @@
                             <label for="pass1">Username Instagram</label>
                             <input  type="text" name="ig" placeholder="Masukan usernmae facebook anda" autocomplete="off"
                             class="form-control @error('ig') is-invalid @enderror" value="{{old('ig')}}">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Jika anda mempunyai akun instagram,Mohon mengisi,Jika tidak dapat dikosongkan
                              </div>
                             @error('ig')
@@ -37,7 +37,7 @@
                             <label for="pass1">Username Linkedin</label>
                             <input  type="text" name="linkend" placeholder="Masukan username Linkedin anda" autocomplete="off"
                             class="form-control @error('linkend') is-invalid @enderror" value="{{old('linkend')}}">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Jika anda mempunyai akun linkedin,Mohon mengisi,Jika tidak dapat dikosongkan
                              </div>
                             @error('linkend')
@@ -62,7 +62,7 @@
                                     <option value="Yes" @if(old('alumni_association') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                     <option value="No" @if(old('alumni_association') == "No") {{ 'selected' }} @endif> No </option>
                                 </select>
-                                <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                                <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                                 @error('alumni_association')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -79,7 +79,7 @@
                                 <option value="Sudah" @if(old('cooperation_institutions_alumni_associations') == "Sudah") {{ 'selected' }} @endif> Sudah </option>
                                 <option value="Belum" @if(old('cooperation_institutions_alumni_associations') == "Belum") {{ 'selected' }} @endif> Belum </option>
                             </select>
-                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                             @error('cooperation_institutions_alumni_associations')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -97,7 +97,7 @@
                                 <option value="Seminar ilmiah bersama" @if(old('development_of_competencies_and_institutions') == "Seminar ilmiah bersama") {{ 'selected' }} @endif> Seminar ilmiah bersama </option>
                                 <option value="Pelatihan" @if(old('development_of_competencies_and_institutions') == "Pelatihan") {{ 'selected' }} @endif> Pelatihan </option>
                             </select>
-                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                             @error('development_of_competencies_and_institutions')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

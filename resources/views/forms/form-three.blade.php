@@ -12,7 +12,7 @@
                                 <option value="Yes" @if (old('works') == "Yes") {{ 'selected' }} @endif> Yes </option>
                                 <option value="No"  @if (old('works') == "No")  {{ 'selected' }} @endif> No </option>
                             </select>
-                            <div class="text-danger">Harap memilih pilihan anda</div>
+                            <div class="text-danger" style="font-size: 10px">Harap memilih pilihan anda</div>
                             {{-- <div class="invalid-feedback">Harap memilih pilihan anda</div> --}}
                             @error('works')
                                 <span class="invalid-feedback" role="alert">
@@ -28,7 +28,7 @@
                                 <option value="Sebelum Lulus" @if (old('start_work') == "Sebelum Lulus") {{ 'selected' }} @endif> Bulan sebelum lulus</option>
                                 <option value="Setelah Lulus" @if (old('start_work') == "Setelah Lulus") {{ 'selected' }} @endif> Bulan setelah lulus</option>
                             </select>
-                            <div class="text-danger">Harap memilih pilihan anda</div>
+                            <div class="text-danger" style="font-size: 10px">Harap memilih pilihan anda</div>
                             @error('start_work')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <textarea class="form-control @error('jobs_reason') is-invalid @enderror" name="jobs_reason"  rows="3"autocomplete="off"> {{old('jobs_reason')}} </textarea>
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi alasan anda
                             </div>
                             @error('jobs_reason')
@@ -53,11 +53,11 @@
 
                         <div class="form-group" id="hidden_div_yes_two" style="display: none;" >
                             <label for="#">  Bulan berapa setelah lulus anda memperoleh pekerjaan pertama?
-                                <span class="text-danger">*</span>
+                                <span class="text-danger" >*</span>
                             </label>
                             <input type="month" autocomplete="off" name="after_how_many_months_job" value="{{old('after_how_many_months_job')}}" placeholder="Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?"
                             class="form-control @error('after_how_many_months_job') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi bulan berapa anda memperoleh pekerjaan
                             </div>
                             @error('after_how_many_months_job')
@@ -74,7 +74,7 @@
                             <input type="month" autocomplete="off" value="{{old('get_str')}}" name="get_str"
                             placeholder="Bulan ke berapa anda memperoleh pekerjaan anda ?"
                             class="form-control @error('get_str') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi bulan berapa STR anda keluar
                             </div>
                             @error('get_str')
@@ -91,7 +91,7 @@
                             </label>
                             <input type="number" autocomplete="off"  value="{{old('amount_applied')}}" name="amount_applied" placeholder="Jumlah Instansi yang dilamar"
                             class="form-control @error('amount_applied') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi jumlah instansi yang anda lamar
                             </div>
                             @error('amount_applied')
@@ -103,7 +103,7 @@
                             <input type="number" autocomplete="off" value="{{old('amount_response_to_applications')}}"
                             name="amount_response_to_applications" parsley-trigger="change" placeholder="Jumlah instansi merespon lamaran"
                             class="form-control @error('amount_response_to_applications') is-invalid @enderror">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi jumlah instansi yang merespon lamaran anda
                             </div>
                             @error('amount_response_to_applications')
@@ -115,7 +115,7 @@
                             <input type="number" autocomplete="off" value="{{old('amount_inviting_interviews')}}" name="amount_inviting_interviews"
                             parsley-trigger="change" placeholder="Jumlah instansi yang mengundang wawancara"
                             class="form-control @error('amount_inviting_interviews') is-invalid @enderror ">
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi jumlah instansi yang mengundang anda wawancara
                             </div>
                             @error('amount_inviting_interviews')
@@ -139,7 +139,7 @@
                                 <option value="Melalui jejaring/relasi orang tua/saudara/teman/dosen" @if(old('how_to_find_a_job') == "Melalui jejaring/relasi orang tua/saudara/teman/dosen") {{ 'selected' }} @endif> Melalui jejaring/relasi orang tua/saudara/teman/dosen </option>
                                 <option value="Lainnya" @if(old('how_to_find_a_job') == "Lainnya") {{ 'selected' }} @endif> Lainnya </option>
                             </select>
-                            <div class="text-danger">
+                            <div class="text-danger" style="font-size: 10px">
                                 Harap mempilih pilihan anda
                             </div>
                             @error('how_to_find_a_job')

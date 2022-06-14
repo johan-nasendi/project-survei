@@ -11,7 +11,7 @@
                         <input type="text"  name="what_study_program" id="what_study_program" value="{{old('what_study_program')}}"
                         placeholder="Lulus dari program studi apa ?" class="form-control @error('what_study_program') is-invalid @enderror"
                        required="" autocomplete="what_study_program">
-                       <div class="invalid-feedback">Harap mengisi program studi anda</div>
+                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi program studi anda</div>
                         @error('what_study_program')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -24,7 +24,7 @@
                         <input type="date"  name="college_entry_date" value="{{old('college_entry_date')}}"
                        required=""  autocomplete="off"  placeholder="Kapan Anda Masuk Kuliah?"
                        class="form-control @error('college_entry_date') is-invalid @enderror">
-                       <div class="invalid-feedback">Harap mengisi kapan anda masuk kuliah anda</div>
+                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi kapan anda masuk kuliah anda</div>
                         @error('college_entry_date')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -36,7 +36,7 @@
                         <input type="date"  name="college_graduation_date" value="{{old('college_graduation_date')}}"
                        required="" autocomplete="off" placeholder="Kapan Anda Lulus Kuliah ?"
                         class="form-control @error('college_graduation_date') is-invalid @enderror" >
-                        <div class="invalid-feedback">Harap mengisi kapan lulus kuliah anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap mengisi kapan lulus kuliah anda</div>
                         @error('college_graduation_date')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -48,7 +48,7 @@
                         <input  type="text"  name="score_ipk" value="{{old('score_ipk')}}"
                         placeholder="Berapa nilai IPK (Indeks Prestasi Kumulatif) anda?"
                        required="" autocomplete="off"  class="form-control @error('score_ipk') is-invalid @enderror">
-                       <div class="invalid-feedback">Harap mengisi nilai IPK anda</div>
+                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi nilai IPK anda</div>
                         @error('score_ipk')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -64,7 +64,7 @@
                             <option value="Yes" @if(old('organization') == "Yes") {{ 'selected' }} @endif> Yes</option>
                             <option value="No" @if(old('organization') == "No") {{ 'selected' }} @endif>No</option>
                         </select>
-                        <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                         @error('organization')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -83,7 +83,7 @@
                                 <option value="Pasif" @if (old('active_inactive_organization') == "Pasif") {{ 'selected' }} @endif>Pasif</option>
                                 <option value="Tidak Aktif" @if (old('active_inactive_organization') == "Tidak Aktif") {{ 'selected' }} @endif>Tidak Aktif</option>
                             </select>
-                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                             @error('active_inactive_organization')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -109,7 +109,7 @@
                         <option value="Yes" @if(old('further_education_levels') == "Yes") {{ 'selected' }} @endif>Yes</option>
                         <option value="No" @if(old('further_education_levels') == "No") {{ 'selected' }} @endif>No</option>
                     </select>
-                    <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                     @error('further_education_levels')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -126,7 +126,7 @@
                         <option value="Yes" @if(old('educational_background') == "Yes") {{ 'selected' }} @endif>Yes</option>
                         <option value="No" @if(old('educational_background') == "No") {{ 'selected' }} @endif>No</option>
                     </select>
-                    <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                     @error('educational_background')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -143,7 +143,7 @@
                         <option value="Yes" @if(old('field_work') == "Yes") {{ 'selected' }} @endif>Yes</option>
                         <option value="No" @if(old('field_work') == "No") {{ 'selected' }} @endif>No</option>
                     </select>
-                    <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                     @error('field_work')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -165,7 +165,7 @@
                         <option value="Keterlibatan dalam penelitian dosen" @if (old('according') == "Keterlibatan dalam penelitian dosen") {{ 'selected' }} @endif>Keterlibatan dalam penelitian dosen</option>
                         <option value="Magang" @if(old('according') == "Magang") {{ 'selected' }} @endif>Magang</option>
                     </select>
-                    <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                     @error('according')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

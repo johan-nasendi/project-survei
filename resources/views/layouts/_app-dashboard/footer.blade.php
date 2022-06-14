@@ -2,10 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                2021 -
-                <script>
-                    document.write(new Date().getFullYear())
-                </script> &copy; Poltekkes Jayapura theme by <a href="">JN</a>
+                <script>document.write(new Date().getFullYear())</script>
+                &copy; Poltekkes Kemenkes Jayapura
             </div>
             <div class="col-md-6">
                 <div class="text-md-right footer-links d-none d-sm-block">

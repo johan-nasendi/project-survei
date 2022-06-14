@@ -14,7 +14,7 @@
                             <option value="Sesuai" @if(old('curriculum_compatibility_jobs') == "Sesuai") {{ 'selected' }} @endif> [4] Sesuai </option>
                             <option value="Sangat Sesuai" @if(old('curriculum_compatibility_jobs') == "Sangat Sesuai") {{ 'selected' }} @endif> [5] Sangat Sesuai </option>
                         </select>
-                        <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                         @error('curriculum_compatibility_jobs')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -32,7 +32,7 @@
                             <option value="Pengetahuan di bidang atau disiplin ilmu" @if(old('health_polytechnic_Competence') == "Pengetahuan di bidang atau disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di bidang atau disiplin ilmu </option>
                             <option value="Pengetahuan di luar bidang disiplin ilmu" @if(old('health_polytechnic_Competence') == "Pengetahuan di luar bidang disiplin ilmu") {{ 'selected' }} @endif> Pengetahuan di luar bidang disiplin ilmu</option>
                         </select>
-                        <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                         @error('health_polytechnic_Competence')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -60,7 +60,7 @@
                             <option value="Kerjasama Tim" @if(old('competency_mastered') == "Kerjasama Tim") {{ 'selected' }} @endif> Kerjasama Tim </option>
                             <option value="Pengetahuan Umum" @if(old('competency_mastered') == "Pengetahuan Umum") {{ 'selected' }} @endif> Pengetahuan Umum </option>
                         </select>
-                        <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                         @error('competency_mastered')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -83,7 +83,7 @@
                                 <option value="Kerjasama Tim" @if(old('competencies_required_job') == "Kerjasama Tim") {{ 'selected' }} @endif> Kerjasama Tim </option>
                                 <option value="Pengetahuan Umum" @if(old('competencies_required_job') == "Pengetahuan Umum") {{ 'selected' }} @endif> Pengetahuan Umum </option>
                             </select>
-                            <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                             @error('competencies_required_job')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -102,7 +102,7 @@
                             <option value="Kemampuan berbahasa inggris" @if(old('competency_improvement_needs') == "Kemampuan berbahasa inggris") {{ 'selected' }} @endif> Kemampuan berbahasa inggris </option>
                             <option value="Kemampuan penguasaan teknologi informasi" @if(old('competency_improvement_needs') == "Kemampuan penguasaan teknologi informasi") {{ 'selected' }} @endif> Kemampuan penguasaan teknologi informasi </option>
                         </select>
-                        <div class="invalid-feedback">Harap memilih pilihan anda  anda</div>
+                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
                         @error('competency_improvement_needs')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
