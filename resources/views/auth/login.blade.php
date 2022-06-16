@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <title>Masuk</title>
-            <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <!-- CSRF Token -->
+         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('/img/logo.png')}}">
 		<!-- App css -->
@@ -53,13 +53,13 @@
                                     <p class="text-muted mb-4 mt-3">Masukkan alamat email dan kata sandi Anda..</p>
                                 </div>
 
-                                <form  action="{{ route('login') }}" method="POST" autocomplete="off">
+                                <form  action="{{ route('login') }}" method="POST" autocomplete="on">
                                     @csrf
 
                                     <div class="form-group mb-3">
                                         <label for="emailaddress">Email</label>
                                         <input  type="email" class="form-control @error('email') is-invalid @enderror"
-                                        placeholder="Masukkan Email Anda" name="email" value="{{ old('email') }}"  required="" autocomplete="email"   autofocus>
+                                        placeholder="Masukkan Email Anda" name="email" value="{{ old('email') }}"  required="" autocomplete="on" >
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
                                         <label for="password">Password</label>
                                         <div class="input-group input-group-merge">
                                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                                            placeholder="Masukkan Password Anda" name="password" required="" autocomplete="current-password">
+                                            placeholder="Masukkan Password Anda" name="password" required="">
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -91,8 +91,6 @@
 
                                 </form>
 
-
-
                             </div> <!-- end card-body -->
                         </div>
                         <!-- end card -->
@@ -103,12 +101,10 @@
             <!-- end container -->
         </div>
         <!-- end page -->
-        @include('sweetalert::alert')
-        <!-- Vendor js -->
-        <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
-
-        <!-- App js -->
-        <script src="{{asset('/assets/js/app.min.js')}}"></script>
-
     </body>
+    <!-- Vendor js -->
+    <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
+
+    <!-- App js -->
+    <script src="{{asset('/assets/js/app.min.js')}}"></script>
 </html>
