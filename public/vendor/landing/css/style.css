@@ -119,6 +119,7 @@ p {
 .bg-home {
     position: relative;
     padding: 200px 0px 180px 0px;
+    height: 79vh;
 }
 
 .home-center {
@@ -173,31 +174,9 @@ p {
 }
 
 .home-first-img {
-    position: absolute;
-    top: 80%;
+    position: relative;
+    top: 15vh 40px;
     width: 500px;
-}
-
-.home-second-img {
-    position: absolute;
-    max-width: 350px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 61px;
-    right: 0px;
-    z-index: 1;
-    opacity: 0.8;
-}
-
-.home-third-img {
-    position: absolute;
-    right: 0px;
-    max-width: 200px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    opacity: 0.7;
 }
 
 .clients {
@@ -549,3 +528,31 @@ p {
 
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* scrollbar starts on line 31 */
+
+
+/* fonts and basic setup */
+
+
+/* custom scrollbar */
+
+ ::-webkit-scrollbar {
+    width: 20px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #feca57;
+}

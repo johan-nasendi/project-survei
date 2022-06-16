@@ -16,36 +16,33 @@ class RelationshipCompetenceSeeder extends Seeder
     {
         RelationshipCompetence::create([
             'respondent_id' => 1,
-            'curriculum_compatibility_jobs' => 'Sangat Sesuai',
-            'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competencies_required_job' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
+            'learning_process' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'curriculum' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'student_admini_services' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'facilities_infrastructure' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         ]);
-
         RelationshipCompetence::create([
             'respondent_id' => 2,
-            'curriculum_compatibility_jobs' => 'Tidak Sesuai',
-            'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competencies_required_job' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
+            'learning_process' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'curriculum' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'student_admini_services' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'facilities_infrastructure' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         ]);
         RelationshipCompetence::create([
             'respondent_id' => 3,
-            'curriculum_compatibility_jobs' => 'Kurang Sesuai',
-            'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competencies_required_job' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
+            'learning_process' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'curriculum' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'student_admini_services' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'facilities_infrastructure' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         ]);
         RelationshipCompetence::create([
             'respondent_id' => 4,
-            'curriculum_compatibility_jobs' => 'Sangat',
-            'health_polytechnic_Competence' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_mastered' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competencies_required_job' => 'Pengetahuan di bidang atau disiplin ilmu',
-            'competency_improvement_needs' => 'Kemampuan berbahasa inggris',
+            'learning_process' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'curriculum' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'student_admini_services' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'facilities_infrastructure' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
         ]);
+
+
     }
 }

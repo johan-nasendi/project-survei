@@ -9,14 +9,13 @@ class RelationshipCompetence extends Model
 {
     use HasFactory;
 
-    protected $table = "relationship";
+    protected $table = "suggestion";
     protected $fillable = [
         'respondent_id',
-        'curriculum_compatibility_jobs',
-        'health_polytechnic_Competence',
-        'competency_mastered',
-        'competencies_required_job',
-        'competency_improvement_needs',
+        'learning_process',
+        'curriculum',
+        'student_admini_services',
+        'facilities_infrastructure',
 ];
 
 

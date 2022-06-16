@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(JobExperiencesSeeder::class);
         $this->call(QuestionsLearningExperienceaSeeder::class);
         $this->call(RelationshipCompetenceSeeder::class);
-        $this->call(AlumniComunitacionBetweenSeeder::class);
 
     }
 }

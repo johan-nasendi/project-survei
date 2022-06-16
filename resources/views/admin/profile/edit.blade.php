@@ -24,7 +24,7 @@ Edit Profil
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="{{route('profile.index')}}">Profil</a></li>
+                                            <li class="breadcrumb-item"><a href="{{route('profil.index')}}">Profil</a></li>
                                             <li class="breadcrumb-item active">@yield('title')</li>
                                         </ol>
                                     </div>
@@ -55,7 +55,7 @@ Edit Profil
 
                                         <!-- start card-body -->
                                         <div class="card-body">
-                                            <form action="{{route('profil.update',['profile' =>$user->id ])}}" method="POST">
+                                            <form action="{{route('profil.update',['profil' =>$user->id ])}}" method="POST">
                                                 @method('PUT')
                                                 @csrf
 
@@ -66,20 +66,6 @@ Edit Profil
                                                     name="name" value="{{ old('name',$user->name) }}" required autocomplete="name"
                                                     autofocus placeholder="Nama Lengkap">
                                                     @error('name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                                </div>
-                                            </div>
-
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="#" class="col-form-label">Username</label>
-                                                    <input  type="text" class="form-control @error('username') is-invalid @enderror"
-                                                    name="username" value="{{ old('username',$user->username) }}" required="" autocomplete="username"
-                                                    autofocus placeholder="Username">
-                                                    @error('username')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>

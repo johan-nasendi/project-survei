@@ -16,11 +16,14 @@ class CreateRespondentTable extends Migration
         Schema::create('respondent', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('place_of_birth');
-            $table->date('date_of_birth');
             $table->string('gender');
             $table->string('mobile_phone_number',13)->unique();
+            $table->string('place_of_birth');
+            $table->date('date_of_birth');
             $table->string('email')->unique();
+            $table->string('what_study_program');
+            $table->string('year_of_college_entry');
+            $table->string('college_graduation_date');
             $table->string('slug');
             $table->timestamps();
         });

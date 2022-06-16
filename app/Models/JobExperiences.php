@@ -11,22 +11,12 @@ class JobExperiences extends Model
     protected $table = "job_experiences";
     protected $fillable = [
         'respondent_id',
-        'works',
+        'do_you_work',
         'start_work',
-        'jobs_reason',
-        'after_how_many_months_job',
-        'get_str',
-        'amount_applied',
-        'amount_response_to_applications',
-        'amount_inviting_interviews',
-        'how_to_find_a_job',
         'workplace',
         'name_workplace',
+        'address_work',
         'job_educational_background',
-        'why_take_the_job',
-        'level_of_education',
-        'relationship_study_work',
-        'additional_competence',
         'income_per_month',
 ];
 

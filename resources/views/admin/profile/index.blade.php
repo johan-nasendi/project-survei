@@ -111,13 +111,6 @@ Profil
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="lastname">Username</label>
-                                                            <input type="text" class="form-control" name="username"
-                                                            value="{{old('name',Auth::user()->username)}}" placeholder="Username" readonly>
-                                                        </div>
-                                                    </div> <!-- end col -->
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
                                                             <label for="lastname">E-mail</label>
                                                             <input type="email" class="form-control" name="email"
                                                             value="{{old('name',Auth::user()->email)}}" placeholder="email" readonly>
@@ -125,7 +118,7 @@ Profil
                                                     </div> <!-- end col -->
                                                 </div> <!-- end row -->
                                                 <div class="text-right">
-                                                    <a href="{{route('profil.edit', ['profil' => Auth::user()->username])}}" class="btn btn-warning waves-effect waves-light mt-2" >
+                                                    <a href="{{route('profil.edit', ['profil' => Auth::user()->email])}}" class="btn btn-warning waves-effect waves-light mt-2" >
                                                         <i class="mdi mdi-content-save"></i> Edit
                                                     </a>
                                                 </div>

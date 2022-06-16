@@ -1,4 +1,4 @@
-<h4 class="header-title mb-3"> <b>E. KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</b> </h4>
+{{-- <h4 class="header-title mb-3"> <b>E. KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</b> </h4>
     <div class="row">
         <div class="col-lg-6">
             <div class="card-box">
@@ -108,4 +108,4 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-
+ --}}

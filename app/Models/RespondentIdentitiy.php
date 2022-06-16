@@ -16,6 +16,9 @@ class RespondentIdentitiy extends Model
                             'place_of_birth',
                             'date_of_birth',
                             'gender',
+                            'what_study_program',
+                            'year_of_college_entry',
+                            'college_graduation_date',
                             'email',
                             'mobile_phone_number',
                             'slug'
@@ -38,10 +41,7 @@ class RespondentIdentitiy extends Model
         return $this->hasMany(RelationshipCompetence::class,'respondent_id');
     }
 
-    public function alumniComunication()
-    {
-        return $this->hasMany(AlumniComunitacionBetween::class,'respondent_id');
-    }
+
 
 
     public function pertayaan()
@@ -57,10 +57,7 @@ class RespondentIdentitiy extends Model
     {
         return $this->belongsTo(RelationshipCompetence::class,'id','respondent_id');
     }
-    public function alumni()
-    {
-        return $this->belongsTo(AlumniComunitacionBetween::class,'id','respondent_id');
-    }
+
 
 
 

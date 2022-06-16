@@ -13,19 +13,15 @@ class CreateQuestionsLearningTable extends Migration
      */
     public function up()
     {
-        Schema::create('questions_learning', function (Blueprint $table) {
+        Schema::create('pbm_experience', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('respondent_id');
-            $table->string('what_study_program');
-            $table->date('college_entry_date');
-            $table->date('college_graduation_date');
-            $table->string('score_ipk',8);
-            $table->string('organization');
             $table->string('active_inactive_organization');
-            $table->string('further_education_levels');
-            $table->string('educational_background');
-            $table->string('field_work');
-            $table->string('according');
+            $table->string('organization_name');
+            $table->string('lecturer_ability');
+            $table->string('lecturer_skills_practice');
+            $table->string('rectors_service');
+            $table->string('study_program_services');
             $table->foreign('respondent_id')->references('id')->on('respondent')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

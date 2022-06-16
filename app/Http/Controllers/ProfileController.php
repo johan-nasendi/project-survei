@@ -58,7 +58,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('username', $id)->first();
+        $user = User::where('email', $id)->first();
         return view('admin.profile.edit',compact('user'));
     }
 
@@ -73,14 +73,12 @@ class ProfileController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:240',
-            'username' => 'required|string|regex:/^[A-Za-z0-9_]+$/|max:50|unique:users,username,'.$id,
             'email' => 'required|email|unique:users,email,'.$id,
         ]);
 
         try {
               $user = User::find($id);
               $user->name = $request->name;
-              $user->username  = $request->username;
               $user->email  = $request->email;
               $user->update();
               $user->attachRole($request->role_id);

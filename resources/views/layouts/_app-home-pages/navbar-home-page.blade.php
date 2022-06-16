@@ -13,10 +13,10 @@
     <div class="logo-box">
         <a href="/" class="logo logo-light text-center">
                  <span class="logo-sm">
-                    <img src="{{asset('img/logo.png')}}" alt="" height="50">
+                    <img src="{{asset('img/logo.png')}}" alt="logo" height="50">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{asset('img/logo.png')}}" alt="" height="50">
+                    <img src="{{asset('img/logo.png')}}" alt="logo" height="50">
                 </span>
         </a>
     </div>

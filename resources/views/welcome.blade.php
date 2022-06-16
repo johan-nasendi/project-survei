@@ -20,7 +20,7 @@
 
 
 
-<section class="bg-home bg-gradient" id="home">
+<section class="bg-home bg-gradient custom-scrollbar" id="home">
     <div class="home-center">
         <div class="home-desc-center">
             <div class="container">

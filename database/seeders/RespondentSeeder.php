@@ -23,42 +23,54 @@ class RespondentSeeder extends Seeder
            'gender' => 'Pria',
            'email' => 'josua@mail.com',
            'mobile_phone_number' => '081212131012',
+           'what_study_program' => 'DIII Gizi',
+           'year_of_college_entry' => '2018',
+           'college_graduation_date' => 'Juni 2021',
            'created_at' => NOW(),
            'updated_at' => NOW()
            ]);
 
         DB::table('respondent')->insert([
-           'name' => 'Matha Doas',
-           'slug' => 'matha-doas',
-           'place_of_birth' =>  'Sarmi',
-           'date_of_birth' => Carbon::create('1997', '03', '22'),
-           'gender' => 'Wanita',
-           'email' => 'martha@mail.com',
-           'mobile_phone_number' => '081212131013',
-           'created_at' => NOW(),
-           'updated_at' => NOW()
-           ]);
-
-        DB::table('respondent')->insert([
-           'name' => 'Dorlina Sampar',
-           'slug' => 'dorlina-sampar',
-           'place_of_birth' =>  'Sentani',
-           'date_of_birth' => Carbon::create('1997', '08', '29'),
-           'gender' => 'Wanita',
-           'email' => 'lina@mail.com',
-           'mobile_phone_number' => '081212131014',
-           'created_at' => NOW(),
-           'updated_at' => NOW()
-           ]);
-
-        DB::table('respondent')->insert([
-           'name' => 'Felipus Tegai',
-           'slug' => 'felipus-tegai',
+           'name' => 'Luckman Said',
+           'slug' => 'luckman-said',
            'place_of_birth' =>  'Biak',
-           'date_of_birth' => Carbon::create('1998', '09', '09'),
+           'date_of_birth' => Carbon::create('1998', '01', '01'),
            'gender' => 'Pria',
-           'email' => 'felix@mail.com',
+           'email' => 'luck01@mail.com',
+           'mobile_phone_number' => '081212131013',
+           'what_study_program' => 'DIII Keperawatan Yapen',
+           'year_of_college_entry' => '2016',
+           'college_graduation_date' => 'Juni 2019',
+           'created_at' => NOW(),
+           'updated_at' => NOW()
+           ]);
+
+        DB::table('respondent')->insert([
+           'name' => 'Mawar Bazar',
+           'slug' => 'mawar-bazar',
+           'place_of_birth' =>  'Maluku',
+           'date_of_birth' => Carbon::create('2000', '01', '11'),
+           'gender' => 'Wanita',
+           'email' => 'mawarmerah@mail.com',
+           'mobile_phone_number' => '081212131014',
+           'what_study_program' => 'DIII Sanitasi Jayapura',
+           'year_of_college_entry' => '2018',
+           'college_graduation_date' => 'Juni 2021',
+           'created_at' => NOW(),
+           'updated_at' => NOW()
+           ]);
+
+        DB::table('respondent')->insert([
+           'name' => 'Merpati Suana',
+           'slug' => 'merpati-suana',
+           'place_of_birth' =>  'Ambom',
+           'date_of_birth' => Carbon::create('2000', '01', '11'),
+           'gender' => 'Wanita',
+           'email' => 'merpatiputih@mail.com',
            'mobile_phone_number' => '081212131015',
+           'what_study_program' => 'DIII Sanitasi Mimika',
+           'year_of_college_entry' => '2018',
+           'college_graduation_date' => 'Juni 2021',
            'created_at' => NOW(),
            'updated_at' => NOW()
            ]);

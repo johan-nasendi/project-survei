@@ -43,11 +43,7 @@
                                         alt="profile-image">
 
                                     <h4 class="mb-0"> {{$respondent->name}} </h4>
-
-
-                                    <p class="text-muted">{{$respondent->pertayaan->what_study_program}}</p>
-
-
+                                    <p class="text-muted">{{$respondent->what_study_program}}</p>
                                     <div class="text-left mt-3">
                                         <p class="text-color-black mb-2 font-13"><strong>Nama Lengkap :</strong><span class="ml-2"> {{$respondent->name}}</span></p>
                                         <p class="text-color-black mb-2 font-13"><strong>Tempat Lahir :</strong><span class="ml-2"> {{$respondent->place_of_birth}}</span></p>
@@ -66,7 +62,7 @@
                                     <ul class="nav nav-pills navtab-bg  nav-justified">
                                         <li class="nav-item">
                                             <a href="#aboutme" data-toggle="tab" aria-expanded="true" class="nav-link active">
-                                                <i class="fa-solid fa-b"></i>
+                                                <i class="fa-solid fa-a"></i> & <i class="fa-solid fa-b"></i>
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -76,7 +72,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                <i class="fa-solid fa-d"></i> &  <i class="fa-solid fa-e"></i>
+                                                <i class="fa-solid fa-d"></i>
                                             </a>
                                         </li>
 
@@ -85,58 +81,54 @@
                                     <div class="tab-content">
                                         <div class="tab-pane show active" id="aboutme">
 
-                                            <h5 class="mb-4 text-uppercase"><i class="fa-solid fa-graduation-cap"></i>
-                                                PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</h5>
+                                            {{-- <h5 class="mb-4 text-uppercase"><i class="fa-solid fa-graduation-cap"></i>
+                                                PENGALAMAN PBM</h5> --}}
 
                                             <ul class="list-unstyled timeline-sm">
                                                 <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">B1</span>
+                                                    <span class="timeline-sm-date">A1</span>
                                                     <h5 class="mt-0 mb-1">Lulus dari program studi apa ?</h5>
-                                                    <p>{{$respondent->pertayaan->what_study_program}}</p>
+                                                    <p>{{$respondent->what_study_program}}</p>
+                                                </li>
+                                                <li class="timeline-sm-item">
+                                                    <span class="timeline-sm-date">A2</span>
+                                                    <h5 class="mt-0 mb-1">Kapan anda masuk dan lulus kuliah di Prodi tersebut?</h5>
+                                                    <p> <i class=" fas fa-calendar-alt"></i> Tahun Masuk Kuliah :  {{$respondent->year_of_college_entry}} <br>
+                                                        <i class=" fas fa-calendar-alt"></i> Tahun & Bulan Lulus Kuliah : {{$respondent->college_graduation_date}}
+                                                    </p>
+                                                </li>
+
+                                                <h5 class="mb-4 text-uppercase"><i class="fa-solid fa-graduation-cap"></i>
+                                                    PENGALAMAN PBM</h5>
+                                                <li class="timeline-sm-item">
+                                                    <span class="timeline-sm-date">B1</span>
+                                                    <h5 class="mt-0 mb-1">Selama kuliah apakah anda pernah menjadi anggota suatu organisasi di dalam atau luar kampus?</h5>
+                                                    <p>{{$respondent->pertayaan->active_inactive_organization}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">B2</span>
-                                                    <h5 class="mt-0 mb-1">Kapan anda masuk dan lulus kuliah di Prodi tersebut?</h5>
-                                                    <p> <i class=" fas fa-calendar-alt"></i> Masuk Kuliah :  {{$respondent->pertayaan->college_entry_date}} <br>
-                                                        <i class=" fas fa-calendar-alt"></i> Lulus Kuliah : {{$respondent->pertayaan->college_graduation_date}}
-                                                    </p>
-
-
+                                                    <h5 class="mt-0 mb-1">Organisasi apa yang pernah anda ikut?</h5>
+                                                    <p>{{$respondent->pertayaan->organization_name}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">B3</span>
-                                                    <h5 class="mt-0 mb-1">Berapa nilai IPK (Indeks Prestasi Kumulatif) anda?</h5>
-                                                    <p>{{$respondent->pertayaan->score_ipk}}</p>
+                                                    <h5 class="mt-0 mb-1">Selama Kuliah, menurut saudara bagaimana kemampuan dosen dalam mengampu mata kuliah?</h5>
+                                                    <p>{{$respondent->pertayaan->lecturer_ability}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">B4</span>
-                                                    <h5 class="mt-0 mb-1">Selama kuliah, apakah anda menjadi anggota dari suatu organisasi (sosial, pemuda, organisasi keagamaan) di dalam atau di luar kampus?</h5>
-                                                    <p>{{$respondent->pertayaan->organization}}</p>
+                                                    <h5 class="mt-0 mb-1">Bagaimana ketrampilan dosen dan instruktur dalam memberikan praktek?</h5>
+                                                    <p>{{$respondent->pertayaan->lecturer_skills_practice}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">B5</span>
-                                                    <h5 class="mt-0 mb-1">Seberapa aktif anda di organisasi tersebut?</h5>
-                                                    <p>{{$respondent->pertayaan->Active_inactive_organization}}</p>
+                                                    <h5 class="mt-0 mb-1">Bagaimana pelayanan Rektorat dalam memberikan pengurusan administrasi mahasiswa</h5>
+                                                    <p>{{$respondent->pertayaan->rectors_service}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">B6</span>
-                                                    <h5 class="mt-0 mb-1">Setelah lulus dari Poltekkes, apakah anda melanjutkan pendidikan ke jenjang yang lebih tinggi?</h5>
-                                                    <p>{{$respondent->pertayaan->further_education_levels}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">B7</span>
-                                                    <h5 class="mt-0 mb-1">Jika ya, apakah pendidikan yang diambil sesuai dengan latar belakang pendidikan anda di Poltekkes?</h5>
-                                                    <p>{{$respondent->pertayaan->educational_background}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">B8</span>
-                                                    <h5 class="mt-0 mb-1">Jika anda sudah bekerja, apakah pendidikan yang diambil sesuai dengan bidang pekerjaan anda saat ini?</h5>
-                                                    <p>{{$respondent->pertayaan->field_work}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">B9</span>
-                                                    <h5 class="mt-0 mb-1">Menurut anda seberapa besar penekanan pada metode pembelajaran di bawah ini dilaksanakan di program studi anda?</h5>
-                                                    <p>{{$respondent->pertayaan->according}}</p>
+                                                    <h5 class="mt-0 mb-1">Bagaimana pelayanan Program studi dalam memberikan pengurusan administrasi mahasiswa</h5>
+                                                    <p>{{$respondent->pertayaan->study_program_services}}</p>
                                                 </li>
                                             </ul>
 
@@ -152,208 +144,93 @@
                                             <ul class="list-unstyled timeline-sm">
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C1</span>
-                                                    <h5 class="mt-0 mb-1">Apakah anda sudah bekerja saat ini ?</h5>
-                                                    <p>{{$respondent->pekerjaan->works}}</p>
+                                                    <h5 class="mt-0 mb-1">Apakah anda bekerja ?</h5>
+                                                    <p>{{$respondent->pekerjaan->do_you_work}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C2</span>
-                                                    <h5 class="mt-0 mb-1">Kapan anda mulai mencari pekerjaan?</h5>
-                                                    @if(empty($respondent->pekerjaan->start_work))
+                                                    <h5 class="mt-0 mb-1">Jika Sudah dimana anda bekerja?</h5>
+                                                    @if(empty($respondent->pekerjaan->workplace))
                                                     <p>Tidak Ada Data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->start_work}}</p>
-
+                                                    <p>{{$respondent->pekerjaan->workplace}}</p>
                                                     @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C3</span>
-                                                    <h5 class="mt-0 mb-1">Apa alasan utama anda tidak mencari pekerjaan setelah lulus kuliah?</h5>
-                                                    @if(empty($respondent->pekerjaan->jobs_reason))
+                                                    <h5 class="mt-0 mb-1">Nama Instansi tempat bekerja?</h5>
+                                                    @if(empty($respondent->pekerjaan->name_workplace))
                                                     <p>Tidak Ada Data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->jobs_reason}}</p>
+                                                    <p>{{$respondent->pekerjaan->name_workplace}}</p>
                                                     @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C4</span>
-                                                    <h5 class="mt-0 mb-1">Berapa bulan setelah lulus anda memperoleh pekerjaan pertama?</h5>
-                                                    @if(empty($respondent->pekerjaan->after_how_many_months_job ))
+                                                    <h5 class="mt-0 mb-1">Kapan Mulai Bekerja (bulan/tahun)?</h5>
+                                                    @if(empty($respondent->pekerjaan->start_work ))
                                                     <p>Tidak Ada Data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->after_how_many_months_job}}</p>
+                                                    <p>{{$respondent->pekerjaan->start_work}}</p>
                                                     @endif
 
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C5</span>
-                                                    <h5 class="mt-0 mb-1">Berapa bulan setelah keluar STR anda memeroleh pekerjaan pertama?</h5>
-                                                    @if(empty($respondent->pekerjaan->get_str ))
+                                                    <h5 class="mt-0 mb-1">Alamat tempat kerja?</h5>
+                                                    @if(empty($respondent->pekerjaan->address_work ))
                                                     <p>Tidak Ada Data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->get_str}}</p>
+                                                    <p>{{$respondent->pekerjaan->address_work}}</p>
                                                     @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C6</span>
-                                                    <h5 class="mt-0 mb-1">Sebelum anda memperoleh pekerjaan pertama berapa jumlah instansi yang anda lamar, yang merespon, dan yang mengundang wawancara?</h5>
-                                                    @if(empty($respondent->pekerjaan->amount_applied ))
+                                                    <h5 class="mt-0 mb-1">Apakah pekerjaan anda sesuai dengan latar belakang pendidikan?</h5>
+                                                    @if(empty($respondent->pekerjaan->job_educational_background ))
                                                     <p> Tidak ada data </p>
                                                     @else
                                                     <p>
-                                                       Melamar : {{$respondent->pekerjaan->amount_applied}} <br>
-                                                        Respon Lamaran : {{$respondent->pekerjaan->amount_response_to_applications}} <br>
-                                                        Interview : {{$respondent->pekerjaan->amount_inviting_interviews}}
+                                                        {{$respondent->pekerjaan->job_educational_background}} <br>
                                                     </p>
                                                     @endif
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">C7</span>
-                                                    <h5 class="mt-0 mb-1">Bagaimana anda mencari pekerjaan?</h5>
-                                                    @if(empty($respondent->pekerjaan->how_to_find_a_job ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->how_to_find_a_job}}</p>
-                                                    @endif
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C8</span>
-                                                    <h5 class="mt-0 mb-1">Instansi tempat anda bekerja?</h5>
-                                                    @if(empty($respondent->pekerjaan->workplace))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->workplace}}</p>
-                                                    @endif
-
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C9</span>
-                                                    <h5 class="mt-0 mb-1">Apa nama instansi tempat anda bekerja?</h5>
-                                                    @if(empty($respondent->pekerjaan->name_workplace ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->name_workplace}}</p>
-                                                    @endif
-
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C10</span>
-                                                    <h5 class="mt-0 mb-1">Apakah pekerjaan anda sesuai dengan latar belakang pendidikan?</h5>
-                                                    @if(empty($respondent->pekerjaan->job_educational_background ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->job_educational_background}}</p>
-                                                    @endif
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C11</span>
-                                                    <h5 class="mt-0 mb-1">Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya?</h5>
-                                                    @if(empty($respondent->pekerjaan->why_take_the_job ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->why_take_the_job}}</p>
-                                                    @endif
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C12</span>
-                                                    <h5 class="mt-0 mb-1">Tingkat pendidikan apa yang paling tepat/sesuai untuk pekerjaan anda saat ini</h5>
-                                                    @if(empty($respondent->pekerjaan->level_of_education ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->level_of_education}}</p>
-                                                    @endif
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C13</span>
-                                                    <h5 class="mt-0 mb-1">Seberapa erat hubungan antara bidang studi dengan pekerjaan anda?</h5>
-                                                    @if(empty($respondent->pekerjaan->relationship_study_work))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->relationship_study_work}}</p>
-                                                    @endif
-
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C14</span>
-                                                    <h5 class="mt-0 mb-1">Dalam melaksanakan pekerjaan, menurut penilaian Saudara sejauh mana kompetensi tambahan berikut diperlukan?</h5>
-                                                    @if(empty($respondent->pekerjaan->additional_competence ))
-                                                    <p>Tidak ada data</p>
-                                                    @else
-                                                    <p>{{$respondent->pekerjaan->additional_competence}}</p>
-                                                    @endif
-
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">C15</span>
-                                                    <h5 class="mt-0 mb-1">Berapa rata- rata penghasilan anda per bulan </h5>
+                                                    <h5 class="mt-0 mb-1">Berapa gaji pertama anda?</h5>
                                                     @if(empty($respondent->pekerjaan->income_per_month ))
                                                     <p>Tidak ada data</p>
                                                     @else
                                                     <p>{{$respondent->pekerjaan->income_per_month}}</p>
                                                     @endif
                                                 </li>
-                                            </ul>
-
 
                                         </div>
                                         <!-- end timeline content-->
 
                                         <div class="tab-pane" id="settings">
                                             <h5 class="mb-4 text-uppercase"><i class="fa-solid fa-briefcase"></i>
-                                                KOMPETENSI DAN HUBUNGAN ANTARA PROGRAM STUDI DENGAN DUNIA KERJA</h5>
+                                                SARAN & KRITIK</h5>
                                             <ul class="list-unstyled timeline-sm">
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">D1</span>
-                                                    <h5 class="mt-0 mb-1">Kesesuaian Kurikulum dengan dunia kerja ?</h5>
-                                                    <p>{{$respondent->relasi->curriculum_compatibility_jobs}}</p>
+                                                    <h5 class="mt-0 mb-1">Proses Belajar Mengajar?</h5>
+                                                    <p>{{$respondent->relasi->learning_process}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">D2</span>
-                                                    <h5 class="mt-0 mb-1">Kesesuaian Kompetensi yang diperoleh di Poltekkes Kemenkes berikut ini dalam melaksanakan pekerjaan anda ?</h5>
-                                                    <p>{{$respondent->relasi->health_polytechnic_Competence}}</p>
+                                                    <h5 class="mt-0 mb-1">Kurikulum?</h5>
+                                                    <p>{{$respondent->relasi->curriculum}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">D3</span>
-                                                    <h5 class="mt-0 mb-1">Pada saat lulus, pada tingkat mana kompetensi di bawah ini anda kuasai?</h5>
-                                                    <p>{{$respondent->relasi->competency_mastered}}</p>
+                                                    <h5 class="mt-0 mb-1">Layanan Administrasi Kemahasiswaan?</h5>
+                                                    <p>{{$respondent->relasi->student_admini_services}}</p>
                                                 </li>
                                                 <li class="timeline-sm-item">
                                                     <span class="timeline-sm-date">D4</span>
-                                                    <h5 class="mt-0 mb-1">Pada saat ini, pada tingkat mana kompetensi di bawah ini diperlukan dalam pekerjaan?</h5>
-                                                    <p>{{$respondent->relasi->competencies_required_job}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">D5</span>
-                                                    <h5 class="mt-0 mb-1">Kebutuhan peningkatan Kompetensi yang perlu ditambah pada kurikulum Prodi</h5>
-                                                    <p>{{$respondent->relasi->competency_improvement_needs}}</p>
-                                                </li>
-                                            </ul>
-
-                                            <h5 class="mb-4 text-uppercase"><i class="fas fa-network-wired"></i>
-                                                KOMUNIKASI ANTARA ALUMNI DENGAN POLTEKKES KEMENKES</h5>
-                                            <ul class="list-unstyled timeline-sm">
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">E1</span>
-                                                    <h5 class="mt-0 mb-1">Keikutsertaan dalam Ikatan alumni Poltekkes?</h5>
-                                                    <p>{{$respondent->alumni->alumni_association}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">E2</span>
-                                                    <h5 class="mt-0 mb-1">Media komunikasi yang digunakan?</h5>
-                                                    <p>
-                                                        <i class="fab fa-facebook"></i> <a href="https://www.facebook.com/{{$respondent->alumni->fb}}" target="_blank">{{$respondent->alumni->fb}}</a>  <br>
-                                                        <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/{{$respondent->alumni->ig}}" target="_blank">{{$respondent->alumni->ig}}</a> <br>
-                                                        <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/{{$respondent->alumni->linkend}}" target="_blank">{{$respondent->alumni->linkend}}</a>
-                                                    </p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">E3</span>
-                                                    <h5 class="mt-0 mb-1">Apakah kegiatan alumni sudah dirasakan memberikan kontribusi kepada pengembangan kompetensi dan institusi</h5>
-                                                    <p>{{$respondent->alumni->development_of_competencies_and_institutions}}</p>
-                                                </li>
-                                                <li class="timeline-sm-item">
-                                                    <span class="timeline-sm-date">E4</span>
-                                                    <h5 class="mt-0 mb-1">Kegiatan apa sajakah yang dirasakan perlu dikembangkan untuk menjalin kerjasama antara institusi dengan ikatan alumni?</h5>
-                                                    <p>{{$respondent->alumni->cooperation_institutions_alumni_associations}}</p>
+                                                    <h5 class="mt-0 mb-1">Sarana dan Prasarana?</h5>
+                                                    <p>{{$respondent->relasi->facilities_infrastructure}}</p>
                                                 </li>
 
                                             </ul>

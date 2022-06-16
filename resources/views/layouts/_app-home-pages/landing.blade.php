@@ -26,6 +26,9 @@
 		<!-- icons -->
 		<link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
+        {{-- scrollbarr --}}
+        <link href="{{asset('css/scrollbar.css')}}" rel="stylesheet" type="text/css" />
+
         @stack('css-internal')
         @stack('css-external')
     </head>
@@ -40,7 +43,7 @@
             <br>
             <br>
             <br>
-                <div class="content">
+                <div class="content custom-scrollbar">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12">

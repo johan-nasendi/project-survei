@@ -1,71 +1,21 @@
 
-<h4 class="header-title mb-3"> <b>B.PENGALAMAN PEMBELAJARAN DAN KEGIATAN PENDIDIKAN</b> </h4>
+<h4 class="header-title mb-3"> <b>B.PENGALAMAN PBM</b> </h4>
 
     <div class="row  needs-validation was-validated" novalidate="">
         <div class="col-lg-6">
             <div class="card-box">
-                    <div class="form-group">
-                        <label for="#">Lulus dari program studi<span class="text-danger">*</span></label>
-                        <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
-
-                        <input type="text"  name="what_study_program" id="what_study_program" value="{{old('what_study_program')}}"
-                        placeholder="Lulus dari program studi apa ?" class="form-control @error('what_study_program') is-invalid @enderror"
-                       required="" autocomplete="what_study_program">
-                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi program studi anda</div>
-                        @error('what_study_program')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
 
                     <div class="form-group">
-                        <label for="#">Kapan Masuk  kuliah <span class="text-danger">*</span></label>
-                        <input type="date"  name="college_entry_date" value="{{old('college_entry_date')}}"
-                       required=""  autocomplete="off"  placeholder="Kapan Anda Masuk Kuliah?"
-                       class="form-control @error('college_entry_date') is-invalid @enderror">
-                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi kapan anda masuk kuliah anda</div>
-                        @error('college_entry_date')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="#">Kapan Lulus  kuliah <span class="text-danger">*</span></label>
-                        <input type="date"  name="college_graduation_date" value="{{old('college_graduation_date')}}"
-                       required="" autocomplete="off" placeholder="Kapan Anda Lulus Kuliah ?"
-                        class="form-control @error('college_graduation_date') is-invalid @enderror" >
-                        <div class="invalid-feedback" style="font-size: 10px">Harap mengisi kapan lulus kuliah anda</div>
-                        @error('college_graduation_date')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="pass1">Nilai IPK (Indeks Prestasi Kumulatif)<span class="text-danger">*</span></label>
-                        <input  type="text"  name="score_ipk" value="{{old('score_ipk')}}"
-                        placeholder="Berapa nilai IPK (Indeks Prestasi Kumulatif) anda?"
-                       required="" autocomplete="off"  class="form-control @error('score_ipk') is-invalid @enderror">
-                       <div class="invalid-feedback" style="font-size: 10px">Harap mengisi nilai IPK anda</div>
-                        @error('score_ipk')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="#">Selama kuliah, apakah anda menjadi anggota dari suatu organisasi
-                            (sosial, pemuda, organisasi keagamaan) di dalam atau di luar kampus?<span class="text-danger">*</span></label>
-                        <select name="organization"  class="form-control @error('organization') is-invalid @enderror"
-                       required=""  autocomplete="off">
+                        <label for="#">Selama kuliah apakah anda pernah menjadi anggota suatu organisasi di dalam atau luar kampus?<span class="text-danger">*</span></label>
+                            <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
+                        <select name="active_inactive_organization"  class="form-control @error('active_inactive_organization') is-invalid @enderror"
+                       required="" >
                             <option value="" selected disabled>---Pilih---</option>
-                            <option value="Yes" @if(old('organization') == "Yes") {{ 'selected' }} @endif> Yes</option>
-                            <option value="No" @if(old('organization') == "No") {{ 'selected' }} @endif>No</option>
+                            <option value="Ya" @if(old('active_inactive_organization') == "Ya") {{ 'selected' }} @endif> Ya</option>
+                            <option value="Tidak" @if(old('active_inactive_organization') == "Tidak") {{ 'selected' }} @endif>Tidak</option>
                         </select>
                         <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                        @error('organization')
+                        @error('active_inactive_organization')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -73,18 +23,35 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="#">Seberapa aktif anda di organisasi tersebut?<span class="text-danger">*</span></label>
-                            <select name="active_inactive_organization"  class="form-control @error('active_inactive_organization') is-invalid @enderror"
-                           required autocomplete="off" >
+                        <label for="#">Organisasi apa yang pernah anda ikut?<span class="text-danger">*</span></label>
+                            <select name="organization_name"  class="form-control @error('organization_name') is-invalid @enderror"
+                           required="" >
                                 <option value="" selected disabled>---Pilih---</option>
-                                <option value="Sangat Aktif" @if (old('active_inactive_organization') == "Sangat Aktif") {{ 'selected' }} @endif>Sangat Aktif</option>
-                                <option value="Cukup Aktif" @if (old('active_inactive_organization') == "Cukup Aktif") {{ 'selected' }} @endif>Cukup Aktif</option>
-                                <option value="Kurang Aktif" @if (old('active_inactive_organization') == "Kurang Aktif") {{ 'selected' }} @endif>Kurang Aktif</option>
-                                <option value="Pasif" @if (old('active_inactive_organization') == "Pasif") {{ 'selected' }} @endif>Pasif</option>
-                                <option value="Tidak Aktif" @if (old('active_inactive_organization') == "Tidak Aktif") {{ 'selected' }} @endif>Tidak Aktif</option>
+                                <option value="BEM" @if (old('organization_name') == "BEM") {{ 'selected' }} @endif>BEM</option>
+                                <option value="HMJ" @if (old('organization_name') == "HMJ") {{ 'selected' }} @endif>HMJ</option>
+                                <option value="UKM" @if (old('organization_name') == "UKM") {{ 'selected' }} @endif>UKM</option>
+                                <option value="Lainnya" @if (old('organization_name') == "Lainnya") {{ 'selected' }} @endif>Lainnya</option>
                             </select>
                             <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                            @error('active_inactive_organization')
+                            @error('organization_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="#">Selama Kuliah, menurut saudara bagaimana kemampuan dosen dalam mengampu mata kuliah?<span class="text-danger">*</span></label>
+                            <select name="lecturer_ability"  class="form-control @error('lecturer_ability') is-invalid @enderror"
+                           required="" >
+                                <option value="" selected disabled>---Pilih---</option>
+                                <option value="Sangat Baik" @if (old('lecturer_ability') == "Sangat Baik") {{ 'selected' }} @endif>Sangat Baik</option>
+                                <option value="Baik" @if (old('lecturer_ability') == "Baik") {{ 'selected' }} @endif>Baik</option>
+                                <option value="Cukup" @if (old('lecturer_ability') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
+                                <option value="Kurang" @if (old('lecturer_ability') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
+                            </select>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
+                            @error('lecturer_ability')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -100,78 +67,63 @@
             <div class="card-box">
 
                 <div class="form-group">
-                    <label for="#">Setelah lulus dari Poltekkes,apakah anda melanjutkan pendidikan ke jenjang yang lebih tinggi?
+                    <label for="#">Bagaimana ketrampilan dosen dan instruktur dalam memberikan praktek?
                         <span class="text-danger">*</span>
                     </label>
-                    <select name="further_education_levels"  class="form-control @error('further_education_levels') is-invalid @enderror"
-                   required="" autocomplete="off" >
+                    <select name="lecturer_skills_practice"  class="form-control @error('lecturer_skills_practice') is-invalid @enderror"
+                   required="" >
                         <option value="" selected disabled>---Pilih---</option>
-                        <option value="Yes" @if(old('further_education_levels') == "Yes") {{ 'selected' }} @endif>Yes</option>
-                        <option value="No" @if(old('further_education_levels') == "No") {{ 'selected' }} @endif>No</option>
+                        <option value="Sangat Baik" @if (old('lecturer_skills_practice') == "Sangat Baik") {{ 'selected' }} @endif>Sangat Baik</option>
+                        <option value="Baik" @if (old('lecturer_skills_practice') == "Baik") {{ 'selected' }} @endif>Baik</option>
+                        <option value="Cukup" @if (old('lecturer_skills_practice') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
+                        <option value="Kurang" @if (old('lecturer_skills_practice') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
                     <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                    @error('further_education_levels')
+                    @error('lecturer_skills_practice')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
                 </div>
                 <div class="form-group">
-                    <label for="#">Jika ya, apakah pendidikan yang diambil sesuai dengan latar belakang pendidikan anda di Poltekkes?
+                    <label for="#">Bagaimana pelayanan Rektorat dalam memberikan pengurusan administrasi mahasiswa?
                         <span class="text-danger">*</span>
                     </label>
-                    <select name="educational_background"  class="form-control @error('educational_background') is-invalid @enderror"
-                   required=""  autocomplete="off">
+                    <select name="rectors_service"  class="form-control @error('rectors_service') is-invalid @enderror"
+                   required="">
                         <option value="" selected disabled>---Pilih---</option>
-                        <option value="Yes" @if(old('educational_background') == "Yes") {{ 'selected' }} @endif>Yes</option>
-                        <option value="No" @if(old('educational_background') == "No") {{ 'selected' }} @endif>No</option>
+                        <option value="Sangat Baik" @if (old('rectors_service') == "Sangat Baik") {{ 'selected' }} @endif>Sangat Baik</option>
+                        <option value="Baik" @if (old('rectors_service') == "Baik") {{ 'selected' }} @endif>Baik</option>
+                        <option value="Cukup" @if (old('rectors_service') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
+                        <option value="Kurang" @if (old('rectors_service') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
                     <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                    @error('educational_background')
+                    @error('rectors_service')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                      @enderror
                 </div>
                 <div class="form-group">
-                    <label for="#">Jika anda sudah bekerja, apakah pendidikan yang diambil sesuai dengan bidang pekerjaan anda saat ini?
+                    <label for="#">Bagaimana pelayanan Program studi dalam memberikan pengurusan administrasi mahasiswa?
                         <span class="text-danger">*</span>
                     </label>
-                    <select name="field_work"  class="form-control @error('field_work') is-invalid @enderror"
-                   required=""  autocomplete="off">
+                    <select name="study_program_services"  class="form-control @error('study_program_services') is-invalid @enderror"
+                   required="" >
                         <option value="" selected disabled>---Pilih---</option>
-                        <option value="Yes" @if(old('field_work') == "Yes") {{ 'selected' }} @endif>Yes</option>
-                        <option value="No" @if(old('field_work') == "No") {{ 'selected' }} @endif>No</option>
+                        <option value="Sangat Baik" @if (old('study_program_services') == "Sangat Baik") {{ 'selected' }} @endif>Sangat Baik</option>
+                        <option value="Baik" @if (old('study_program_services') == "Baik") {{ 'selected' }} @endif>Baik</option>
+                        <option value="Cukup" @if (old('study_program_services') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
+                        <option value="Kurang" @if (old('study_program_services') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
                     <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                    @error('field_work')
+                    @error('study_program_services')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
                 </div>
 
-                <div class="form-group">
-                    <label for="#">Menurut anda seberapa besar penekanan pada metode pembelajaran di bawah ini dilaksanakan di program studi anda?
-                        <span class="text-danger">*</span>
-                    </label>
-                    <select name="according"  class="form-control @error('according') is-invalid @enderror"
-                    required=""  autocomplete="off">
-                        <option value="" selected disabled>---Pilih---</option>
-                        <option value="Perkuliahan" @if (old('according') == "Perkuliahan") {{ 'selected' }} @endif>Perkuliahan</option>
-                        <option value="Praktek Laboratorium" @if (old('according') == "Praktek Laboratorium") {{ 'selected' }} @endif>Praktek Laboratorium</option>
-                        <option value="Praktik Klinik" @if (old('gender') == "Praktik Klinik") {{ 'selected' }} @endif>Praktik Klinik</option>
-                        <option value="Praktek kerja Lapangan" @if (old('according') == "Praktek kerja Lapangan") {{ 'selected' }} @endif>Praktek kerja Lapangan/PKN</option>
-                        <option value="Keterlibatan dalam penelitian dosen" @if (old('according') == "Keterlibatan dalam penelitian dosen") {{ 'selected' }} @endif>Keterlibatan dalam penelitian dosen</option>
-                        <option value="Magang" @if(old('according') == "Magang") {{ 'selected' }} @endif>Magang</option>
-                    </select>
-                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda  anda</div>
-                    @error('according')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
 
             </div> <!-- end card-box -->
         </div><!-- end col -->

@@ -9,19 +9,15 @@ class QuestionsLearningExperiencea extends Model
 {
     use HasFactory;
 
-    protected $table = "questions_learning";
+    protected $table = "pbm_experience";
     protected $fillable = [
         'respondent_id',
-        'what_study_program',
-        'college_entry_date',
-        'college_graduation_date',
-        'score_ipk',
-        'organization',
+        'organization_name',
         'active_inactive_organization',
-        'further_education_levels',
-        'educational_background',
-        'field_work',
-        'according',
+        'lecturer_ability',
+        'lecturer_skills_practice',
+        'rectors_service',
+        'study_program_services',
 ];
 
 

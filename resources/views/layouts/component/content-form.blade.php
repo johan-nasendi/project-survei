@@ -15,10 +15,10 @@
     @include('forms.form-four')
 </div>
 <hr>
-<div class="tab" id="basictab5">
+{{-- <div class="tab" id="basictab5">
     @include('forms.form-five')
-</div>
-<hr>
+</div> --}}
+
 <div class="tab" id="basictab6">
     @include('forms.form-six')
 </div>

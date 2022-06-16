@@ -13,14 +13,13 @@ class CreateRelationshipTable extends Migration
      */
     public function up()
     {
-        Schema::create('relationship', function (Blueprint $table) {
+        Schema::create('suggestion', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('respondent_id');
-            $table->string('curriculum_compatibility_jobs')->nullable();
-            $table->string('health_polytechnic_Competence')->nullable();
-            $table->string('competency_mastered')->nullable();
-            $table->string('competencies_required_job')->nullable();
-            $table->string('competency_improvement_needs')->nullable();
+            $table->mediumText('learning_process');
+            $table->mediumText('curriculum');
+            $table->mediumText('student_admini_services');
+            $table->mediumText('facilities_infrastructure');
             $table->foreign('respondent_id')->references('id')->on('respondent')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
