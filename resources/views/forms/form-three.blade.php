@@ -12,6 +12,7 @@
                                 <option value="" disabled selected="selected">---Pilih---</option>
                                 <option value="Sudah" @if (old('do_you_work') == "Sudah") {{ 'selected' }} @endif> Sudah </option>
                                 <option value="Belum"  @if (old('do_you_work') == "Belum")  {{ 'selected' }} @endif> Belum </option>
+                                <option value="Sedang melanjutkan pendidikan"  @if (old('do_you_work') == "Sedang melanjutkan pendidikan") {{ 'selected' }} @endif> Sedang melanjutkan pendidikan </option>
                             </select>
                             <div class="text-danger" style="font-size: 10px">Harap memilih pilihan anda</div>
                             {{-- <div class="invalid-feedback">Harap memilih pilihan anda</div> --}}

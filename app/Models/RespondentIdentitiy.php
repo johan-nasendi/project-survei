@@ -14,7 +14,7 @@ class RespondentIdentitiy extends Model
 	protected $fillable = [
                             'name',
                             'place_of_birth',
-                            'date_of_birth',
+                            'address',
                             'gender',
                             'what_study_program',
                             'year_of_college_entry',

@@ -42,7 +42,7 @@ class RespondentIdentityController extends Controller
 
                 'name' => 'required|string|max:100',
                 'mobile_phone_number' => 'required|numeric|min:14|unique:respondent,mobile_phone_number',
-                'date_of_birth' => 'required|date',
+                'address' => 'required|string|max:255',
                 'place_of_birth' => 'required|string|max:100',
                 'email' => 'required|string|email|unique:respondent,email',
                 'gender' => 'required',
@@ -75,9 +75,9 @@ class RespondentIdentityController extends Controller
             'mobile_phone_number.unique'    => 'No Handphone sudah digunakan,Silakan Masukan No handphone yang lain!',
             'gender.required'   => 'Jenis Kelamin Wajib di isi',
             'place_of_birth.required'   => 'Tempat lahir Wajib di isi',
-            'date_of_birth.required'   => 'Tanggal lahir Wajib di isi',
+            'address.required'   => 'Alamat tempat tinggal anda Wajib di isi',
             'what_study_program.required'   => 'Jurusan/Prodi Wajib di isi',
-            'year_of_college_entry.required'   => 'Tahun Masuk kuliah  Wajib di isi',
+            'year_of_college_entry.required'   => 'Tahun Masuk kuliah Wajib di isi',
             'college_graduation_date.required'   => 'Bulan dan Tahun Lulus Wajib di isi',
 
             'do_you_work.required' => 'Apakah anda sudah bekerja saat ini? Wajib di isi!',
@@ -100,7 +100,7 @@ class RespondentIdentityController extends Controller
             $respondent->name = $request->name;
             $respondent->email = $request->email;
             $respondent->place_of_birth = $request->place_of_birth;
-            $respondent->date_of_birth = $request->date_of_birth;
+            $respondent->address = $request->address;
             $respondent->what_study_program = $request->what_study_program;
             $respondent->year_of_college_entry = $request->year_of_college_entry;
             $respondent->college_graduation_date = $request->college_graduation_date;

@@ -47,10 +47,10 @@
                                     <div class="text-left mt-3">
                                         <p class="text-color-black mb-2 font-13"><strong>Nama Lengkap :</strong><span class="ml-2"> {{$respondent->name}}</span></p>
                                         <p class="text-color-black mb-2 font-13"><strong>Tempat Lahir :</strong><span class="ml-2"> {{$respondent->place_of_birth}}</span></p>
-                                        <p class="text-color-black mb-2 font-13"><strong>Tanggal Lahir :</strong><span class="ml-2"> {{$respondent->date_of_birth}}</span></p>
                                         <p class="text-color-black mb-2 font-13"><strong>Jenis Kelamin :</strong><span class="ml-2"> {{$respondent->gender}}</span></p>
                                         <p class="text-color-black mb-2 font-13"><strong>Mobile :</strong><span class="ml-2">{{$respondent->mobile_phone_number}}</span></p>
                                         <p class="text-color-black mb-2 font-13"><strong>Email :</strong> <span class="ml-2 ">{{$respondent->email}}</span></p>
+                                        <p class="text-color-black mb-2 font-13"><strong>Alamat:</strong><span class="ml-2"> {{$respondent->address}}</span></p>
                                     </div>
 
                                 </div> <!-- end card-box -->

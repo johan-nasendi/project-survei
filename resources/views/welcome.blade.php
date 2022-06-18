@@ -1,76 +1,48 @@
 @extends('layouts._app-home-pages.landing')
-@section('title','Poltekkes Jayapura')
+@section('title','Poltekes Jayapura')
 @section('content')
 
-@push('css-internal')
-    <!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+ <!--==================== HOME ====================-->
+ <section class="home" id="home">
+    <div class="home__container container grid">
+        <img src="{{asset('/img/hello.png')}}" alt="" class="home__img" style="width: 500px">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{('/vendor/landing/css/bootstrap.min.css')}}" type="text/css">
-
-    <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="{{('/vendor/landing/css/materialdesignicons.min.css')}}" />
-
-    <!-- Custom  sCss -->
-    <link rel="stylesheet" type="text/css" href="{{('/vendor/landing/css/style.css')}}" />
-
-@endpush
-
-
-
-<section class="bg-home bg-gradient custom-scrollbar" id="home">
-    <div class="home-center">
-        <div class="home-desc-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="home-title mo-mb-20">
-                            <h1 class="mb-4 text-dark">PEDOMAN PELAKSANAAN TRACER STUDY POLTEKKES KEMENKES</h1>
-                            <div class="subscribe">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="mb-2">
-                                                <a href="{{route('forum')}}" class="btn btn-warning text-dark">
-                                                    <b>MULAI KUESIONER</b> <i class="fa fa-paper-plane text-dark"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 offset-xl-2 col-lg-5 offset-lg-1 col-md-8">
-                        <div class="home-img position-relative">
-                            <img src="{{asset('/img/hello.png')}}" alt="hello" class="home-first-img">
-                            {{-- <img src="{{asset('/img/hello.png')}}" alt="" class="home-second-img mx-auto d-block"> --}}
-                            {{-- <img src="{{asset('/img/hello.png')}}" alt="" class="home-third-img"> --}}
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container-fluid -->
+        <div class="home__data">
+            <h1 class="home__title">
+                SURVEY PENELUSURAN ALUMNI <br>
+                POLITEKNIK KESEHATAN KEMENKES JAYAPURA
+            </h1>
+            <p class="home__description">
+                Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura
+            </p>
+            <p class="home__description">
+                Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.
+            </p>
+            <a href="{{route('forum')}}" class="button button--flex">
+                MULAI KUESIONER <i class="ri-send-plane-fill button__icon"></i>
+                </a>
         </div>
+
+        {{-- <div class="home__social">
+            <span class="home__social-follow">Ikuti Kami</span>
+
+            <div class="home__social-links">
+                <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+            </div>
+        </div> --}}
     </div>
 </section>
-
-
+<!--==================== FOOTER ====================-->
+<footer class="footer footer-alt">
+    <p class="footer__copy"><script>document.write(new Date().getFullYear())</script>
+        &copy; Poltekkes Kemenkes Jayapura</p>
+</footer>
 @stop
-@push('js-internal')
-
-<script src="{{('/vendor/landing/js/jquery.min.js')}}"></script>
-<script src="{{('/vendor/landing/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{('/vendor/landing/js/jquery.easing.min.js')}}"></script>
-<script src="{{('/vendor/landing/js/scrollspy.min.js')}}"></script>
-
-<!-- custom js -->
-<script src="{{('/vendor/landing/js/app.js')}}"></script>
-
-@endpush
-
-

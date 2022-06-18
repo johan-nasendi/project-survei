@@ -32,19 +32,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label for="#"> Tanggal Lahir <span class="text-danger">*</span></label>
-                            <input type="date"  name="date_of_birth" required=""  autocomplete="date_of_birth"
-                            class="form-control @error('date_of_birth') is-invalid @enderror" value="{{ old('date_of_birth') }}">
-                            <div class="invalid-feedback" style="font-size: 10px">
-                                Harap mengisi tanggal lahir anda
-                            </div>
-                            @error('date_of_birth')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+
                     <div class="form-group">
                         <label for="gender"> Jenis Kelamin <span class="text-danger">*</span></label>
                             <select name="gender"  class="form-control @error('gender') is-invalid @enderror"
@@ -53,8 +41,19 @@
                                 <option value="Pria" @if (old('gender') == "Pria") {{ 'selected' }} @endif> Pria</option>
                                 <option value="Wanita" @if (old('gender') == "Wanita") {{ 'selected' }} @endif>Wanita</option>
                             </select>
-                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih jenis kelamin anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
                             @error('gender')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="#"> Alamat Sekarang<span class="text-danger">*</span> </label>
+                        <textarea class="form-control @error('address') is-invalid @enderror" required="" name="address" placeholder="Alamat tempat anda tinggal sekarang"  rows="2" autocomplete="on">{{old('address')}}</textarea>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap mengisi email anda</div>
+                            @error('address')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -90,7 +89,7 @@
                                 <option value="DIII TLM" @if (old('what_study_program') == "DIII TLM") {{ 'selected' }} @endif>DIII TLM </option>
                                 <option value="DIII Farmasi " @if (old('what_study_program') == "DIII Farmasi ") {{ 'selected' }} @endif>DIII Farmasi  </option>
                             </select>
-                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih jurusan/prodi anda</div>
+                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
                             @error('what_study_program')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -133,7 +132,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email"> Alamat E-mail <span class="text-danger">*</span> </label>
+                        <label for="#">  Email <span class="text-danger">*</span> </label>
                             <input type="email" name="email"  value="{{old('email')}}" class="form-control @error('email') is-invalid @enderror"
                             required="" autofocus  autocomplete="email" placeholder="Alamat email anda yang aktif">
                             <div class="invalid-feedback" style="font-size: 10px">Harap mengisi email anda</div>
@@ -143,6 +142,7 @@
                             </span>
                         @enderror
                     </div>
+
             </div> <!-- end col -->
         </div> <!-- end row -->
 

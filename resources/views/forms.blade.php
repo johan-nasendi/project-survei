@@ -3,39 +3,74 @@
 @section('content')
 
 @push('css-internal')
-    <!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <!-- App css -->
+    <link href="{{asset('/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="{{asset('/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
+    <link href="{{asset('/assets/css/bootstrap-dark.min.css')}}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+    <link href="{{asset('/assets/css/app-dark.min.css')}}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+    <!-- icons -->
+    <link href="{{asset('/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 @endpush
 
-        <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
-        @if (count($errors) > 0)
-        <ul class="alert alert-danger">
-        @foreach($errors->all() as $error)
-           <li>{{ $error }}</li>
-        @endforeach
-        </ul>
-        @endif
-
-         <div id="basicwizard">
-            @include('layouts.component.nav-form')
-            <form name="frm" action="{{route('forum.post')}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="tab-content b-0 mb-0 pt-0">
-                    @include('layouts.component.content-form')
-                </div> <!-- tab-content -->
-            </form>
-        </div> <!-- end #basicwizard-->
-
+<div class="content custom-scrollbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <br><br><br><br><br><br>
+                        <h1 class="header-titl"> Kuesioner Tracer Study (Alumni) </h1>
+                        @if (count($errors) > 0)
+                            <ul class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                            </ul>
+                        @endif
+                        <div id="basicwizard">
+                            @include('layouts.component.nav-form')
+                            <form name="frm" action="{{route('forum.post')}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="tab-content b-0 mb-0 pt-0">
+                                    @include('layouts.component.content-form')
+                                </div> <!-- tab-content -->
+                            </form>
+                        </div> <!-- end #basicwizard-->
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<footer class="footer footer-alt">
+    <script>document.write(new Date().getFullYear())</script>
+    &copy; Poltekkes Kemenkes Jayapura
+</footer>
 @stop
 
 @push('js-external')
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                <!-- Vendor js -->
+                <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
+
+                 <!-- custom dmeo js-->
+                 <script src="https://kit.fontawesome.com/b00263187e.js" crossorigin="anonymous"></script>
+
+                <!-- Plugins js-->
+                <script src="{{asset('/assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}"></script>
+
+                <!-- Init js-->
+                <script src="{{asset('/assets/js/pages/form-wizard.init.js')}}"></script>
+
+                <!-- App js -->
+                <script src="{{asset('/assets/js/app.min.js')}}"></script>
 @endpush
 
 @push('js-internal')
-<script type="text/javascript">
+    <script type="text/javascript">
 
     // function showDiv(){
     //     getSelectValue = document.getElementById("test").value;
