@@ -9,7 +9,7 @@
                         <label for="#">Selama kuliah apakah anda pernah menjadi anggota suatu organisasi di dalam atau luar kampus?<span class="text-danger">*</span></label>
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
                         <select name="active_inactive_organization"  class="form-control @error('active_inactive_organization') is-invalid @enderror"
-                       required="" >
+                       required=""id="Organisasi" onchange="showDiv()" >
                             <option value="" selected disabled>---Pilih---</option>
                             <option value="Ya" @if(old('active_inactive_organization') == "Ya") {{ 'selected' }} @endif> Ya</option>
                             <option value="Tidak" @if(old('active_inactive_organization') == "Tidak") {{ 'selected' }} @endif>Tidak</option>
@@ -22,7 +22,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="hidden_organization_name" style="display: none;">
                         <label for="#">Organisasi apa yang pernah anda ikut?<span class="text-danger">*</span></label>
                             <select name="organization_name"  class="form-control @error('organization_name') is-invalid @enderror">
                                 <option value="" selected disabled>---Pilih---</option>

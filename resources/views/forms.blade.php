@@ -72,82 +72,14 @@
 @push('js-internal')
     <script type="text/javascript">
 
-    // function showDiv(){
-    //     getSelectValue = document.getElementById("test").value;
-    //     if(getSelectValue == "Yes") {
-    //         document.getElementById("hidden_div_yes_one").style.display="block";
-    //     }
-
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_two").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_three").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_four").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_five").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_six").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_seven").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_eight").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_nine").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_ten").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_eleven").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_additional_competence").style.display="block";
-    //     }
-    //     if(getSelectValue == "Yes"){
-    //         document.getElementById("hidden_div_yes_twelve").style.display="block";
-    //     }
-
-    //     else  {
-    //         document.getElementById("hidden_div_yes_one").style.display="none";
-    //         document.getElementById("hidden_div_yes_two").style.display="none";
-    //         document.getElementById("hidden_div_yes_three").style.display="none";
-    //         document.getElementById("hidden_div_yes_four").style.display="none";
-    //         document.getElementById("hidden_div_yes_five").style.display="none";
-    //         document.getElementById("hidden_div_yes_six").style.display="none";
-    //         document.getElementById("hidden_div_yes_seven").style.display="none";
-    //         document.getElementById("hidden_div_yes_ten").style.display="none";
-    //         document.getElementById("hidden_div_yes_eight").style.display="none";
-    //         document.getElementById("hidden_div_yes_nine").style.display="none";
-    //         document.getElementById("hidden_div_yes_eleven").style.display="none";
-    //         document.getElementById("hidden_div_yes_additional_competence").style.display="none";
-    //         document.getElementById("hidden_div_yes_twelve").style.display="none";
-
-    //     }
-    //     if(getSelectValue == "No"){
-    //         document.getElementById("hidden_div_no").style.display="block";
-
-    //     } else {
-    //         document.getElementById("hidden_div_no").style.display="none";
-    //     }
-
-    // }
-
-    // function showArea(){
-    //     getSelectValue = document.getElementById("jobs_reason").value;
-    //     if(getSelectValue == "1"){
-    //         document.getElementById("hidden_textarea").style.display="block";
-    //     } else {
-    //         document.getElementById("hidden_textarea").style.display="none";
-    //     }
-    // }
+    function showDiv(){
+        getSelectValue = document.getElementById("Organisasi").value;
+        if(getSelectValue == "Ya") {
+            document.getElementById("hidden_organization_name").style.display="block";
+        }else  {
+         document.getElementById("hidden_organization_name").style.display="none";
+        }
+    }
 
     function IsEmpty() {
         // Respondent
