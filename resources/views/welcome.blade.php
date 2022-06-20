@@ -12,10 +12,10 @@
         <img src="{{asset('/img/hello.png')}}" alt="" class="home__img" style="width: 400px">
 
         <div class="home__data" style="margin-left: 4.9rem">
-            <p class="home__description" style="font-size: 15px;">
+            <p class="home__description" >
                 <b>Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura</b>
             </p>
-            <p class="home__description" style="font-size: 15px;">
+            <p class="home__description">
                 <b>Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.</b>
             </p>
             <a href="{{route('forum')}}" class="button button--flex">
