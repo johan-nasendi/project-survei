@@ -205,6 +205,16 @@
                                                     @endif
                                                 </li>
 
+                                                <li class="timeline-sm-item">
+                                                    <span class="timeline-sm-date">C8</span>
+                                                    <h5 class="mt-0 mb-1">Keterangan</h5>
+                                                    @if(empty($respondent->pekerjaan->description ))
+                                                    <p>Tidak ada data</p>
+                                                    @else
+                                                    <p>{{$respondent->pekerjaan->description}}</p>
+                                                    @endif
+                                                </li>
+
                                         </div>
                                         <!-- end timeline content-->
 

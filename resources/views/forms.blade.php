@@ -44,6 +44,7 @@
         </div>
     </div>
 </div>
+<br>
 <footer class="footer footer-alt">
     <script>document.write(new Date().getFullYear())</script>
     &copy; Poltekkes Kemenkes Jayapura
@@ -79,6 +80,51 @@
         }else  {
          document.getElementById("hidden_organization_name").style.display="none";
         }
+    }
+
+    function showDivJob(){
+        getSelectValue = document.getElementById("you_work").value;
+
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_workplace").style.display="block";
+        }
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_name_workplace").style.display="block";
+        }
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_start_work").style.display="block";
+        }
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_address_work").style.display="block";
+        }
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_income_per_month").style.display="block";
+        }
+        if(getSelectValue == "Sudah") {
+            document.getElementById("hidden_job_educational_background").style.display="block";
+        }
+
+        else  {
+         document.getElementById("hidden_workplace").style.display="none";
+         document.getElementById("hidden_name_workplace").style.display="none";
+         document.getElementById("hidden_start_work").style.display="none";
+         document.getElementById("hidden_address_work").style.display="none";
+         document.getElementById("hidden_income_per_month").style.display="none";
+         document.getElementById("hidden_job_educational_background").style.display="none";
+        }
+
+        if(getSelectValue == "Sedang melanjutkan pendidikan") {
+            document.getElementById("hidden_description").style.display="block";
+        }
+        if(getSelectValue == "Belum") {
+            document.getElementById("hidden_workplace").style.display="none";
+         document.getElementById("hidden_name_workplace").style.display="none";
+         document.getElementById("hidden_start_work").style.display="none";
+         document.getElementById("hidden_address_work").style.display="none";
+         document.getElementById("hidden_income_per_month").style.display="none";
+         document.getElementById("hidden_job_educational_background").style.display="none";
+        }
+
     }
 
     function IsEmpty() {

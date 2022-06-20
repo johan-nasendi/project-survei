@@ -64,6 +64,7 @@ class RespondentIdentityController extends Controller
                 'address_work' =>'required_if:do_you_work,Sudah',
                 'job_educational_background' =>'required_if:do_you_work,Sudah',
                 'income_per_month' =>'required_if:do_you_work,Sudah',
+                'description' => 'required_if:do_you_work,Sedang melanjutkan pendidikan',
 
                 'learning_process'  => 'required|string',
                 'curriculum'  => 'required|string',
@@ -87,6 +88,7 @@ class RespondentIdentityController extends Controller
             'address_work.required_if' => 'Alamat tempat kerja? Wajib di isi!',
             'job_educational_background.required_if' => 'Apakah pekerjaan anda sesuai dengan latar belakang pendidikan? Wajib di isi!',
             'income_per_month.required_if' => 'Berapa gaji pertama anda? Wajib di isi',
+            'description.required_if' => 'Berikan Keterangan anda? Wajib di isi',
 
 
             'active_inactive_organization'=> 'Selama kuliah apakah anda pernah menjadi anggota suatu organisasi di dalam atau luar kampus? Wajib di isi',
@@ -136,6 +138,7 @@ class RespondentIdentityController extends Controller
             $jobex->address_work = $request->address_work;
             $jobex->job_educational_background = $request->job_educational_background;
             $jobex->income_per_month = $request->income_per_month;
+            $jobex->description = $request->description;
             $respondent->jobex()->save($jobex);
 
             $relations = new RelationshipCompetence();

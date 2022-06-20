@@ -19,6 +19,7 @@ class CreateJobExperiencesTable extends Migration
             $table->string('do_you_work');
             $table->string('workplace')->nullable();
             $table->string('name_workplace')->nullable();
+            $table->string('description')->nullable();
             $table->string('start_work')->nullable();
             $table->string('address_work')->nullable();
             $table->string('job_educational_background')->nullable();

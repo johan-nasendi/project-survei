@@ -14,6 +14,7 @@ class JobExperiences extends Model
         'do_you_work',
         'start_work',
         'workplace',
+        'description',
         'name_workplace',
         'address_work',
         'job_educational_background',
