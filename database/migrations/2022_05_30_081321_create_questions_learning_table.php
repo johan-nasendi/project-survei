@@ -17,7 +17,7 @@ class CreateQuestionsLearningTable extends Migration
             $table->id();
             $table->unsignedBigInteger('respondent_id');
             $table->string('active_inactive_organization');
-            $table->string('organization_name');
+            $table->string('organization_name')->nullable();
             $table->string('lecturer_ability');
             $table->string('lecturer_skills_practice');
             $table->string('rectors_service');

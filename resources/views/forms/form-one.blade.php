@@ -2,7 +2,8 @@
 <h4 class="header-title mb-3"> <b>A.IDENTITAS ALUMNI</b> </h4>
 
         <div class="row needs-validation was-validated bg-white"   novalidate="">
-            <div class="col-6 ">
+            <div class="col-lg-6 ">
+
                     <div class="form-group">
                         <label  for="name"> Nama <span class="text-danger">*</span> </label>
                             <input type="text"  name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
@@ -63,7 +64,7 @@
 
             </div> <!-- end col -->
 
-            <div class="col-6">
+            <div class="col-lg-6">
                     <div class="form-group">
                         <label  for="#"> Jurusan/Prodi <span class="text-danger">*</span></label>
                             <select name="what_study_program"  class="form-control @error('what_study_program') is-invalid @enderror"

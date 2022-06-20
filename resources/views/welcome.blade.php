@@ -4,40 +4,24 @@
 
  <!--==================== HOME ====================-->
  <section class="home" id="home">
+    <h1 class="home__title">
+        SURVEY PENELUSURAN ALUMNI <br>
+        POLITEKNIK KESEHATAN KEMENKES JAYAPURA
+    </h1>
     <div class="home__container container grid">
-        <img src="{{asset('/img/hello.png')}}" alt="" class="home__img" style="width: 500px">
+        <img src="{{asset('/img/hello.png')}}" alt="" class="home__img" style="width: 400px">
 
-        <div class="home__data">
-            <h1 class="home__title">
-                SURVEY PENELUSURAN ALUMNI <br>
-                POLITEKNIK KESEHATAN KEMENKES JAYAPURA
-            </h1>
-            <p class="home__description">
-                Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura
+        <div class="home__data" style="margin-left: 4.9rem">
+            <p class="home__description" style="font-size: 15px;">
+                <b>Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura</b>
             </p>
-            <p class="home__description">
-                Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.
+            <p class="home__description" style="font-size: 15px;">
+                <b>Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.</b>
             </p>
             <a href="{{route('forum')}}" class="button button--flex">
                 MULAI KUESIONER <i class="ri-send-plane-fill button__icon"></i>
                 </a>
         </div>
-
-        {{-- <div class="home__social">
-            <span class="home__social-follow">Ikuti Kami</span>
-
-            <div class="home__social-links">
-                <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
-                    <i class="ri-facebook-fill"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
-                    <i class="ri-instagram-line"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" class="home__social-link">
-                    <i class="ri-twitter-fill"></i>
-                </a>
-            </div>
-        </div> --}}
     </div>
 </section>
 <!--==================== FOOTER ====================-->

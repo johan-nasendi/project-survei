@@ -50,12 +50,12 @@ class RespondentIdentityController extends Controller
                 'year_of_college_entry' => 'required|string',
                 'college_graduation_date' => 'required|string',
 
-                'organization_name'=> 'required|string',
-                'active_inactive_organization'=> 'required|string',
-                'lecturer_ability'=> 'required|string',
-                'lecturer_skills_practice'=> 'required|string',
-                'rectors_service'=> 'required|string',
-                'study_program_services'=> 'required|string',
+                'active_inactive_organization'=> 'required',
+                'organization_name'=> 'required_if:active_inactive_organization,Ya',
+                'lecturer_ability'=> 'required',
+                'lecturer_skills_practice'=> 'required',
+                'rectors_service'=> 'required',
+                'study_program_services'=> 'required',
 
                 'do_you_work' => 'required',
                 'start_work' =>'required_if:do_you_work,Sudah',
@@ -87,6 +87,14 @@ class RespondentIdentityController extends Controller
             'address_work.required_if' => 'Alamat tempat kerja? Wajib di isi!',
             'job_educational_background.required_if' => 'Apakah pekerjaan anda sesuai dengan latar belakang pendidikan? Wajib di isi!',
             'income_per_month.required_if' => 'Berapa gaji pertama anda? Wajib di isi',
+
+
+            'active_inactive_organization'=> 'Selama kuliah apakah anda pernah menjadi anggota suatu organisasi di dalam atau luar kampus? Wajib di isi',
+            'organization_name.required_if'=> 'Organisasi apa yang pernah anda ikut? :attribute Wajib di isi',
+            'lecturer_ability'=> 'Selama Kuliah, menurut saudara bagaimana kemampuan dosen dalam mengampu mata kuliah? wajib di isi',
+            'lecturer_skills_practice'=> 'Bagaimana ketrampilan dosen dan instruktur dalam memberikan praktek? Wajib di isi',
+            'rectors_service'=> 'Bagaimana pelayanan Rektorat dalam memberikan pengurusan administrasi mahasiswa? Wajib di isi',
+            'study_program_services'=> 'Bagaimana pelayanan Program studi dalam memberikan pengurusan administrasi mahasiswa? Wajib di isi',
 
             'learning_process.required'  => 'Proses Belajar Mengajar? Wajib di isi! ',
             'curriculum.required'  => 'Kurikulum? Wajib di isi!',

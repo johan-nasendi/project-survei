@@ -24,8 +24,7 @@
 
                     <div class="form-group">
                         <label for="#">Organisasi apa yang pernah anda ikut?<span class="text-danger">*</span></label>
-                            <select name="organization_name"  class="form-control @error('organization_name') is-invalid @enderror"
-                           required="" >
+                            <select name="organization_name"  class="form-control @error('organization_name') is-invalid @enderror">
                                 <option value="" selected disabled>---Pilih---</option>
                                 <option value="BEM" @if (old('organization_name') == "BEM") {{ 'selected' }} @endif>BEM</option>
                                 <option value="HMJ" @if (old('organization_name') == "HMJ") {{ 'selected' }} @endif>HMJ</option>
