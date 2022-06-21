@@ -100,7 +100,7 @@
 
                     <div class="form-group">
                         <label for="#">Tahun Masuk kuliah  <span class="text-danger">*</span></label>
-                            <input type="text"  name="year_of_college_entry" value="{{old('year_of_college_entry')}}"  required="" autocomplete="year_of_college_entry" autofocus
+                            <input type="month"  name="year_of_college_entry" value="{{old('year_of_college_entry')}}"  required="" autocomplete="year_of_college_entry" autofocus
                             placeholder="Tahun Masuk kuliah anda" class="form-control @error('year_of_college_entry') is-invalid @enderror">
                             <div class="invalid-feedback" style="font-size: 10px">Harap mengisi Tahun Masuk kuliah anda</div>
                             @error('year_of_college_entry')

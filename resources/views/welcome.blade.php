@@ -13,10 +13,10 @@
 
         <div class="home__data" style="margin-left: 7.28rem;">
             <p class="home__description" >
-                <b>Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura</b>
+                Kuesioner Penelusuran Alumni ini adalah untuk menelusuri alumni yang lulus dari Politeknik kesehatan kemenkes Jayapura
             </p>
             <p class="home__description">
-                <b>Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.</b>
+                Mohon kesedian dan kerjasama dari pada alumni untuk mengisi kuesioner demi  pengembangan poltekkes kemenkes Jayapura.
             </p>
 
             <a href="{{route('forum')}}" class="button button--flex"  >
