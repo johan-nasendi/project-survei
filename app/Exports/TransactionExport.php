@@ -44,6 +44,7 @@ class TransactionExport implements FromCollection, WithHeadings, WithMapping
             $respondent->pertayaan->study_program_services,
 
             $respondent->pekerjaan->do_you_work,
+            $respondent->pekerjaan->description,
             $respondent->pekerjaan->start_work,
             $respondent->pekerjaan->workplace,
             $respondent->pekerjaan->name_workplace,
@@ -80,6 +81,7 @@ class TransactionExport implements FromCollection, WithHeadings, WithMapping
            'pelayanan Program studi dalam memberikan pengurusan administrasi mahasiswa',
 
            'Apakah anda bekerja',
+           'Dimana anda melanjutkan pendidikan(perguruan tinggi apa)?',
            'Jika Sudah dimana anda bekerja',
            'Nama Instansi tempat bekerja ',
            'Kapan Mulai Bekerja',
