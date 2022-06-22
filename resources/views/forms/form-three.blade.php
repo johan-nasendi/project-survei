@@ -23,10 +23,10 @@
                         </div>
 
                         <div class="form-group" id="hidden_description" style="display: none;">
-                            <label for="#">Berikan Keterangan anda?<span class="text-danger">*</span></label>
+                            <label for="#">Dimana anda melanjutkan pendidikan(perguruan tinggi apa)?<span class="text-danger">*</span></label>
                             <textarea class="form-control @error('description') is-invalid @enderror"  name="description" placeholder="Berikan keterangan anda,Mengapa anda Belum Berkerja?"  rows="2" autocomplete="on">{{old('description')}}</textarea>
                             <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi keterangan mengapa belum berkerja!
+                                Harap mengisi Dimana anda melanjutkan pendidikan(perguruan tinggi apa)
                             </div>
                             @error('description')
                             <span class="invalid-feedback" role="alert">
