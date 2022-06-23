@@ -5,7 +5,7 @@
                 <div class="card-box">
                         <div class="form-group needs-validation was-validated" novalidate="">
                             <input type="hidden" name="respondent_id" value="{{old('respondent_id')}}">
-                            <label for="#">Apakah Anda sudah punya pengalaman kerja?<span class="text-danger">*</span></label>
+                            <label for="#">Apakah anda sudah bekerja?<span class="text-danger">*</span></label>
                             <select  name="do_you_work" class="form-control @error('do_you_work') is-invalid @enderror"
                             required="" id="you_work" onchange="showDivJob()">
                                 <option value="" disabled selected="selected">---Pilih---</option>

@@ -81,7 +81,7 @@ class RespondentIdentityController extends Controller
             'year_of_college_entry.required'   => 'Tahun Masuk kuliah Wajib di isi',
             'college_graduation_date.required'   => 'Bulan dan Tahun Lulus Wajib di isi',
 
-            'do_you_work.required' => 'Apakah anda sudah bekerja saat ini? Wajib di isi!',
+            'do_you_work.required' => 'Apakah anda sudah bekerja? Wajib di isi!',
             'start_work.required_if' => 'Kapan Mulai Bekerja (bulan/tahun)? Wajib di isi!',
             'workplace.required_if' => 'Jika Sudah dimana anda bekerja? Wajib di isi!',
             'name_workplace.required_if' => 'Nama Instansi tempat bekerja? Wajib di isi!',

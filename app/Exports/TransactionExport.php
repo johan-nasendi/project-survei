@@ -80,7 +80,7 @@ class TransactionExport implements FromCollection, WithHeadings, WithMapping
            'pelayanan Rektorat dalam memberikan pengurusan administrasi mahasiswa',
            'pelayanan Program studi dalam memberikan pengurusan administrasi mahasiswa',
 
-           'Apakah anda bekerja',
+           'Apakah anda sudah bekerja',
            'Dimana anda melanjutkan pendidikan(perguruan tinggi apa)?',
            'Jika Sudah dimana anda bekerja',
            'Nama Instansi tempat bekerja ',
