@@ -35,6 +35,19 @@
                             @enderror
                         </div>
 
+                        <div class="form-group" id="hidden_current_activities" style="display: none;">
+                            <label for="#">Apa kegiatan Anda saat sekarang?<span class="text-danger">*</span></label>
+                            <textarea class="form-control @error('current_activities') is-invalid @enderror"  name="current_activities" placeholder="Berikan keterangan anda, Apa kegiatan Anda saat sekarang?"  rows="2" autocomplete="on">{{old('current_activities')}}</textarea>
+                            <div class="text-danger" style="font-size: 10px">
+                                Harap mengisi kegiatan Anda saat sekarang
+                            </div>
+                            @error('current_activities')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+
 
                         <div class="form-group" id="hidden_workplace" style="display: none;">
                             <label for="#">Jika Sudah dimana anda bekerja?<span class="text-danger">*</span></label>

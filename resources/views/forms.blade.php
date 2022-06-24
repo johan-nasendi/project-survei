@@ -102,9 +102,9 @@
         }
         if(getSelectValue == "Sudah") {
             document.getElementById("hidden_job_educational_background").style.display="block";
-        }
-
-        else  {
+        } else  {
+         document.getElementById("hidden_description").style.display="none";
+         document.getElementById("hidden_current_activities").style.display="none";
          document.getElementById("hidden_workplace").style.display="none";
          document.getElementById("hidden_name_workplace").style.display="none";
          document.getElementById("hidden_start_work").style.display="none";
@@ -113,17 +113,22 @@
          document.getElementById("hidden_job_educational_background").style.display="none";
         }
 
+
         if(getSelectValue == "Sedang melanjutkan pendidikan") {
             document.getElementById("hidden_description").style.display="block";
+        } else {
+            document.getElementById("hidden_description").style.display="none";
         }
+
+
         if(getSelectValue == "Belum") {
-            document.getElementById("hidden_workplace").style.display="none";
-         document.getElementById("hidden_name_workplace").style.display="none";
-         document.getElementById("hidden_start_work").style.display="none";
-         document.getElementById("hidden_address_work").style.display="none";
-         document.getElementById("hidden_income_per_month").style.display="none";
-         document.getElementById("hidden_job_educational_background").style.display="none";
+         document.getElementById("hidden_current_activities").style.display="block";
+        } else {
+            document.getElementById("hidden_current_activities").style.display="none";
         }
+
+
+
 
     }
 
