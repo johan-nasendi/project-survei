@@ -7,7 +7,7 @@
                     <div class="form-group">
                         <label  for="name"> Nama <span class="text-danger">*</span> </label>
                             <input type="text"  name="name" value="{{ old('name') }}"  placeholder="Nama lengkap anda"
-                            class="form-control  @error('name') is-invalid @enderror" required="" autocomplete="name"  >
+                            class="form-control  @error('name') is-invalid @enderror normal" required="" autocomplete="name" >
                             <div class="invalid-feedback" style="font-size: 10px">
                                 Harap mengisi nama lengkap anda
                             </div>

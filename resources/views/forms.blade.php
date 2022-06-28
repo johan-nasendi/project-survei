@@ -47,12 +47,13 @@
 <br>
 <footer class="footer footer-alt">
     <script>document.write(new Date().getFullYear())</script>
-    &copy; Poltekkes Kemenkes Jayapura
+    &copy; Poltekkes Kemenkes Jayapura | <a href="{{route('login')}}" style="color: #2f3640;"> Login </a>
 </footer>
 @stop
 
 @push('js-external')
                 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
                 <!-- Vendor js -->
                 <script src="{{asset('/assets/js/vendor.min.js')}}"></script>
@@ -323,5 +324,31 @@
 
             return true;
     }
+
+
+    var with_rupiah = document.getElementById('dengan-rupiah');
+    with_rupiah.addEventListener('keyup', function(e)
+    {
+        with_rupiah.value = formatRupiah(this.value, 'Rp. ');
+    });
+
+/* Fungsi */
+function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+
  </script>
 @endpush

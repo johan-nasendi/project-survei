@@ -6,9 +6,6 @@
     <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
 
-            <li class="nav__item">
-                <i class="ri-login-box-line"></i> <a href="{{route('login')}}" class="nav__link">Login</a>
-            </li>
         </ul>
 
         <div class="nav__close" id="nav-close">

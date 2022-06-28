@@ -28,6 +28,8 @@
 <!--==================== FOOTER ====================-->
 <footer class="footer footer-alt">
     <p class="footer__copy"><script>document.write(new Date().getFullYear())</script>
-        &copy; Poltekkes Kemenkes Jayapura</p>
+        &copy; Poltekkes Kemenkes Jayapura |  <a href="{{route('login')}}" style="color: #2f3640;"> Login </a> </p>
+
 </footer>
+
 @stop

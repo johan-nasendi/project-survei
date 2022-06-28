@@ -109,7 +109,7 @@ class RespondentIdentityController extends Controller
 
     try {
             $respondent = new RespondentIdentitiy();
-            $respondent->name = $request->name;
+            $respondent->name = Str::upper($request->name);
             $respondent->email = $request->email;
             $respondent->place_of_birth = $request->place_of_birth;
             $respondent->address = $request->address;

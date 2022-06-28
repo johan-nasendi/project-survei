@@ -5,6 +5,15 @@
 <head>
     <meta charset="utf-8" />
     <title>{{config('app.name')}} - @yield('title')</title>
+
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Poltekes Jayapura" />
+    <meta property="og:description" content="Poltekes Jayapura - tracerstudy" />
+    <meta property="og:url" content="https://tracerstudy.poltekkesjayapura.ac.id" />
+    <meta property="og:site_name" content="Poltekes Jayapura" />
+    <meta property="og:image" content="https://tracerstudy.poltekkesjayapura.ac.id/img/logo.png" />
+
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
      <meta content="Coderthemes" name="author" />

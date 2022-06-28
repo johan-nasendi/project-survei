@@ -5,6 +5,14 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Poltekes Jayapura" />
+    <meta property="og:description" content="Poltekes Jayapura - tracerstudy" />
+    <meta property="og:url" content="https://tracerstudy.poltekkesjayapura.ac.id" />
+    <meta property="og:site_name" content="Poltekes Jayapura" />
+    <meta property="og:image" content="https://tracerstudy.poltekkesjayapura.ac.id/img/logo.png" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

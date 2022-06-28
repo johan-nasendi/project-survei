@@ -116,8 +116,8 @@
 
                         <div class="form-group" id="hidden_income_per_month" style="display: none;">
                             <label for="#"> Berapa gaji pertama anda?<span class="text-danger">*</span></label>
-                            <input type="number" autocomplete="on"  value="{{old('income_per_month')}}" name="income_per_month"
-                            placeholder="Berapa gaji pertama anda" class="form-control @error('income_per_month') is-invalid @enderror">
+                            <input type="text" id="dengan-rupiah" autocomplete="on"  value="{{old('income_per_month')}}" name="income_per_month"
+                            placeholder="Rp" class="form-control @error('income_per_month') is-invalid @enderror">
                             <div class="text-danger" style="font-size: 10px">
                                 Harap mengisi gaji pertama anda? Jika Sudah berkerja!
                             </div>
