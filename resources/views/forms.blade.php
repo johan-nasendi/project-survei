@@ -326,15 +326,14 @@
     }
 
 
-    var with_rupiah = document.getElementById('dengan-rupiah');
+var with_rupiah = document.getElementById('dengan-rupiah');
     with_rupiah.addEventListener('keyup', function(e)
     {
-        with_rupiah.value = formatRupiah(this.value, 'Rp. ');
+        with_rupiah.value = formatRupiah(this.value, 'Rp');
     });
 
 /* Fungsi */
-function formatRupiah(angka, prefix)
-    {
+function formatRupiah(angka, prefix) {
         var number_string = angka.replace(/[^,\d]/g, '').toString(),
             split    = number_string.split(','),
             sisa     = split[0].length % 3,
@@ -348,7 +347,7 @@ function formatRupiah(angka, prefix)
 
         rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
         return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
-    }
+}
 
  </script>
 @endpush

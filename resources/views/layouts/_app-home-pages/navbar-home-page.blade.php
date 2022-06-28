@@ -1,5 +1,5 @@
 <nav class="nav container">
-    <a href="/" class="nav__logo">
+    <a href="https://poltekkesjayapura.ac.id" class="nav__logo">
         <img src="{{asset('/img/logo.png')}}" alt="" style="height: 40px"> POLTEKES JAYAPURA
     </a>
 

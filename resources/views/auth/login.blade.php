@@ -37,13 +37,13 @@
 
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
-                                        <a href="/" class="logo logo-dark text-center">
+                                        <a href="https://poltekkesjayapura.ac.id" class="logo logo-dark text-center">
                                             <span class="logo-lg">
                                                 <img src="{{asset('/img/logo.png')}}" alt="logos" height="100">
                                             </span>
                                         </a>
 
-                                        <a href="index.html" class="logo logo-light text-center">
+                                        <a href="https://poltekkesjayapura.ac.id" class="logo logo-light text-center">
                                             <span class="logo-lg">
                                                 <img src="{{asset('/img/logo.png')}}" alt="logos" height="100">
                                             </span>

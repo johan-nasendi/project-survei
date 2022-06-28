@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label  for="#"> Tempat Lahir <span class="text-danger">*</span></label>
                             <input type="text"  name="place_of_birth" value="{{ old('place_of_birth') }}"
-                            placeholder="Tempat lahir anda" required=""  autofocus autocomplete="place_of_birth"
+                            placeholder="Tempat lahir anda" required=""  autofocus autocomplete="on"
                             class="form-control @error('place_of_birth') is-invalid @enderror">
                             <div class="invalid-feedback" style="font-size: 10px">
                                 Harap mengisi tempat lahir anda
