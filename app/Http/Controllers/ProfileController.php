@@ -5,7 +5,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
-
+use Illuminate\Support\Str;
 class ProfileController extends Controller
 {
     /**
@@ -58,7 +58,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        $user = User::where('email', $id)->first();
+        $user = User::where('slug', $id)->first();
         return view('admin.profile.edit',compact('user'));
     }
 
@@ -77,14 +77,15 @@ class ProfileController extends Controller
         ]);
 
         try {
-              $user = User::find($id);
-              $user->name = $request->name;
-              $user->email  = $request->email;
-              $user->update();
-              $user->attachRole($request->role_id);
+            $user = User::find($id);
+            $user->name = $request->name;
+            $user->slug = Str::slug($request->get('name'));
+            $user->email  = $request->email;
+            $user->update();
+            $user->attachRole($request->role_id);
 
-              Alert::success('Success', 'Data anda berhasil di perbarui');
-              return redirect()->route('profile.index');
+            Alert::success('Success', 'Data anda berhasil di perbarui');
+            return redirect()->route('profil.index');
 
            }catch (\Throwable $e) {
             Alert::error('Error','Gagal memperbarui data anda',['error' => $e->getMessage()]);

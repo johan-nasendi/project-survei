@@ -37,7 +37,7 @@ Profil
                         <div class="row">
                             <div class="col-lg-4 col-xl-4">
                                 <div class="card-box text-center">
-                                    <img src="{{asset('assets/images/users/user-sacode.png')}}" class="rounded-circle avatar-lg img-thumbnail"
+                                    <img src="{{asset('assets/images/user-circle.png')}}" class="rounded-circle avatar-lg img-thumbnail"
                                         alt="profile-image">
                                     <h4 class="mb-0">  {{Auth::user()->name}} </h4>
                                     <p class="text-muted">Administator</p>
@@ -55,7 +55,7 @@ Profil
                                         </li>
                                         <li class="nav-item">
                                             <a href="#timeline" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                Ubah Password
+                                                Ubah Kata Sandi
                                             </a>
                                         </li>
 
@@ -63,34 +63,68 @@ Profil
                                     <div class="tab-content">
                                         <div class="tab-pane" id="timeline">
 
-                                            <form>
+                                            <form action="#" method="POST">
+                                                @csrf
                                                 <h5 class="mb-4 text-uppercase"><i class=" fas fa-lock"></i>
                                                     Ubah Kata Sandi</h5>
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <div class="form-group">
+                                                        <div class="form-group {{ $errors->has('current-password') ? ' has-error' : '' }}">
                                                             <label for="userpassword">Kata Sandi lama</label>
-                                                            <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                                            <div class="input-group input-group-merge">
+                                                                <input id="password" type="password" class="form-control"
+                                                                placeholder="Kata sandi lama anda" name="current-password" required="">
+                                                                @if ($errors->has('current-password'))
+                                                                <span class="help-block">
+                                                                    <strong>{{ $errors->first('current-password') }}</strong>
+                                                                </span>
+                                                                @endif
+                                                                <div class="input-group-append" data-password="false">
+                                                                    <div class="input-group-text">
+                                                                        <span class="password-eye"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div> <!-- end col -->
                                                     <div class="col-md-12">
-                                                        <div class="form-group">
+                                                        <div class="form-group {{ $errors->has('new-password') ? ' has-error' : '' }}">
                                                             <label for="lastname">Kata Sandi Baru</label>
-                                                            <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+                                                            <div class="input-group input-group-merge">
+                                                                <input id="password" type="password" class="form-control"
+                                                                placeholder="Kata sandi baru anda" name="new-password" required="">
+                                                                @if ($errors->has('new-password'))
+                                                                <span class="help-block">
+                                                                    <strong>{{ $errors->first('new-password') }}</strong>
+                                                                </span>
+                                                                @endif
+                                                                <div class="input-group-append" data-password="false">
+                                                                    <div class="input-group-text">
+                                                                        <span class="password-eye"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div> <!-- end col -->
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="lastname">Confirmasi Kata Sandi Baru</label>
-                                                            <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+                                                            <label for="lastname">Konfirmasi Kata Sandi Baru</label>
+                                                            <div class="input-group input-group-merge">
+                                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                                                                placeholder="Konfirmasi Kata sandi baru anda" name="new-password_confirmation" required="">
+                                                                <div class="input-group-append" data-password="false">
+                                                                    <div class="input-group-text">
+                                                                        <span class="password-eye"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div> <!-- end col -->
                                                 </div> <!-- end row -->
 
                                                 <div class="text-right">
-                                                    <a href="#" class="btn btn-warning waves-effect waves-light mt-2" >
-                                                        <i class="mdi mdi-content-save"></i> Edit
-                                                    </a>
+                                                    <button type="submit" class="btn btn-warning waves-effect waves-light" disabled>
+                                                        <i class="mdi mdi-content-save"></i> Ubah</button>
                                                 </div>
 
                                             </form>
@@ -100,11 +134,11 @@ Profil
 
                                         <div class="tab-pane show active" id="settings">
                                             <form>
-                                                <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle mr-1"></i> Personal Info</h5>
+                                                <h5 class="mb-4 text-uppercase"><i class="mdi mdi-account-circle mr-1"></i> Info Profil</h5>
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="firstname">Full Name</label>
+                                                            <label for="firstname">Name</label>
                                                             <input type="text" class="form-control" name="name"
                                                             value="{{old('name',Auth::user()->name)}}" placeholder=" Nama Lengkap" readonly>
                                                         </div>
@@ -118,7 +152,7 @@ Profil
                                                     </div> <!-- end col -->
                                                 </div> <!-- end row -->
                                                 <div class="text-right">
-                                                    <a href="{{route('profil.edit', ['profil' => Auth::user()->email])}}" class="btn btn-warning waves-effect waves-light mt-2" >
+                                                    <a href="{{route('profil.edit', ['profil' => Auth::user()->slug])}}" class="btn btn-warning waves-effect waves-light mt-2" >
                                                         <i class="mdi mdi-content-save"></i> Edit
                                                     </a>
                                                 </div>

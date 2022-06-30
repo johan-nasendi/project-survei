@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(LaratrustSeeder::class);
         $this->call(UserSeeder::class);
-        $this->call(RespondentSeeder::class);
-        $this->call(JobExperiencesSeeder::class);
-        $this->call(QuestionsLearningExperienceaSeeder::class);
-        $this->call(RelationshipCompetenceSeeder::class);
+        // $this->call(RespondentSeeder::class);
+        // $this->call(JobExperiencesSeeder::class);
+        // $this->call(QuestionsLearningExperienceaSeeder::class);
+        // $this->call(RelationshipCompetenceSeeder::class);
 
     }
 }

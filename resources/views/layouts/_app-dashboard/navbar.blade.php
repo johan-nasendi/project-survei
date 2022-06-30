@@ -46,7 +46,7 @@
 
     <!-- LOGO -->
     <div class="logo-box">
-        <a href="#" class="logo logo-dark text-center">
+        <a href="https://poltekkesjayapura.ac.id" class="logo logo-dark text-center" target="_blank">
             <span class="logo-sm">
                     <img src="{{asset('img/logo2.png')}}" alt="" height="50">
                     <!-- <span class="logo-lg-text-light">UBold</span> -->
@@ -57,7 +57,7 @@
             </span>
         </a>
 
-        <a href="#" class="logo logo-light text-center">
+        <a href="https://poltekkesjayapura.ac.id" class="logo logo-light text-center" target="_blank">
             <span class="logo-sm">
                     <img src="{{asset('img/logo2.png')}}" alt="" height="50">
                 </span>

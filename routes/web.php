@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RespondentIdentityController;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +43,8 @@ Route::group(['prefix' => 'dasbor','middleware' => ['web','auth']] , function() 
     Route::get('export', [DashboardController::class, 'export_mapping'])->name('export');
 
     Route::resource('/profil',ProfileController::class)->except('show');
+
+    // Route::post('/profil/ubah-kata-sandi/kirim', [HomeController::class, 'password_update'])->name('password.update');
 
 
 });
