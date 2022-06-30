@@ -201,7 +201,7 @@
                                                     @if(empty($respondent->pekerjaan->income_per_month ))
                                                     <p>Tidak ada data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->income_per_month}}</p>
+                                                    <p>  @currency($respondent->pekerjaan->income_per_month) </p>
                                                     @endif
                                                 </li>
 
@@ -211,7 +211,7 @@
                                                     @if(empty($respondent->pekerjaan->description ))
                                                     <p>Tidak ada data</p>
                                                     @else
-                                                    <p>{{$respondent->pekerjaan->description}}</p>
+                                                    <p> {{$respondent->pekerjaan->description}}</p>
                                                     @endif
                                                 </li>
 

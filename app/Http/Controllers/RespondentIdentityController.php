@@ -104,8 +104,9 @@ class RespondentIdentityController extends Controller
             'curriculum.required'  => 'Kurikulum? Wajib di isi!',
             'student_admini_services.required'  => 'Layanan Administrasi Kemahasiswaan? Wajib di isi!',
             'facilities_infrastructure.required'  => 'Sarana dan Prasarana? Wajib di isi!',
-        ]
-    );
+        ]);
+
+    // dd($request->all());
 
     try {
             $respondent = new RespondentIdentitiy();
@@ -139,7 +140,7 @@ class RespondentIdentityController extends Controller
             $jobex->name_workplace = $request->name_workplace;
             $jobex->address_work = $request->address_work;
             $jobex->job_educational_background = $request->job_educational_background;
-            $jobex->income_per_month = $request->income_per_month;
+            $jobex->income_per_month = Str::replace(".", "", $request->income_per_month);
             $jobex->description = $request->description;
             $jobex->current_activities = $request->current_activities;
             $respondent->jobex()->save($jobex);
@@ -153,10 +154,10 @@ class RespondentIdentityController extends Controller
             $respondent->relastionship()->save($relations);
 
 
-              Alert::success('Success', 'Data Anda Berhasil Dikirim');
+              Alert::success('Success', 'Terima kasih! Data Anda Berhasil Dikirim');
               return redirect('/');
             } catch (\Throwable $th) {
-              Alert::error('Error','Data Anda Gagal Dikirim', ['error' => $th->getMessage()]);
+              Alert::error('Error','Opsss! Data Anda Gagal Dikirim', ['error' => $th->getMessage()]);
             } return redirect()->back();
     }
 

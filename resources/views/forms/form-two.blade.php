@@ -1,7 +1,7 @@
 
 <h4 class="header-title mb-3"> <b>B.PENGALAMAN PBM</b> </h4>
 
-    <div class="row  needs-validation was-validated" novalidate="">
+    <div class="row">
         <div class="col-lg-6">
             <div class="card-box">
 
@@ -14,7 +14,7 @@
                             <option value="Ya" @if(old('active_inactive_organization') == "Ya") {{ 'selected' }} @endif> Ya</option>
                             <option value="Tidak" @if(old('active_inactive_organization') == "Tidak") {{ 'selected' }} @endif>Tidak</option>
                         </select>
-                        <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan  anda</div>
+                        {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan  anda</div> --}}
                         @error('active_inactive_organization')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -31,7 +31,7 @@
                                 <option value="UKM" @if (old('organization_name') == "UKM") {{ 'selected' }} @endif>UKM</option>
                                 <option value="Lainnya" @if (old('organization_name') == "Lainnya") {{ 'selected' }} @endif>Lainnya</option>
                             </select>
-                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
+                            {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
                             @error('organization_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@
                                 <option value="Cukup" @if (old('lecturer_ability') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
                                 <option value="Kurang" @if (old('lecturer_ability') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                             </select>
-                            <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
+                            {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
                             @error('lecturer_ability')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -66,8 +66,7 @@
             <div class="card-box">
 
                 <div class="form-group">
-                    <label for="#">Bagaimana ketrampilan dosen dan instruktur dalam memberikan praktek?
-                        <span class="text-danger">*</span>
+                    <label for="#">Bagaimana ketrampilan dosen dan instruktur dalam memberikan praktek?<span class="text-danger">*</span>
                     </label>
                     <select name="lecturer_skills_practice"  class="form-control @error('lecturer_skills_practice') is-invalid @enderror"
                    required="" >
@@ -77,7 +76,7 @@
                         <option value="Cukup" @if (old('lecturer_skills_practice') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
                         <option value="Kurang" @if (old('lecturer_skills_practice') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
-                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
+                    {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
                     @error('lecturer_skills_practice')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -85,8 +84,7 @@
                      @enderror
                 </div>
                 <div class="form-group">
-                    <label for="#">Bagaimana pelayanan Rektorat dalam memberikan pengurusan administrasi mahasiswa?
-                        <span class="text-danger">*</span>
+                    <label for="#">Bagaimana pelayanan Rektorat dalam memberikan <br> pengurusan administrasi mahasiswa?<span class="text-danger">*</span>
                     </label>
                     <select name="rectors_service"  class="form-control @error('rectors_service') is-invalid @enderror"
                    required="">
@@ -96,7 +94,7 @@
                         <option value="Cukup" @if (old('rectors_service') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
                         <option value="Kurang" @if (old('rectors_service') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
-                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
+                    {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
                     @error('rectors_service')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -115,7 +113,7 @@
                         <option value="Cukup" @if (old('study_program_services') == "Cukup") {{ 'selected' }} @endif>Cukup</option>
                         <option value="Kurang" @if (old('study_program_services') == "Kurang") {{ 'selected' }} @endif>Kurang</option>
                     </select>
-                    <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div>
+                    {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
                     @error('study_program_services')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
