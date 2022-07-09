@@ -13,8 +13,6 @@
                                 <option value="Belum"  @if (old('do_you_work') == "Belum")  {{ 'selected' }} @endif> Belum </option>
                                 <option value="Sedang melanjutkan pendidikan"  @if (old('do_you_work') == "Sedang melanjutkan pendidikan") {{ 'selected' }} @endif> Sedang melanjutkan pendidikan </option>
                             </select>
-                            {{-- <div class="invalid-feedback" style="font-size: 10px">Harap memilih pilihan anda</div> --}}
-                            {{-- <div class="invalid-feedback">Harap memilih pilihan anda</div> --}}
                             @error('do_you_work')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -25,9 +23,6 @@
                         <div class="form-group" id="hidden_description" style="display: none;">
                             <label for="#">Dimana anda melanjutkan pendidikan(perguruan tinggi apa)?<span class="text-danger">*</span></label>
                             <textarea class="form-control @error('description') is-invalid @enderror"  name="description" placeholder="Berikan keterangan anda,Mengapa anda Belum Berkerja?"  rows="2" autocomplete="on">{{old('description')}}</textarea>
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi Dimana anda melanjutkan pendidikan(perguruan tinggi apa)
-                            </div> --}}
                             @error('description')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -38,9 +33,6 @@
                         <div class="form-group" id="hidden_current_activities" style="display: none;">
                             <label for="#">Apa kegiatan Anda saat sekarang?<span class="text-danger">*</span></label>
                             <textarea class="form-control @error('current_activities') is-invalid @enderror"  name="current_activities" placeholder="Berikan keterangan anda, Apa kegiatan Anda saat sekarang?"  rows="2" autocomplete="on">{{old('current_activities')}}</textarea>
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi kegiatan Anda saat sekarang
-                            </div> --}}
                             @error('current_activities')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -58,7 +50,6 @@
                                 <option value="Usaha sendiri" @if(old('workplace') == "Usaha sendiri") {{ 'selected' }} @endif> Usaha sendiri </option>
                                 <option value="Lainnya" @if(old('workplace') == "Lainnya") {{ 'selected' }} @endif> Lainya... </option>
                             </select>
-                            {{-- <div class="text-danger" style="font-size: 10px">Harap memilih pilihan anda? Jika Sudah berkerja!</div> --}}
                             @error('workplace')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -70,9 +61,6 @@
                             <label for="#">Nama Instansi tempat bekerja?<span class="text-danger">*</span></label>
                             <input type="text" autocomplete="on"  value="{{old('name_workplace')}}" name="name_workplace"
                             placeholder="Nama Instansi tempat bekerja" class="form-control @error('name_workplace') is-invalid @enderror">
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi Nama Instansi tempat bekerja? Jika Sudah berkerja!
-                            </div> --}}
                             @error('name_workplace')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -91,9 +79,6 @@
                             <label for="#"> Kapan Mulai Bekerja (bulan/tahun)?<span class="text-danger">*</span></label>
                             <input type="month" autocomplete="on"  value="{{old('start_work')}}" name="start_work"
                             placeholder="Kapan Mulai Bekerja" class="form-control @error('start_work') is-invalid @enderror">
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi kapan anda mulai berkerja? Jika Sudah berkerja!
-                            </div> --}}
                             @error('start_work')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -104,9 +89,6 @@
                         <div class="form-group" id="hidden_address_work" style="display: none;">
                             <label for="#"> Alamat tempat kerja?<span class="text-danger">*</span></label>
                             <textarea class="form-control @error('address_work') is-invalid @enderror" name="address_work" placeholder="Alamat tempat anda berkerja"  rows="2" autocomplete="on">{{old('address_work')}}</textarea>
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap mengisi alamat tempat anda kerja? Jika Sudah berkerja!
-                            </div> --}}
                             @error('address_work')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -138,9 +120,6 @@
                                 <option value="Sesuai" @if(old('job_educational_background') == "Sesuai") {{ 'selected' }} @endif> Sesuai </option>
                                 <option value="Tidak Sesuai" @if(old('job_educational_background') == "Tidak Sesuai") {{ 'selected' }} @endif> Tidak Sesuai </option>
                             </select>
-                            {{-- <div class="text-danger" style="font-size: 10px">
-                                Harap memilih pilihan anda? Jika Sudah berkerja!
-                            </div> --}}
                             @error('job_educational_background')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
